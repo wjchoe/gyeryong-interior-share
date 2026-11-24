@@ -1,0 +1,687 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3000 -3300 22600 17600" width="1130" height="880" data-units="mm" data-origin="세대 외곽 좌상단(X1,Y1)" role="img" aria-labelledby="t d">
+<title id="t">계룡삼환 리모델링 기준평면도 v2 (mm 좌표, 레이어 구조)</title>
+<desc id="d">단위 mm, 원점은 X1·Y1 교점. 벽은 중심선 좌표, 표현 두께 외벽 100 · 기존 내벽 80 · 신설 100(실제 두께 아님). 분양 평면도 치수 기준이며 실측으로 갱신. 하위 레이어(L-*)에 전기·IoT·통신·냉난방·설비·가구를 추가해 사용.</desc>
+<defs>
+<pattern id="pat-tile" width="300" height="300" patternUnits="userSpaceOnUse"><path d="M300 0H0V300" fill="none" stroke="#b9b9b9" stroke-width="8"/></pattern>
+<pattern id="pat-tile-s" width="150" height="150" patternUnits="userSpaceOnUse"><path d="M150 0H0V150" fill="none" stroke="#c4c4c4" stroke-width="6"/></pattern>
+<pattern id="pat-wood" width="1200" height="180" patternUnits="userSpaceOnUse"><path d="M0 180H1200 M600 0V180" fill="none" stroke="#efe6d8" stroke-width="6"/></pattern>
+<pattern id="pat-new" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V80" stroke="#3a3a3a" stroke-width="14"/></pattern>
+<pattern id="pat-shaft" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V120" stroke="#9a9a9a" stroke-width="8"/></pattern>
+<style>
+text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-serif;fill:#222}
+.ext{stroke:#111;stroke-width:100;stroke-linecap:square;fill:none}
+.str{stroke:#222;stroke-width:80;stroke-linecap:square;fill:none}
+.new{fill:url(#pat-new);stroke:#222;stroke-width:14}
+.demo{stroke:#c0392b;stroke-width:80;stroke-dasharray:180 120;fill:none;opacity:.85}
+.demo-t{fill:#c0392b;font-size:150px}
+.win-gap{stroke:#fff;stroke-width:120;fill:none}
+.win{stroke:#222;stroke-width:16;fill:none}
+.win-g{stroke:#4a7bb7;stroke-width:22;fill:none}
+.door-leaf{stroke:#111;stroke-width:34;fill:none}
+.door-arc{stroke:#555;stroke-width:12;fill:none;stroke-dasharray:60 40}
+.door-gap{stroke:#fff;stroke-width:130;fill:none}
+.fix{fill:#fff;stroke:#555;stroke-width:16}
+.fix-l{fill:none;stroke:#777;stroke-width:10}
+.grid{stroke:#4a7bb7;stroke-width:9;stroke-dasharray:240 80 40 80;fill:none;opacity:.55}
+.grid-b{fill:#fff;stroke:#4a7bb7;stroke-width:14}
+.grid-t{fill:#2c5d97;font-size:170px;font-weight:700;text-anchor:middle;dominant-baseline:central}
+.dim{stroke:#666;stroke-width:10;fill:none}
+.dim-t{font-size:155px;text-anchor:middle;fill:#444}
+.room{font-size:260px;font-weight:800;text-anchor:middle}
+.room-c{font-size:150px;text-anchor:middle;fill:#666}
+.room-a{font-size:140px;text-anchor:middle;fill:#2c5d97}
+.tag{font-size:135px;font-weight:800;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:40px;fill:#111}
+.note{font-size:140px;fill:#333}
+.h1{font-size:330px;font-weight:800}
+.h2{font-size:190px;font-weight:800}
+.tb{font-size:128px;fill:#333}
+.tbh{font-size:128px;font-weight:800;fill:#111}
+.rule{stroke:#bbb;stroke-width:8}
+.sym{fill:none;stroke:#111;stroke-width:16}
+.chk{fill:#e67e22;font-size:150px;font-weight:800}
+</style>
+<symbol id="sym-outlet" overflow="visible" data-label="콘센트(2구)"><circle r="110" class="sym" fill="#fff"/><path d="M-110 0H110" class="sym"/></symbol>
+<symbol id="sym-outlet-wp" overflow="visible" data-label="방수 콘센트"><circle r="110" class="sym" fill="#fff"/><path d="M-110 0H110" class="sym"/><text y="60" font-size="110" text-anchor="middle">W</text></symbol>
+<symbol id="sym-outlet-ded" overflow="visible" data-label="전용 회로(인덕션·에어컨 등)"><rect x="-110" y="-110" width="220" height="220" class="sym" fill="#fff"/><path d="M-110 110L110 -110" class="sym"/></symbol>
+<symbol id="sym-switch" overflow="visible" data-label="스위치"><circle r="70" fill="#111"/><path d="M0 0L130 -130" class="sym"/></symbol>
+<symbol id="sym-switch-smart" overflow="visible" data-label="스마트 스위치(중성선)"><circle r="80" fill="#fff" class="sym"/><text y="45" font-size="120" text-anchor="middle" font-weight="800">N</text></symbol>
+<symbol id="sym-downlight" overflow="visible" data-label="다운라이트"><circle r="90" class="sym" fill="#fff"/><circle r="30" fill="#111"/></symbol>
+<symbol id="sym-ceiling-light" overflow="visible" data-label="천장등"><circle r="140" class="sym" fill="#fff"/><path d="M-100 -100L100 100M100 -100L-100 100" class="sym"/></symbol>
+<symbol id="sym-linear" overflow="visible" data-label="라인조명(길이별 늘림)"><rect x="-400" y="-35" width="800" height="70" fill="#111"/></symbol>
+<symbol id="sym-ac-ceiling" overflow="visible" data-label="천장형 에어컨 실내기"><rect x="-420" y="-420" width="840" height="840" class="sym" fill="#fff"/><path d="M-420 -420L420 420M420 -420L-420 420" class="sym" stroke-dasharray="40 30"/><text y="50" font-size="150" text-anchor="middle" font-weight="800">AC</text></symbol>
+<symbol id="sym-ac-out" overflow="visible" data-label="에어컨 실외기"><rect x="-400" y="-200" width="800" height="400" class="sym" fill="#fff"/><circle r="150" class="sym"/></symbol>
+<symbol id="sym-lan" overflow="visible" data-label="LAN 단자"><path d="M-110 90L0 -110L110 90Z" class="sym" fill="#fff"/></symbol>
+<symbol id="sym-ap" overflow="visible" data-label="Wi-Fi AP"><circle r="110" class="sym" fill="#fff"/><path d="M-170 -120A210 210 0 0 1 170 -120" class="sym"/></symbol>
+<symbol id="sym-comm" overflow="visible" data-label="통신단자함"><rect x="-220" y="-140" width="440" height="280" class="sym" fill="#fff"/><text y="45" font-size="120" text-anchor="middle" font-weight="800">TEL</text></symbol>
+<symbol id="sym-panel" overflow="visible" data-label="분전반"><rect x="-220" y="-140" width="440" height="280" fill="#111"/><text y="45" font-size="120" text-anchor="middle" font-weight="800" style="fill:#fff">P</text></symbol>
+<symbol id="sym-tablet" overflow="visible" data-label="벽 태블릿(HA)"><rect x="-260" y="-170" width="520" height="340" rx="40" class="sym" fill="#fff"/><text y="45" font-size="120" text-anchor="middle" font-weight="800">HA</text></symbol>
+<symbol id="sym-doorbell" overflow="visible" data-label="도어벨/카메라"><circle r="120" class="sym" fill="#fff"/><circle r="45" fill="#111"/></symbol>
+<symbol id="sym-sensor" overflow="visible" data-label="센서(재실·문열림·온습도)"><path d="M0 -130L130 0L0 130L-130 0Z" class="sym" fill="#fff"/><text y="45" font-size="110" text-anchor="middle" font-weight="800">S</text></symbol>
+<symbol id="sym-manifold" overflow="visible" data-label="난방 분배기"><rect x="-350" y="-120" width="700" height="240" class="sym" fill="#fff"/><path d="M-250 -120V120M-100 -120V120M50 -120V120M200 -120V120" class="sym"/></symbol>
+<symbol id="sym-water" overflow="visible" data-label="급수·급탕 접속점"><circle r="100" fill="#2e86de"/><circle r="45" fill="#fff"/></symbol>
+<symbol id="sym-drain" overflow="visible" data-label="배수구·배수 접속"><circle r="110" class="sym" fill="#fff"/><path d="M-60 -60L60 60M60 -60L-60 60" class="sym"/></symbol>
+<symbol id="sym-check" overflow="visible" data-label="현장 확인점"><circle r="130" fill="#e67e22"/><text y="50" font-size="150" text-anchor="middle" font-weight="800" style="fill:#fff">?</text></symbol>
+</defs>
+<rect x="-3000" y="-3300" width="22600" height="17600" fill="#fff"/>
+<g id="L-title">
+<text x="-2700" y="-2750" class="h1">계룡삼환 리모델링 · A-00 기준평면도 v2</text>
+<text x="-2700" y="-2420" class="note">단위 mm · 원점 X1/Y1 · 벽 중심선 좌표 · 분양 평면도 치수 기준(실측 전) · 1:100 @A3</text>
+</g>
+<g id="L-floor" data-layer="바닥 마감 구역">
+<rect x="0" y="700" width="3150" height="3300" fill="url(#pat-wood)" />
+<rect x="4800" y="0" width="3300" height="4000" fill="url(#pat-wood)" />
+<rect x="8100" y="1480" width="3300" height="2520" fill="url(#pat-wood)" />
+<rect x="1500" y="4000" width="7775" height="1500" fill="url(#pat-wood)" />
+<rect x="1500" y="5500" width="5700" height="300" fill="url(#pat-wood)" />
+<rect x="0" y="5800" width="2700" height="3900" fill="url(#pat-wood)" />
+<rect x="0" y="9700" width="2700" height="1350" fill="url(#pat-wood)" />
+<rect x="2700" y="5800" width="4500" height="5250" fill="url(#pat-wood)" />
+<rect x="7200" y="5500" width="4200" height="4200" fill="url(#pat-wood)" />
+<rect x="0" y="4000" width="1500" height="1800" fill="url(#pat-tile)" />
+<rect x="8100" y="350" width="2350" height="1130" fill="url(#pat-tile)" />
+<rect x="7200" y="9700" width="4200" height="1350" fill="url(#pat-tile)" />
+<rect x="3150" y="700" width="1650" height="2000" fill="url(#pat-tile-s)" />
+<rect x="3150" y="2700" width="950" height="1300" fill="url(#pat-tile-s)" />
+<rect x="9275" y="4000" width="1475" height="1500" fill="url(#pat-tile-s)" />
+<rect x="4100" y="2700" width="700" height="450" fill="url(#pat-shaft)" />
+</g>
+<g id="L-grid" data-layer="축선(X/Y)">
+<path class="grid" d="M0 -1500V12350"/>
+<circle class="grid-b" cx="0" cy="-1800" r="230"/><text class="grid-t" x="0" y="-1800">X1</text>
+<circle class="grid-b" cx="0" cy="12650" r="230"/><text class="grid-t" x="0" y="12650">X1</text>
+<path class="grid" d="M1500 -1500V12350"/>
+<circle class="grid-b" cx="1500" cy="-1800" r="230"/><text class="grid-t" x="1500" y="-1800">X2</text>
+<circle class="grid-b" cx="1500" cy="12650" r="230"/><text class="grid-t" x="1500" y="12650">X2</text>
+<path class="grid" d="M2700 -1500V12350"/>
+<circle class="grid-b" cx="2700" cy="-1800" r="230"/><text class="grid-t" x="2700" y="-1800">X3</text>
+<circle class="grid-b" cx="2700" cy="12650" r="230"/><text class="grid-t" x="2700" y="12650">X3</text>
+<path class="grid" d="M3150 -1500V12350"/>
+<circle class="grid-b" cx="3150" cy="-1800" r="230"/><text class="grid-t" x="3150" y="-1800">X4</text>
+<circle class="grid-b" cx="3150" cy="12650" r="230"/><text class="grid-t" x="3150" y="12650">X4</text>
+<path class="grid" d="M4800 -1500V12350"/>
+<circle class="grid-b" cx="4800" cy="-1800" r="230"/><text class="grid-t" x="4800" y="-1800">X5</text>
+<circle class="grid-b" cx="4800" cy="12650" r="230"/><text class="grid-t" x="4800" y="12650">X5</text>
+<path class="grid" d="M7200 -1500V12350"/>
+<circle class="grid-b" cx="7200" cy="-1800" r="230"/><text class="grid-t" x="7200" y="-1800">X6</text>
+<circle class="grid-b" cx="7200" cy="12650" r="230"/><text class="grid-t" x="7200" y="12650">X6</text>
+<path class="grid" d="M8100 -1500V12350"/>
+<circle class="grid-b" cx="8100" cy="-1800" r="230"/><text class="grid-t" x="8100" y="-1800">X7</text>
+<circle class="grid-b" cx="8100" cy="12650" r="230"/><text class="grid-t" x="8100" y="12650">X7</text>
+<path class="grid" d="M9275 -1500V12350"/>
+<circle class="grid-b" cx="9275" cy="-1800" r="230"/><text class="grid-t" x="9275" y="-1800">X8</text>
+<circle class="grid-b" cx="9275" cy="12650" r="230"/><text class="grid-t" x="9275" y="12650">X8</text>
+<path class="grid" d="M10750 -1500V12350"/>
+<circle class="grid-b" cx="10750" cy="-1800" r="230"/><text class="grid-t" x="10750" y="-1800">X9</text>
+<circle class="grid-b" cx="10750" cy="12650" r="230"/><text class="grid-t" x="10750" y="12650">X9</text>
+<path class="grid" d="M11400 -1500V12350"/>
+<circle class="grid-b" cx="11400" cy="-1800" r="230"/><text class="grid-t" x="11400" y="-1800">X10</text>
+<circle class="grid-b" cx="11400" cy="12650" r="230"/><text class="grid-t" x="11400" y="12650">X10</text>
+<path class="grid" d="M-1600 0H13000"/>
+<circle class="grid-b" cx="-2150" cy="0" r="230"/><text class="grid-t" x="-2150" y="0">Y1</text>
+<circle class="grid-b" cx="13300" cy="0" r="230"/><text class="grid-t" x="13300" y="0">Y1</text>
+<path class="grid" d="M-1600 700H13000"/>
+<circle class="grid-b" cx="-2150" cy="700" r="230"/><text class="grid-t" x="-2150" y="700">Y2</text>
+<circle class="grid-b" cx="13300" cy="700" r="230"/><text class="grid-t" x="13300" y="700">Y2</text>
+<path class="grid" d="M-1600 1480H13000"/>
+<circle class="grid-b" cx="-2150" cy="1480" r="230"/><text class="grid-t" x="-2150" y="1480">Y3</text>
+<circle class="grid-b" cx="13300" cy="1480" r="230"/><text class="grid-t" x="13300" y="1480">Y3</text>
+<path class="grid" d="M-1600 4000H13000"/>
+<circle class="grid-b" cx="-2150" cy="4000" r="230"/><text class="grid-t" x="-2150" y="4000">Y4</text>
+<circle class="grid-b" cx="13300" cy="4000" r="230"/><text class="grid-t" x="13300" y="4000">Y4</text>
+<path class="grid" d="M-1600 5500H13000"/>
+<circle class="grid-b" cx="-2150" cy="5500" r="230"/><text class="grid-t" x="-2150" y="5500">Y5</text>
+<circle class="grid-b" cx="13300" cy="5500" r="230"/><text class="grid-t" x="13300" y="5500">Y5</text>
+<path class="grid" d="M-1600 5800H13000"/>
+<circle class="grid-b" cx="-2150" cy="5800" r="230"/><text class="grid-t" x="-2150" y="5800">Y6</text>
+<circle class="grid-b" cx="13300" cy="5800" r="230"/><text class="grid-t" x="13300" y="5800">Y6</text>
+<path class="grid" d="M-1600 9700H13000"/>
+<circle class="grid-b" cx="-2150" cy="9700" r="230"/><text class="grid-t" x="-2150" y="9700">Y7</text>
+<circle class="grid-b" cx="13300" cy="9700" r="230"/><text class="grid-t" x="13300" y="9700">Y7</text>
+<path class="grid" d="M-1600 11050H13000"/>
+<circle class="grid-b" cx="-2150" cy="11050" r="230"/><text class="grid-t" x="-2150" y="11050">Y8</text>
+<circle class="grid-b" cx="13300" cy="11050" r="230"/><text class="grid-t" x="13300" y="11050">Y8</text>
+</g>
+<g id="L-wall-exist" data-layer="기존 벽">
+<path class="ext" d="M0 700L4800 700 M4800 700L4800 0 M4800 0L7950 0 M7950 0L7950 350 M7950 350L10450 350 M10450 350L10450 1480 M10450 1480L11400 1480 M11400 1480L11400 4000 M11400 4000L10750 4000 M10750 4000L10750 5500 M10750 5500L11400 5500 M11400 5500L11400 11050 M11400 11050L0 11050 M0 11050L0 5560 M0 4560L0 700 M10450 700L11400 700 M11400 700L11400 1480 M10450 350L10450 700 M11400 4000L11400 5500"/>
+<path class="str" d="M3150 700L3150 4000 M4800 700L4800 4000 M2670 4000L3150 4000 M3800 4000L4150 4000 M4720 4000L4800 4000 M4100 2700L4800 2700 M4100 3150L4800 3150 M4100 2700L4100 4000 M7950 350L7950 740 M7950 1440L7950 4000 M7950 1480L10450 1480 M7950 4000L8300 4000 M9030 4000L11400 4000 M9275 4000L9275 5500 M9960 5500L10750 5500 M7200 5500L7350 5500 M8100 5500L9275 5500 M7200 5500L7200 9700 M7200 9700L11400 9700 M0 5800L1950 5800 M2700 5800L2700 9700 M0 4000L1950 4000"/>
+<rect x="10550" y="800" width="750" height="580" fill="url(#pat-shaft)" stroke="#999" stroke-width="10"/>
+<rect x="10850" y="4100" width="450" height="1300" fill="url(#pat-shaft)" stroke="#999" stroke-width="10"/>
+<text x="10925" y="1170" class="room-c">X(세대 밖)</text><text x="11075" y="4770" class="room-c" transform="rotate(-90 11075 4770)">X(세대 밖)</text>
+<text x="4450" y="2900" class="room-c">X(배관)</text><text x="4450" y="3060" class="room-c" style="font-size:105px">세대 밖</text>
+</g>
+<g id="L-wall-new" data-layer="신설 벽(계획)">
+<rect class="new" x="9950.0" y="6580" width="100" height="3120"/>
+<rect class="new" x="1450.0" y="4000" width="100" height="350"/>
+<rect class="new" x="1450.0" y="5170" width="100" height="630"/>
+<rect class="new" x="460" y="9650.0" width="1080" height="100"/>
+<rect class="new" x="7150.0" y="9700" width="100" height="360"/>
+<rect class="new" x="7150.0" y="10750" width="100" height="300"/>
+<rect class="new" x="10150.0" y="9700" width="100" height="550"/>
+<rect class="new" x="10150.0" y="10830" width="100" height="220"/>
+</g>
+<g id="L-wall-wing" data-layer="내력 날개벽">
+<rect x="0" y="9660" width="460" height="80" fill="#111"/>
+<rect class="new" x="2240" y="9660" width="420" height="80"/>
+<rect class="new" x="2660" y="9660" width="80" height="1390"/>
+</g>
+<g id="L-bearing" data-layer="내력벽(철거 불가)">
+<rect x="0" y="9660" width="460" height="80" fill="none" stroke="#c0392b" stroke-width="20"/>
+</g>
+<text x="2450" y="9560" class="room-c" style="font-size:55px;fill:#555">가벽(날개벽 자리)</text>
+<g id="L-demo" data-layer="철거 계획(구조 확인 전)">
+<path class="demo" d="M2740 9700L7160 9700"/>
+</g>
+<g id="L-openings" data-layer="창호·문(번호)">
+<g id="W01" data-type="window" data-width-mm="2130">
+<path class="win-gap" d="M410 700H2540"/>
+<path class="win" d="M410 645H2540 M410 755H2540 M410 645V755 M2540 645V755"/>
+<path class="win-g" d="M410 685H2540 M410 715H2540"/>
+<text class="tag" x="1475.0" y="440">W01 · 2130</text>
+</g>
+<g id="W02" data-type="window" data-width-mm="935">
+<path class="win-gap" d="M8890 350H9825"/>
+<path class="win" d="M8890 295H9825 M8890 405H9825 M8890 295V405 M9825 295V405"/>
+<path class="win-g" d="M8890 335H9825 M8890 365H9825"/>
+<text class="tag" x="9357.5" y="90">W02 · 935</text>
+</g>
+<g id="W03" data-type="window" data-width-mm="1470">
+<path class="win-gap" d="M8800 1480H10270"/>
+<path class="win" d="M8800 1425H10270 M8800 1535H10270 M8800 1425V1535 M10270 1425V1535"/>
+<path class="win-g" d="M8800 1465H10270 M8800 1495H10270"/>
+<text class="tag" x="9535.0" y="1810">W03 · 1470</text>
+</g>
+<g id="W04" data-type="window" data-width-mm="2020">
+<path class="win-gap" d="M7930 9700H9950"/>
+<path class="win" d="M7930 9645H9950 M7930 9755H9950 M7930 9645V9755 M9950 9645V9755"/>
+<path class="win-g" d="M7930 9685H9950 M7930 9715H9950"/>
+<text class="tag" x="8940.0" y="9470">W04 · 2020</text>
+</g>
+<g id="W05" data-type="window" data-width-mm="2090">
+<path class="win-gap" d="M320 11050H2410"/>
+<path class="win" d="M320 10995H2410 M320 11105H2410 M320 10995V11105 M2410 10995V11105"/>
+<path class="win-g" d="M320 11035H2410 M320 11065H2410"/>
+<text class="tag" x="1365.0" y="11410">W05 · 2090</text>
+</g>
+<g id="W11" data-type="window" data-width-mm="880">
+<path class="win-gap" d="M560 9700H1440"/>
+<path class="win" d="M560 9645H1440 M560 9755H1440 M560 9645V9755 M1440 9645V9755"/>
+<path class="win-g" d="M560 9685H1440 M560 9715H1440"/>
+<text class="tag" x="1000.0" y="9470">W11 · 880</text>
+</g>
+<g id="W06" data-type="window" data-width-mm="3470">
+<path class="win-gap" d="M3290 11050H6760"/>
+<path class="win" d="M3290 10995H6760 M3290 11105H6760 M3290 10995V11105 M6760 10995V11105"/>
+<path class="win-g" d="M3290 11035H6760 M3290 11065H6760"/>
+<text class="tag" x="5025.0" y="11410">W06 · 3470</text>
+</g>
+<g id="W07" data-type="window" data-width-mm="2140">
+<path class="win-gap" d="M7340 11050H9480"/>
+<path class="win" d="M7340 10995H9480 M7340 11105H9480 M7340 10995V11105 M9480 10995V11105"/>
+<path class="win-g" d="M7340 11035H9480 M7340 11065H9480"/>
+<text class="tag" x="8410.0" y="11410">W07 · 2140</text>
+</g>
+<g id="W08" data-type="window" data-width-mm="680">
+<path class="win-gap" d="M10470 11050H11150"/>
+<path class="win" d="M10470 10995H11150 M10470 11105H11150 M10470 10995V11105 M11150 10995V11105"/>
+<path class="win-g" d="M10470 11035H11150 M10470 11065H11150"/>
+<text class="tag" x="10810.0" y="11410">W08 · 680</text>
+</g>
+<g id="W09" data-type="window" data-width-mm="800">
+<path class="win-gap" d="M3550 700H4350"/>
+<path class="win" d="M3550 645H4350 M3550 755H4350 M3550 645V755 M4350 645V755"/>
+<path class="win-g" d="M3550 685H4350 M3550 715H4350"/>
+<text class="tag" x="3950.0" y="440">W09 · 800</text>
+</g>
+<g id="W10" data-type="window" data-width-mm="800">
+<path class="win-gap" d="M6050 0H6850"/>
+<path class="win" d="M6050 -55H6850 M6050 55H6850 M6050 -55V55 M6850 -55V55"/>
+<path class="win-g" d="M6050 -15H6850 M6050 15H6850"/>
+<text class="tag" x="6450.0" y="-260">W10 · 800</text>
+</g>
+<g id="D01" data-type="door" data-width-mm="1000">
+<path class="door-gap" d="M0 4560L0 5560"/>
+<path class="door-leaf" d="M0 4560L-1000 4560"/>
+<path class="door-arc" d="M-1000 4560A1000 1000 0 0 0 0 5560"/>
+<text class="tag" x="-450.0" y="5105.0">D01</text>
+</g>
+<g id="MD01" data-type="door" data-width-mm="820">
+<path class="door-gap" d="M1500 5170L1500 4350"/>
+<path class="door-leaf" d="M1500 5170L2320 5170"/>
+<path class="door-arc" d="M2320 5170A820 820 0 0 0 1500 4350"/>
+<text class="tag" x="1869.0" y="4805.0">MD01</text>
+</g>
+<g id="D02" data-type="door" data-width-mm="720">
+<path class="door-gap" d="M1950 4000L2670 4000"/>
+<path class="door-leaf" d="M1950 4000L1950 3280"/>
+<path class="door-arc" d="M1950 3280A720 720 0 0 1 2670 4000"/>
+<text class="tag" x="2310.0" y="3721.0">D02</text>
+</g>
+<g id="D03" data-type="door" data-width-mm="650">
+<path class="door-gap" d="M3150 4000L3800 4000"/>
+<path class="door-leaf" d="M3150 4000L3150 3350"/>
+<path class="door-arc" d="M3150 3350A650 650 0 0 1 3800 4000"/>
+<text class="tag" x="3475.0" y="3752.5">D03</text>
+</g>
+<g id="D04" data-type="door" data-width-mm="750">
+<path class="door-gap" d="M2700 5800L1950 5800"/>
+<path class="door-leaf" d="M2700 5800L2700 6550"/>
+<path class="door-arc" d="M2700 6550A750 750 0 0 1 1950 5800"/>
+<text class="tag" x="2325.0" y="6182.5">D04</text>
+</g>
+<g id="D05" data-type="door" data-width-mm="750">
+<path class="door-gap" d="M7350 5500L8100 5500"/>
+<path class="door-leaf" d="M7350 5500L7350 6250"/>
+<path class="door-arc" d="M7350 6250A750 750 0 0 0 8100 5500"/>
+<text class="tag" x="7725.0" y="5882.5">D05</text>
+</g>
+<g id="D06" data-type="door" data-width-mm="685">
+<path class="door-gap" d="M9275 5500L9960 5500"/>
+<path class="door-leaf" d="M9275 5500L9275 4815"/>
+<path class="door-arc" d="M9275 4815A685 685 0 0 1 9960 5500"/>
+<text class="tag" x="9617.5" y="5236.75">D06</text>
+</g>
+<g id="D09" data-type="door" data-width-mm="580">
+<path class="door-gap" d="M10200 10250L10200 10830"/>
+<path class="door-leaf" d="M10200 10250L9620 10250"/>
+<path class="door-arc" d="M9620 10250A580 580 0 0 0 10200 10830"/>
+<text class="tag" x="9939.0" y="10585.0">D09</text>
+</g>
+<g id="D10" data-type="door" data-width-mm="570">
+<path class="door-gap" d="M4720 4000L4150 4000"/>
+<path class="door-leaf" d="M4720 4000L4720 4570"/>
+<path class="door-arc" d="M4720 4570A570 570 0 0 1 4150 4000"/>
+<text class="tag" x="4435.0" y="4301.5">D10</text>
+</g>
+<g id="D07" data-type="door" data-width-mm="700">
+<path class="door-gap" d="M7950 1440L7950 740"/>
+<path class="door-leaf" d="M7950 1440L8650 1440"/>
+<path class="door-arc" d="M8650 1440A700 700 0 0 0 7950 740"/>
+<text class="tag" x="8265.0" y="1135.0">D07</text>
+</g>
+<g id="TD01" data-type="door" data-width-mm="690">
+<path class="door-gap" d="M7200 10060L7200 10750"/>
+<path class="door-leaf" d="M7200 10060L7890 10060"/>
+<path class="door-arc" d="M7890 10060A690 690 0 0 1 7200 10750"/>
+<text class="tag" x="7510.5" y="10450.0">TD01</text>
+</g>
+</g>
+<g id="L-fixture-exist" data-layer="기존 위생·주방 기구(원도면 배치)">
+<rect class="fix" x="3230" y="790" width="1490" height="440" rx="110"/><rect class="fix-l" x="3300" y="850" width="1350" height="320" rx="100"/><text x="3975" y="1065" class="room-c">욕조</text>
+<rect class="fix" x="4230" y="1330" width="510" height="500" rx="70"/><ellipse class="fix-l" cx="4470" cy="1580" rx="170" ry="190"/><text x="4000" y="1620" class="room-c" style="text-anchor:end">세면</text>
+<rect class="fix" x="4580" y="2030" width="160" height="480" rx="30"/><ellipse class="fix" cx="4340" cy="2270" rx="300" ry="200"/><text x="4000" y="2310" class="room-c" style="text-anchor:end">변기</text>
+<rect x="4615" y="2000" width="120" height="540" fill="none" stroke="#555" stroke-width="12" stroke-dasharray="40 25"/><text x="4560" y="1980" class="room-c" style="font-size:60px;text-anchor:end">선반(변기 위)</text>
+<rect x="9330" y="4045" width="580" height="120" fill="none" stroke="#555" stroke-width="12" stroke-dasharray="40 25"/><text x="9620" y="3990" class="room-c" style="font-size:60px">선반(변기 위)</text>
+<rect class="fix" x="9380" y="4060" width="480" height="160" rx="30"/><ellipse class="fix" cx="9620" cy="4450" rx="200" ry="290"/>
+<rect class="fix" x="10050" y="4060" width="600" height="460" rx="70"/><ellipse class="fix-l" cx="10350" cy="4310" rx="200" ry="150"/>
+</g>
+<g id="L-kitchen" data-layer="주방 계획(1안 ㄷ자, 2026-11-22)">
+<rect x="4850" y="50" width="3060" height="600" fill="#fff" stroke="#555" stroke-width="14"/>
+<path d="M4850 50 H5750 V650 H5450 V950 H4850 Z" fill="#fff" stroke="#8a5a00" stroke-width="14"/>
+<path d="M5450 650 H5750 M5450 650 V950" stroke="#8a5a00" stroke-width="30"/>
+<path d="M5750 650 L5900 910" stroke="#c0392b" stroke-width="12" stroke-dasharray="40 25"/><path d="M5450 650 A300 300 0 0 0 5900 910" fill="none" stroke="#c0392b" stroke-width="10" stroke-dasharray="30 20"/>
+<path d="M5450 950 L5710 1100" stroke="#2c5d97" stroke-width="12" stroke-dasharray="40 25"/><path d="M5450 650 A300 300 0 0 1 5710 1100" fill="none" stroke="#2c5d97" stroke-width="10" stroke-dasharray="30 20"/>
+<text x="5150" y="330" class="room-c" style="font-size:72px">하부 코너장</text>
+<text x="5150" y="440" class="room-c" style="font-size:66px">양개형 900</text>
+<rect x="5750" y="50" width="600" height="600" fill="#fff" stroke="#555" stroke-width="14" style="fill:#eef1f7"/>
+<text x="6050" y="330" class="room-c" style="font-size:70px">식세기 600</text>
+<rect x="5750" y="650" width="600" height="565" fill="none" stroke="#2c5d97" stroke-width="10" stroke-dasharray="40 30"/>
+<text x="6050" y="990" class="room-c" style="font-size:52px">문 열림 565</text>
+<text x="6590" y="380" class="room-c" style="font-size:70px">조리대 480</text>
+<rect x="6830" y="90" width="600" height="520" fill="#fff" stroke="#111" stroke-width="16"/><circle cx="6980" cy="250" r="95" class="fix-l"/><circle cx="7280" cy="250" r="95" class="fix-l"/><circle cx="7130" cy="470" r="110" class="fix-l"/>
+<rect x="6780" y="60" width="700" height="120" fill="none" stroke="#c0392b" stroke-width="16" stroke-dasharray="50 30"/>
+<rect x="7430" y="50" width="450" height="600" fill="#fff" stroke="#555" stroke-width="14"/>
+<text x="7655" y="350" class="room-c" style="font-size:80px" transform="rotate(-90 7655 350)">양념</text>
+<rect x="7880" y="50" width="30" height="600" fill="#fff" stroke="#555" stroke-width="14" style="fill:#ddd"/>
+<path d="M4850 1270 H7910 M4850 1200 V1340 M7910 1200 V1340" stroke="#c0392b" stroke-width="14"/><rect x="6380" y="1170" width="1100" height="120" fill="#fff"/><text x="6930" y="1260" class="room-c" style="font-size:85px;fill:#c0392b;font-weight:800">실측 안목 3,060</text>
+<rect x="4850" y="950" width="600" height="900" fill="#fff" stroke="#555" stroke-width="14"/>
+<rect x="4920" y="970" width="460" height="860" rx="50" class="fix"/><circle cx="5150" cy="1400" r="40" class="fix-l"/>
+<text x="5150" y="1260" class="room-c" style="font-size:62px" transform="rotate(-90 5150 1260)">개수대 860</text>
+<rect x="5260" y="1020" width="150" height="760" fill="none" stroke="#b03a2e" stroke-width="12" stroke-dasharray="30 18"/>
+<text x="5335" y="1400" class="room-c" style="font-size:52px" transform="rotate(-90 5335 1400)">분배기(하부)</text>
+<rect x="4850" y="1850" width="600" height="100" fill="#fff" stroke="#555" stroke-width="10" stroke-dasharray="30 20"/>
+<text x="5150" y="1920.0" class="room-c" style="font-size:46px">여유 100</text>
+<path d="M5520 950 V1950 M5480 950 H5560 M5480 1850 H5560 M5480 1950 H5560" stroke="#555" stroke-width="10"/>
+<text x="5600" y="1420" class="room-c" style="font-size:56px" transform="rotate(-90 5600 1420)">900</text>
+<text x="5600" y="1900.0" class="room-c" style="font-size:46px" transform="rotate(-90 5600 1900.0)">100</text>
+<rect x="4850" y="1950" width="1400" height="600" fill="#fbf1de" stroke="#8a5a00" stroke-width="16"/>
+<path d="M5450 1950 V2550" stroke="#8a5a00" stroke-width="10" stroke-dasharray="40 30"/>
+<text x="5150" y="2240" class="room-c" style="font-size:58px">로봇청소기</text>
+<text x="5150" y="2330" class="room-c" style="font-size:48px">(식탁 쪽 개방)</text>
+<path d="M4900 2550 h500" stroke="#2c5d97" stroke-width="22"/>
+<text x="5880" y="2280" class="room-c" style="font-size:62px">반도 1,400 × 600</text>
+<path d="M5450 2470 H6250 M5450 2430 V2510 M6250 2430 V2510" stroke="#555" stroke-width="8"/>
+<text x="5850" y="2400" class="room-c" style="font-size:44px">앞면 800</text>
+<rect x="7160" y="1990" width="750" height="930" fill="#fff" stroke="#555" stroke-width="14"/>
+<rect x="7160" y="2920" width="750" height="720" fill="#fff" stroke="#555" stroke-width="14"/>
+<rect x="7160" y="1998" width="698" height="914" fill="#d9eedd" stroke="#1d6b3a" stroke-width="10"/>
+<text x="7509" y="2455" class="room-c" style="font-size:66px" transform="rotate(-90 7509 2455)">냉장고 914×698</text>
+<rect x="7160" y="2947" width="685" height="666" fill="#d9eedd" stroke="#1d6b3a" stroke-width="10"/>
+<text x="7502" y="3280" class="room-c" style="font-size:62px" transform="rotate(-90 7502 3280)">김치 666×685</text>
+<text x="7884" y="2455" class="room-c" style="font-size:36px" transform="rotate(-90 7884 2455)">뒤 52</text>
+<text x="7878" y="3280" class="room-c" style="font-size:36px" transform="rotate(-90 7878 3280)">뒤 65</text>
+<rect x="7160" y="1990" width="750" height="1650" fill="none" stroke="#1d6b3a" stroke-width="18"/>
+<path d="M7160 1998 L6703 1998 A457 457 0 0 0 7160 2455 M7160 2912 L6703 2912 A457 457 0 0 1 7160 2455" fill="none" stroke="#2c5d97" stroke-width="10" stroke-dasharray="40 25"/>
+<text x="6930" y="2220" class="room-c" style="font-size:48px">문 457</text>
+<text x="6930" y="2720" class="room-c" style="font-size:48px">문 457</text>
+<path d="M7160 3620 L6494 3620 A666 666 0 0 1 7160 2954" fill="none" stroke="#2c5d97" stroke-width="10" stroke-dasharray="40 25"/>
+<text x="6820" y="3540" class="room-c" style="font-size:44px">상칸 문 666(좌/우 확인)</text>
+<rect x="7160" y="1440" width="750" height="550" fill="#fff" stroke="#555" stroke-width="14"/>
+<text x="7535" y="1715.0" class="room-c" style="font-size:56px" transform="rotate(-90 7535 1715.0)">키큰장 550</text>
+<path d="M7160 1440 L6610 1440 A550 550 0 0 0 7160 1990" fill="none" stroke="#2c5d97" stroke-width="10" stroke-dasharray="40 25"/>
+<rect x="7160" y="3640" width="750" height="400" fill="#fff" stroke="#555" stroke-width="14" style="fill:#fbf1de"/>
+<text x="7535" y="3840.0" class="room-c" style="font-size:52px" transform="rotate(-90 7535 3840.0)">커피장 400</text>
+<text x="7020" y="3860.0" class="room-c" style="font-size:40px" transform="rotate(-90 7020 3860.0)">하부 수납 · 상판 커피머신</text>
+<path d="M7160 1390 H7910 M7160 1350 V1430 M7910 1350 V1430" stroke="#555" stroke-width="10"/>
+<text x="7535" y="1365" class="room-c" style="font-size:46px">750</text>
+<path d="M7160 4110 H7910 M7160 4070 V4150 M7910 4070 V4150" stroke="#555" stroke-width="10"/>
+<text x="7535" y="4090" class="room-c" style="font-size:46px">750</text>
+<path d="M8110 50 V4040 M8330 1440 V4040 M8290 1440 H8370 M8290 4040 H8370 M8070 50 H8150 M8070 650 H8150 M8070 740 H8150 M8070 1440 H8150 M8070 1990 H8150 M8070 3640 H8150 M8070 4040 H8150" stroke="#555" stroke-width="10"/>
+<text x="8190" y="350.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 350.0)">600</text>
+<text x="8190" y="695.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 695.0)">90</text>
+<text x="8190" y="1320.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 1320.0)">700</text>
+<text x="8190" y="1715.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 1715.0)">키큰장 550</text>
+<text x="8190" y="2815.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 2815.0)">냉장고장 1,650 (930 + 720)</text>
+<text x="8190" y="3840.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 3840.0)">커피장 400</text>
+<text x="8410" y="2740" class="room-c" style="font-size:46px" transform="rotate(-90 8410 2740)">실측 2,600 (발코니 문 쪽 모서리~커피장 끝 = H-옷방 외경)</text>
+<path d="M6500 650 V1950 M6430 650 H6570 M6430 1950 H6570" stroke="#2c5d97" stroke-width="12"/><text x="6560" y="1420.0" class="room-c" style="font-size:72px;fill:#2c5d97;text-anchor:start">1,300</text>
+<path d="M6250 2350 H7160 M6250 2280 V2420 M7160 2280 V2420" stroke="#2c5d97" stroke-width="12"/><text x="6705" y="2320" class="room-c" style="font-size:72px;fill:#2c5d97">통로 910</text>
+<path d="M6850 1100 L7450 1100" stroke="#8a5a00" stroke-width="10" stroke-dasharray="50 30"/><text x="7500" y="1080" class="room-c" style="font-size:60px;fill:#8a5a00;text-anchor:start">→ D07</text>
+<path d="M5650 2550 V2650" stroke="#555" stroke-width="10"/>
+<text x="5760" y="2625" class="room-c" style="font-size:44px">100</text>
+<path d="M4850 600 H7910 M4850 565 V635 M5750 565 V635 M6350 565 V635 M6830 565 V635 M7430 565 V635 M7880 565 V635 M7910 565 V635" stroke="#555" stroke-width="8"/>
+<text x="5300.0" y="585" class="room-c" style="font-size:42px">900</text>
+<text x="6050.0" y="585" class="room-c" style="font-size:42px">600</text>
+<text x="6590.0" y="585" class="room-c" style="font-size:42px">480</text>
+<text x="7130.0" y="585" class="room-c" style="font-size:42px">600</text>
+<text x="7655.0" y="585" class="room-c" style="font-size:42px">450</text>
+<text x="7895.0" y="585" class="room-c" style="font-size:42px"></text>
+<text x="7895" y="720" class="room-c" style="font-size:40px">30</text>
+<path d="M5520 50 V1950 M5480 50 H5560" stroke="#555" stroke-width="10"/>
+<text x="5600" y="500" class="room-c" style="font-size:56px" transform="rotate(-90 5600 500)">900</text>
+<path d="M6320 1950 V2550 M6280 1950 H6360 M6280 2550 H6360" stroke="#555" stroke-width="10"/>
+<text x="6400" y="2250" class="room-c" style="font-size:50px" transform="rotate(-90 6400 2250)">600</text>
+<path d="M7470 50 V650 M7440 50 H7500 M7440 650 H7500" stroke="#555" stroke-width="8"/>
+<circle cx="5650" cy="3250" r="600" fill="#f7e7c8" stroke="#8a5a00" stroke-width="16"/>
+<text x="5650" y="3260" class="room-c" style="font-size:90px">원형 식탁</text>
+<text x="5650" y="3370" class="room-c" style="font-size:60px">Ø1,200</text>
+<rect x="5987.401153701776" y="3587.401153701776" width="400" height="400" rx="70" fill="#fff" stroke="#888" stroke-width="12" transform="rotate(-45 6187.401153701776 3787.401153701776)"/>
+<rect x="5450.0" y="3810.0" width="400" height="400" rx="70" fill="#fff" stroke="#888" stroke-width="12" transform="rotate(0 5650.0 4010.0)"/>
+<rect x="4912.598846298224" y="3587.401153701776" width="400" height="400" rx="70" fill="#fff" stroke="#888" stroke-width="12" transform="rotate(45 5112.598846298224 3787.401153701776)"/>
+<text x="6900" y="4820" class="room-c" style="font-size:90px;fill:#8a5a00">주방 1안 (ㄷ자)</text>
+</g>
+<g id="L-furniture" data-layer="가구·수납(계획)">
+<rect x="80" y="5560" width="1340" height="170" fill="none" stroke="#555" stroke-width="10" stroke-dasharray="20 40"/><text x="750" y="5500" class="room-c" style="font-size:72px">노출형 기울임 신발 거치대 170 (가구 없음)</text>
+<rect x="60" y="4040" width="1380" height="400" fill="#fff" stroke="#555" stroke-width="14" stroke-dasharray="70 40"/><text x="750" y="4290" class="room-c" style="font-size:80px">신발장 (깊이 약 400)</text>
+<g data-furniture="beds"><rect x="7220" y="6940" width="2300" height="1760" rx="40" fill="#f3efe8" stroke="#6b5a45" stroke-width="14"/><rect x="7240" y="7010" width="420" height="1620" rx="30" fill="#fff" stroke="#6b5a45" stroke-width="8"/><text x="8450" y="7860" class="room-c" style="font-size:105px;fill:#6b5a45">침대 1,760×2,300</text></g>
+<text x="9150" y="6850" class="room-c" style="font-size:80px;fill:#c0392b">문 쪽 여유 1,440</text>
+<rect x="10890" y="5580" width="450" height="1000" fill="#fff" stroke="#8a5a00" stroke-width="16"/>
+<path d="M11330 5650V6510" stroke="#4a7bb7" stroke-width="30"/>
+<text x="11115" y="6080" class="room-c" transform="rotate(-90 11115 6080)" style="dominant-baseline:central;fill:#8a5a00;font-size:60px">화장대 선반 (직접 구매)</text>
+<circle cx="10650" cy="6080" r="160" fill="#fff" stroke="#888" stroke-width="12" stroke-dasharray="30 20"/>
+<text x="10350" y="7900" class="room-c" style="font-size:95px;fill:#c0392b">장 위치 미정</text>
+<path d="M10050 8900 H11350 M10050 8850 V8950 M11350 8850 V8950" stroke="#c0392b" stroke-width="12"/><text x="10700" y="8860" class="room-c" style="font-size:70px;fill:#c0392b">1,300 (우측 벽~가벽)</text>
+<path d="M9520 8300 H9950" stroke="#c0392b" stroke-width="10"/><text x="9735" y="8260" class="room-c" style="font-size:60px;fill:#c0392b">430</text>
+<text x="8940" y="9330" class="room-c" style="font-size:60px;fill:#c0392b">W04 축소 — 가벽 앞까지 약 2,020 (기존 2,220, 최종 폭 미정)</text>
+<text x="1350" y="10750" class="room-c" style="font-size:60px;fill:#555">빈 공간 (창고 없음 · 추후 가구)</text>
+<g id="D11" data-type="folding-door" data-width-mm="700">
+<path d="M2240 9700 L2065 9397 L1890 9700" fill="none" stroke="#111" stroke-width="30" stroke-linejoin="round"/>
+<path d="M2240 9700 H1540" stroke="#555" stroke-width="10" stroke-dasharray="40 30"/>
+<path d="M1700 9560 H2090" stroke="#2c5d97" stroke-width="10"/><path d="M2130 9560 L2070 9525 L2070 9595 Z" fill="#2c5d97"/>
+<rect x="2140" y="9330" width="100" height="370" fill="none" stroke="#2c5d97" stroke-width="8" stroke-dasharray="25 15"/>
+<text x="2060" y="9250" class="tag">D11</text><text x="1890" y="9150" class="room-c" style="font-size:50px;fill:#555">루버 셔터 접이문 350×2</text>
+</g>
+<text x="9750" y="3250" class="room-c" style="font-size:85px;fill:#8a5a00">시스템장 (기존 집 이전)</text>
+<text x="8665" y="4330" class="room-c" style="font-size:60px;fill:#555">개구부 730 (문 없음)</text>
+<rect x="210" y="750" width="2530" height="200" fill="#fbf6e6" fill-opacity=".45" stroke="#9a7d0a" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="1475.0" y="850.0" class="room-c" style="font-size:75px;fill:#9a7d0a;dominant-baseline:central">커튼박스 W01</text>
+<rect x="8600" y="1530" width="1870" height="200" fill="#fbf6e6" fill-opacity=".45" stroke="#9a7d0a" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="9535.0" y="1630.0" class="room-c" style="font-size:75px;fill:#9a7d0a;dominant-baseline:central">커튼박스 W03</text>
+<rect x="7730" y="9450" width="2210" height="200" fill="#fbf6e6" fill-opacity=".45" stroke="#9a7d0a" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="8835.0" y="9550.0" class="room-c" style="font-size:75px;fill:#9a7d0a;dominant-baseline:central">커튼박스 W04</text>
+<rect x="480" y="9450" width="1760" height="200" fill="#fbf6e6" fill-opacity=".45" stroke="#9a7d0a" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="1360.0" y="9550.0" class="room-c" style="font-size:75px;fill:#9a7d0a;dominant-baseline:central">커튼박스 W11+D11</text>
+<rect x="3190" y="10800" width="3950" height="200" fill="#fbf6e6" fill-opacity=".45" stroke="#9a7d0a" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="5165.0" y="10900.0" class="room-c" style="font-size:75px;fill:#9a7d0a;dominant-baseline:central">커튼박스 W06</text>
+<g data-furniture="sofa"><rect x="2800" y="6650.0" width="950" height="2200" rx="60" fill="#f4efe6" stroke="#6b5a45" stroke-width="16"/><rect x="2800" y="6650.0" width="220" height="2200" rx="40" fill="#e6dccb" stroke="#6b5a45" stroke-width="10"/><rect x="2800" y="6650.0" width="950" height="200" rx="40" fill="#e6dccb" stroke="#6b5a45" stroke-width="10"/><rect x="2800" y="8650.0" width="950" height="200" rx="40" fill="#e6dccb" stroke="#6b5a45" stroke-width="10"/><path d="M3020 7383H3750 M3020 8117H3750" stroke="#6b5a45" stroke-width="8" stroke-dasharray="30 20"/><text x="3385" y="7750" class="room-c" transform="rotate(-90 3385 7750)" style="dominant-baseline:central;fill:#6b5a45">소파 약 2,200×950</text></g>
+<g data-furniture="tv"><rect x="6600" y="7200" width="500" height="800" rx="80" fill="#fff" stroke="#888" stroke-width="12" stroke-dasharray="40 25"/><path d="M6720 6762.5V8437.5" stroke="#111" stroke-width="60" stroke-linecap="butt"/><text x="6980" y="7600" class="room-c" transform="rotate(-90 6980 7600)" style="dominant-baseline:central;font-size:105px">TV 75" · 폭 약 1,675</text></g>
+<path d="M2620 7750H2780 M7220 7600H7380" stroke="#c0392b" stroke-width="14"/>
+<g data-furniture="tower-ac" transform="rotate(45 3043 10687)"><rect x="2843.0" y="10487.0" width="400" height="400" rx="50" fill="#eef4fb" stroke="#2c5d97" stroke-width="16"/><path d="M2903.0 10487.0 H3183.0" stroke="#2c5d97" stroke-width="40" stroke-linecap="round"/></g>
+<text x="3373" y="10437" class="room-c" style="font-size:80px;fill:#2c5d97;text-anchor:start">타워 에어컨(45°)</text>
+<text x="2580" y="7790" class="room-c" style="font-size:80px;fill:#c0392b;text-anchor:end">벽 중앙</text><text x="7420" y="7640" class="room-c" style="font-size:80px;fill:#c0392b;text-anchor:start">벽 중앙</text>
+<path d="M3790 7675H6680" stroke="#999" stroke-width="10" stroke-dasharray="60 40"/>
+<text x="5250" y="7635" class="room-c" style="font-size:100px;fill:#888">시청 거리 약 3,000</text>
+</g>
+<g id="L-labels" data-layer="실명·면적">
+<g data-room="A-01" data-area-m2="2.70" data-floor="타일 · 북측 신발장">
+<text x="750" y="5000" class="room-c" style="font-weight:800;font-size:165px;fill:#222">현관</text>
+<text x="750" y="5190" class="room-a">A-01 · ≈2.7㎡</text>
+</g>
+<g data-room="G" data-area-m2="10.39" data-floor="마루 · 팬트리1 취소로 원래 크기 · 서재→침실(2026-11-22)">
+<text x="1950" y="2050" class="room-c" style="font-weight:800;font-size:165px;fill:#222">G-침실</text>
+<text x="1950" y="2240" class="room-a">G · ≈10.4㎡</text>
+</g>
+<g data-room="PT" data-area-m2="0.59" data-floor="마루 · MX4200 #1">
+<text x="4450" y="3560" class="room-c" style="font-weight:800;font-size:165px;fill:#222">팬트리</text>
+<text x="4450" y="3750" class="room-a">PT · ≈0.6㎡</text>
+</g>
+<g data-room="A-04" data-area-m2="4.54" data-floor="타일">
+<text x="3560" y="2900" class="room-c" style="font-weight:800;font-size:165px;fill:#222">욕실A</text>
+<text x="3560" y="3090" class="room-a">A-04 · ≈4.5㎡</text>
+</g>
+<g data-room="A-03" data-area-m2="13.20" data-floor="마루/타일 미정">
+<text x="6000" y="1470" class="room">주방</text>
+<text x="6000" y="1700" class="room-c">A-03</text>
+<text x="6000" y="1890" class="room-a">≈13.2㎡</text>
+</g>
+<g data-room="A-08-1" data-area-m2="2.66" data-floor="타일(비확장) · 외벽 위치 실측 필요">
+<text x="9275" y="1080" class="room-c" style="font-weight:800;font-size:165px;fill:#222">주방 옆 발코니</text>
+<text x="9275" y="1270" class="room-a">A-08-1 · ≈2.7㎡</text>
+</g>
+<g data-room="H" data-area-m2="8.69" data-floor="마루 · 시스템장(기존 집 이전 설치)">
+<text x="9750" y="2800" class="room-c" style="font-weight:800;font-size:165px;fill:#222">H-옷방</text>
+<text x="9750" y="2990" class="room-a">H · ≈8.7㎡</text>
+</g>
+<g data-room="A-05" data-area-m2="2.21" data-floor="타일">
+<text x="10300" y="4950" class="room-c" style="font-weight:800;font-size:165px;fill:#222">욕실B</text>
+<text x="10300" y="5140" class="room-a">A-05 · ≈2.2㎡</text>
+</g>
+<g data-room="HALL" data-area-m2="12.02" data-floor="마루">
+<text x="4950" y="4800" class="room-c" style="font-weight:800;font-size:165px;fill:#222">복도</text>
+<text x="4950" y="4990" class="room-a">HALL · ≈12.0㎡</text>
+</g>
+<g data-room="I" data-area-m2="10.53" data-floor="마루">
+<text x="1300" y="8400" class="room">I-서재</text>
+<text x="1300" y="8630" class="room-c">I</text>
+<text x="1300" y="8820" class="room-a">≈10.5㎡</text>
+</g>
+<g data-room="A-02" data-area-m2="18.90" data-floor="마루">
+<text x="4950" y="7700" class="room">거실</text>
+<text x="4950" y="7930" class="room-c">A-02</text>
+<text x="4950" y="8120" class="room-a">≈18.9㎡</text>
+</g>
+<g data-room="F" data-area-m2="17.64" data-floor="마루 · 드레스룸 가벽 철거, 장 위치 미정">
+<text x="8500" y="6050" class="room">F-침실</text>
+<text x="8500" y="6280" class="room-c">F</text>
+<text x="8500" y="6470" class="room-a">≈17.6㎡</text>
+</g>
+<g data-room="A-08-2" data-area-m2="3.65" data-floor="확장(단열·난방) · 바닥 미정 · 출입 D11 루버 셔터문(당기는 문) · 창고 없음(빈 공간, 추후 가구)">
+<text x="1350" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#222">I-서재 확장부</text>
+<text x="1350" y="10570" class="room-a">A-08-2 · ≈3.6㎡</text>
+</g>
+<g data-room="A-08-3" data-area-m2="6.08" data-floor="마루(확장)">
+<text x="4950" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#222">거실 확장부</text>
+<text x="4950" y="10570" class="room-a">A-08-3 · ≈6.1㎡</text>
+</g>
+<g data-room="A-08-4" data-area-m2="4.05" data-floor="타일(비확장)">
+<text x="8700" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#222">비확장 발코니</text>
+<text x="8700" y="10570" class="room-a">A-08-4 · ≈4.0㎡</text>
+</g>
+<g data-room="ST2" data-area-m2="1.62" data-floor="타일">
+<text x="10800" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#222">발코니 창고</text>
+<text x="10800" y="10570" class="room-a">ST2 · ≈1.6㎡</text>
+</g>
+</g>
+<g id="L-dim" data-layer="치수">
+<path class="dim" d="M0 -700H11400"/>
+<path class="dim" d="M-60 -640L60 -760 M0 -820V-580"/>
+<path class="dim" d="M4740 -640L4860 -760 M4800 -820V-580"/>
+<path class="dim" d="M8040 -640L8160 -760 M8100 -820V-580"/>
+<path class="dim" d="M11340 -640L11460 -760 M11400 -820V-580"/>
+<text class="dim-t" x="2400.0" y="-760">4800</text>
+<text class="dim-t" x="6450.0" y="-760">3300</text>
+<text class="dim-t" x="9750.0" y="-760">3300</text>
+<path class="dim" d="M0 -1150H11400"/>
+<path class="dim" d="M-60 -1090L60 -1210 M0 -1270V-1030"/>
+<path class="dim" d="M11340 -1090L11460 -1210 M11400 -1270V-1030"/>
+<text class="dim-t" x="5700.0" y="-1210">11400</text>
+<path class="dim" d="M0 11750H11400"/>
+<path class="dim" d="M-60 11810L60 11690 M0 11630V11870"/>
+<path class="dim" d="M1440 11810L1560 11690 M1500 11630V11870"/>
+<path class="dim" d="M2640 11810L2760 11690 M2700 11630V11870"/>
+<path class="dim" d="M3090 11810L3210 11690 M3150 11630V11870"/>
+<path class="dim" d="M4740 11810L4860 11690 M4800 11630V11870"/>
+<path class="dim" d="M7140 11810L7260 11690 M7200 11630V11870"/>
+<path class="dim" d="M8040 11810L8160 11690 M8100 11630V11870"/>
+<path class="dim" d="M9215 11810L9335 11690 M9275 11630V11870"/>
+<path class="dim" d="M10690 11810L10810 11690 M10750 11630V11870"/>
+<path class="dim" d="M11340 11810L11460 11690 M11400 11630V11870"/>
+<text class="dim-t" x="750.0" y="11690">1500</text>
+<text class="dim-t" x="2100.0" y="11690">1200</text>
+<text class="dim-t" x="2925.0" y="11690">450</text>
+<text class="dim-t" x="3975.0" y="11690">1650</text>
+<text class="dim-t" x="6000.0" y="11690">2400</text>
+<text class="dim-t" x="7650.0" y="11690">900</text>
+<text class="dim-t" x="8687.5" y="11690">1175</text>
+<text class="dim-t" x="10012.5" y="11690">1475</text>
+<text class="dim-t" x="11075.0" y="11690">650</text>
+<path class="dim" d="M0 12200H11400"/>
+<path class="dim" d="M-60 12260L60 12140 M0 12080V12320"/>
+<path class="dim" d="M2640 12260L2760 12140 M2700 12080V12320"/>
+<path class="dim" d="M7140 12260L7260 12140 M7200 12080V12320"/>
+<path class="dim" d="M11340 12260L11460 12140 M11400 12080V12320"/>
+<text class="dim-t" x="1350.0" y="12140">2700</text>
+<text class="dim-t" x="4950.0" y="12140">4500</text>
+<text class="dim-t" x="9300.0" y="12140">4200</text>
+<path class="dim" d="M-750 700V11050"/>
+<path class="dim" d="M-810 760L-690 640 M-870 700H-630"/>
+<path class="dim" d="M-810 4060L-690 3940 M-870 4000H-630"/>
+<path class="dim" d="M-810 5860L-690 5740 M-870 5800H-630"/>
+<path class="dim" d="M-810 9760L-690 9640 M-870 9700H-630"/>
+<path class="dim" d="M-810 11110L-690 10990 M-870 11050H-630"/>
+<text class="dim-t" x="-820" y="2350.0" transform="rotate(-90 -820 2350.0)">3300</text>
+<text class="dim-t" x="-820" y="4900.0" transform="rotate(-90 -820 4900.0)">1800</text>
+<text class="dim-t" x="-820" y="7750.0" transform="rotate(-90 -820 7750.0)">3900</text>
+<text class="dim-t" x="-820" y="10375.0" transform="rotate(-90 -820 10375.0)">1350</text>
+<path class="dim" d="M-1250 0V11050"/>
+<path class="dim" d="M-1310 60L-1190 -60 M-1370 0H-1130"/>
+<path class="dim" d="M-1310 11110L-1190 10990 M-1370 11050H-1130"/>
+<text class="dim-t" x="-1320" y="5525.0" transform="rotate(-90 -1320 5525.0)">11050</text>
+<path class="dim" d="M12150 0V11050"/>
+<path class="dim" d="M12090 60L12210 -60 M12030 0H12270"/>
+<path class="dim" d="M12090 760L12210 640 M12030 700H12270"/>
+<path class="dim" d="M12090 1540L12210 1420 M12030 1480H12270"/>
+<path class="dim" d="M12090 4060L12210 3940 M12030 4000H12270"/>
+<path class="dim" d="M12090 5560L12210 5440 M12030 5500H12270"/>
+<path class="dim" d="M12090 9760L12210 9640 M12030 9700H12270"/>
+<path class="dim" d="M12090 11110L12210 10990 M12030 11050H12270"/>
+<text class="dim-t" x="12080" y="350.0" transform="rotate(-90 12080 350.0)">700</text>
+<text class="dim-t" x="12080" y="1090.0" transform="rotate(-90 12080 1090.0)">780</text>
+<text class="dim-t" x="12080" y="2740.0" transform="rotate(-90 12080 2740.0)">2520</text>
+<text class="dim-t" x="12080" y="4750.0" transform="rotate(-90 12080 4750.0)">1500</text>
+<text class="dim-t" x="12080" y="7600.0" transform="rotate(-90 12080 7600.0)">4200</text>
+<text class="dim-t" x="12080" y="10375.0" transform="rotate(-90 12080 10375.0)">1350</text>
+</g>
+<g id="L-ceiling" data-layer="천장(단내림·우물·점검구)" data-status="empty"></g>
+<g id="L-light" data-layer="조명 기구·회로" data-status="empty"></g>
+<g id="L-switch" data-layer="스위치(스마트 포함)" data-status="empty"></g>
+<g id="L-outlet" data-layer="콘센트·전용회로" data-status="empty"></g>
+<g id="L-iot" data-layer="IoT(태블릿·도어벨·센서·허브)" data-status="empty"></g>
+<g id="L-network" data-layer="통신(단자함·LAN·AP)" data-status="empty"></g>
+<g id="L-hvac" data-layer="시스템에어컨(실내기·배관·드레인)" data-status="empty"></g>
+<g id="L-heating" data-layer="난방(분배기·회로 구역)" data-status="empty"></g>
+<g id="L-water" data-layer="급수·급탕 접속점" data-status="empty"></g>
+<g id="L-drain" data-layer="배수 접속점" data-status="empty"></g>
+<g id="L-appliance" data-layer="가전 배치" data-status="empty"></g>
+<g id="L-check" data-layer="현장 확인점" data-status="empty">
+</g>
+<g id="L-sheet" data-layer="표·범례">
+<text x="14200" y="-1500" class="h2">개구부 일람 (도면 폭 · 실측 전)</text>
+<text x="14200" y="-1200" class="tbh">번호</text><text x="15000" y="-1200" class="tbh">폭</text><text x="15700" y="-1200" class="tbh">위치·형식</text>
+<text x="14200" y="-995" class="tb" font-weight="800">W01</text><text x="15000" y="-995" class="tb">2130</text><text x="15700" y="-995" class="tb">G-침실 북측창</text>
+<text x="14200" y="-790" class="tb" font-weight="800">W02</text><text x="15000" y="-790" class="tb">935</text><text x="15700" y="-790" class="tb">A-08-1 발코니 외창(기존 대비 1/2) — 외벽 위치 약 Y350(실측 필요)</text>
+<text x="14200" y="-585" class="tb" font-weight="800">W03</text><text x="15000" y="-585" class="tb">1470</text><text x="15700" y="-585" class="tb">H-침실 ↔ 발코니</text>
+<text x="14200" y="-380" class="tb" font-weight="800">W04</text><text x="15000" y="-380" class="tb">2020</text><text x="15700" y="-380" class="tb">F-침실 ↔ A-08-4 — 기존 창(우측 벽에서 1,200 지점까지, 폭 2,220)을 가벽 앞까지 줄여 교체 예정, 최종 폭 미정</text>
+<text x="14200" y="-175" class="tb" font-weight="800">W05</text><text x="15000" y="-175" class="tb">2090</text><text x="15700" y="-175" class="tb">I-서재 확장부 외창</text>
+<text x="14200" y="30" class="tb" font-weight="800">W11</text><text x="15000" y="30" class="tb">880</text><text x="15700" y="30" class="tb">I-서재 ↔ 확장부 큰창(가벽, 실내창) — 서쪽 날개벽 유지로 약 880, 폭·높이 미정</text>
+<text x="14200" y="235" class="tb" font-weight="800">W06</text><text x="15000" y="235" class="tb">3470</text><text x="15700" y="235" class="tb">거실 확장 외창</text>
+<text x="14200" y="440" class="tb" font-weight="800">W07</text><text x="15000" y="440" class="tb">2140</text><text x="15700" y="440" class="tb">A-08-4 외창</text>
+<text x="14200" y="645" class="tb" font-weight="800">W08</text><text x="15000" y="645" class="tb">680</text><text x="15700" y="645" class="tb">A-08-4 창고 외창</text>
+<text x="14200" y="850" class="tb" font-weight="800">W09</text><text x="15000" y="850" class="tb">800</text><text x="15700" y="850" class="tb">욕실A 북측창(위치·폭 실측)</text>
+<text x="14200" y="1055" class="tb" font-weight="800">W10</text><text x="15000" y="1055" class="tb">800</text><text x="15700" y="1055" class="tb">주방 돌출부 창(욕실창 크기, 실측)</text>
+<text x="14200" y="1260" class="tb" font-weight="800">D01</text><text x="15000" y="1260" class="tb">1000</text><text x="15700" y="1260" class="tb">세대 현관문 1,000(외부 개폐) — 실측: 폭 1,000, 문 끝~남측벽 약 170(기울임 신발장 깊이),</text>
+<text x="14200" y="1465" class="tb" font-weight="800">MD01</text><text x="15000" y="1465" class="tb">820</text><text x="15700" y="1465" class="tb">현관 중문(거실 쪽 개폐, 원스윙)</text>
+<text x="14200" y="1670" class="tb" font-weight="800">D02</text><text x="15000" y="1670" class="tb">720</text><text x="15700" y="1670" class="tb">G-침실 여닫이 720(서재 안쪽 개폐, 경첩 서측 — 미닫이에서 변경)</text>
+<text x="14200" y="1875" class="tb" font-weight="800">D03</text><text x="15000" y="1875" class="tb">650</text><text x="15700" y="1875" class="tb">욕실A</text>
+<text x="14200" y="2080" class="tb" font-weight="800">D04</text><text x="15000" y="2080" class="tb">750</text><text x="15700" y="2080" class="tb">I-서재</text>
+<text x="14200" y="2285" class="tb" font-weight="800">D05</text><text x="15000" y="2285" class="tb">750</text><text x="15700" y="2285" class="tb">F-침실</text>
+<text x="14200" y="2490" class="tb" font-weight="800">D06</text><text x="15000" y="2490" class="tb">685</text><text x="15700" y="2490" class="tb">욕실B</text>
+<text x="14200" y="2695" class="tb" font-weight="800">D09</text><text x="15000" y="2695" class="tb">580</text><text x="15700" y="2695" class="tb">A-08-4 창고(발코니 쪽 개폐)</text>
+<text x="14200" y="2900" class="tb" font-weight="800">D10</text><text x="15000" y="2900" class="tb">570</text><text x="15700" y="2900" class="tb">팬트리 여닫이 — 구 SD01 2짝문 변경</text>
+<text x="14200" y="3105" class="tb" font-weight="800">D07</text><text x="15000" y="3105" class="tb">700</text><text x="15700" y="3105" class="tb">주방 → A-08-1 발코니 터닝도어(여닫이, 발코니 쪽 개폐 · 문짝이 옷방 쪽(남측)으로 열림,)</text>
+<text x="14200" y="3310" class="tb" font-weight="800">TD01</text><text x="15000" y="3310" class="tb">690</text><text x="15700" y="3310" class="tb">거실 확장부 ↔ A-08-4 터닝도어(여닫이, 거실에서 밀어서 발코니 쪽으로 열림 —)</text>
+<path class="rule" d="M14200 3510H19500"/>
+<text x="14200" y="3840" class="h2">실 면적 (벽 중심선 개략)</text>
+<text x="14200" y="4100" class="tb" font-weight="800">A-01</text><text x="15200" y="4100" class="tb">현관</text><text x="17200" y="4100" class="tb">2.7㎡</text><text x="18000" y="4100" class="tb">타일 · 북측 신발장</text>
+<text x="14200" y="4290" class="tb" font-weight="800">G</text><text x="15200" y="4290" class="tb">G-침실</text><text x="17200" y="4290" class="tb">10.4㎡</text><text x="18000" y="4290" class="tb">마루 · 팬트리1 취소로 원래 크기 · 서재→침실</text>
+<text x="14200" y="4480" class="tb" font-weight="800">PT</text><text x="15200" y="4480" class="tb">팬트리</text><text x="17200" y="4480" class="tb">0.6㎡</text><text x="18000" y="4480" class="tb">마루 · MX4200 #1</text>
+<text x="14200" y="4670" class="tb" font-weight="800">A-04</text><text x="15200" y="4670" class="tb">욕실A</text><text x="17200" y="4670" class="tb">4.5㎡</text><text x="18000" y="4670" class="tb">타일</text>
+<text x="14200" y="4860" class="tb" font-weight="800">A-03</text><text x="15200" y="4860" class="tb">주방</text><text x="17200" y="4860" class="tb">13.2㎡</text><text x="18000" y="4860" class="tb">마루/타일 미정</text>
+<text x="14200" y="5050" class="tb" font-weight="800">A-08-1</text><text x="15200" y="5050" class="tb">주방 옆 발코니</text><text x="17200" y="5050" class="tb">2.7㎡</text><text x="18000" y="5050" class="tb">타일(비확장) · 외벽 위치 실측 필요</text>
+<text x="14200" y="5240" class="tb" font-weight="800">H</text><text x="15200" y="5240" class="tb">H-옷방</text><text x="17200" y="5240" class="tb">8.7㎡</text><text x="18000" y="5240" class="tb">마루 · 시스템장(기존 집 이전 설치)</text>
+<text x="14200" y="5430" class="tb" font-weight="800">A-05</text><text x="15200" y="5430" class="tb">욕실B</text><text x="17200" y="5430" class="tb">2.2㎡</text><text x="18000" y="5430" class="tb">타일</text>
+<text x="14200" y="5620" class="tb" font-weight="800">HALL</text><text x="15200" y="5620" class="tb">복도</text><text x="17200" y="5620" class="tb">12.0㎡</text><text x="18000" y="5620" class="tb">마루</text>
+<text x="14200" y="5810" class="tb" font-weight="800">I</text><text x="15200" y="5810" class="tb">I-서재</text><text x="17200" y="5810" class="tb">10.5㎡</text><text x="18000" y="5810" class="tb">마루</text>
+<text x="14200" y="6000" class="tb" font-weight="800">A-02</text><text x="15200" y="6000" class="tb">거실</text><text x="17200" y="6000" class="tb">18.9㎡</text><text x="18000" y="6000" class="tb">마루</text>
+<text x="14200" y="6190" class="tb" font-weight="800">F</text><text x="15200" y="6190" class="tb">F-침실</text><text x="17200" y="6190" class="tb">17.6㎡</text><text x="18000" y="6190" class="tb">마루 · 드레스룸 가벽 철거, 장 위치 미정</text>
+<text x="14200" y="6380" class="tb" font-weight="800">A-08-2</text><text x="15200" y="6380" class="tb">I-서재 확장부</text><text x="17200" y="6380" class="tb">3.6㎡</text><text x="18000" y="6380" class="tb">확장(단열·난방) · 바닥 미정 · 출입 D11 루버 셔터문(당기는 문) · 창고 없음(빈 공간, 추후 가구)</text>
+<text x="14200" y="6570" class="tb" font-weight="800">A-08-3</text><text x="15200" y="6570" class="tb">거실 확장부</text><text x="17200" y="6570" class="tb">6.1㎡</text><text x="18000" y="6570" class="tb">마루(확장)</text>
+<text x="14200" y="6760" class="tb" font-weight="800">A-08-4</text><text x="15200" y="6760" class="tb">비확장 발코니</text><text x="17200" y="6760" class="tb">4.0㎡</text><text x="18000" y="6760" class="tb">타일(비확장)</text>
+<text x="14200" y="6950" class="tb" font-weight="800">ST2</text><text x="15200" y="6950" class="tb">발코니 창고</text><text x="17200" y="6950" class="tb">1.6㎡</text><text x="18000" y="6950" class="tb">타일</text>
+<path class="rule" d="M14200 7260H19500"/>
+<text x="14200" y="7590" class="h2">범례 · 기호 라이브러리</text>
+<path class="ext" d="M14200 7880H14620" style="stroke-width:100"/><text x="14800" y="7920" class="tb">기존 벽(도면 표현 두께 외벽 100·내벽 80)</text>
+<rect class="new" x="14200" y="8110" width="420" height="100"/><text x="14800" y="8200" class="tb">신설 벽(경량 100)</text>
+<path class="demo" d="M14200 8440H14620" style="stroke-width:80"/><text x="14800" y="8480" class="tb">철거 계획(구조 확인 전)</text>
+<rect x="14200" y="8610" width="420" height="220" fill="url(#pat-tile)" stroke="#999" stroke-width="8"/><text x="14800" y="8760" class="tb">타일 바닥</text>
+<rect x="14200" y="8890" width="420" height="220" fill="url(#pat-wood)" stroke="#999" stroke-width="8"/><text x="14800" y="9040" class="tb">마루 바닥</text>
+<use href="#sym-outlet" transform="translate(14420 9275) scale(0.85)"/><text x="14870" y="9320" class="tb">콘센트(2구)</text>
+<use href="#sym-outlet-wp" transform="translate(17120 9275) scale(0.85)"/><text x="17570" y="9320" class="tb">방수 콘센트</text>
+<use href="#sym-outlet-ded" transform="translate(14420 9655) scale(0.85)"/><text x="14870" y="9700" class="tb">전용 회로(인덕션·에어컨 등)</text>
+<use href="#sym-switch" transform="translate(17120 9655) scale(0.85)"/><text x="17570" y="9700" class="tb">스위치</text>
+<use href="#sym-switch-smart" transform="translate(14420 10035) scale(0.85)"/><text x="14870" y="10080" class="tb">스마트 스위치(중성선)</text>
+<use href="#sym-downlight" transform="translate(17120 10035) scale(0.85)"/><text x="17570" y="10080" class="tb">다운라이트</text>
+<use href="#sym-ceiling-light" transform="translate(14420 10415) scale(0.85)"/><text x="14870" y="10460" class="tb">천장등</text>
+<use href="#sym-linear" transform="translate(17120 10415) scale(0.85)"/><text x="17570" y="10460" class="tb">라인조명(길이별 늘림)</text>
+<use href="#sym-ac-ceiling" transform="translate(14420 10795) scale(0.4)"/><text x="14870" y="10840" class="tb">천장형 에어컨 실내기</text>
+<use href="#sym-ac-out" transform="translate(17120 10795) scale(0.4)"/><text x="17570" y="10840" class="tb">에어컨 실외기</text>
+<use href="#sym-lan" transform="translate(14420 11175) scale(0.85)"/><text x="14870" y="11220" class="tb">LAN 단자</text>
+<use href="#sym-ap" transform="translate(17120 11175) scale(0.85)"/><text x="17570" y="11220" class="tb">Wi-Fi AP</text>
+<use href="#sym-comm" transform="translate(14420 11555) scale(0.4)"/><text x="14870" y="11600" class="tb">통신단자함</text>
+<use href="#sym-panel" transform="translate(17120 11555) scale(0.4)"/><text x="17570" y="11600" class="tb">분전반</text>
+<use href="#sym-tablet" transform="translate(14420 11935) scale(0.4)"/><text x="14870" y="11980" class="tb">벽 태블릿(HA)</text>
+<use href="#sym-doorbell" transform="translate(17120 11935) scale(0.85)"/><text x="17570" y="11980" class="tb">도어벨/카메라</text>
+<use href="#sym-sensor" transform="translate(14420 12315) scale(0.85)"/><text x="14870" y="12360" class="tb">센서(재실·문열림·온습도)</text>
+<use href="#sym-manifold" transform="translate(17120 12315) scale(0.4)"/><text x="17570" y="12360" class="tb">난방 분배기</text>
+<use href="#sym-water" transform="translate(14420 12695) scale(0.85)"/><text x="14870" y="12740" class="tb">급수·급탕 접속점</text>
+<use href="#sym-drain" transform="translate(17120 12695) scale(0.85)"/><text x="17570" y="12740" class="tb">배수구·배수 접속</text>
+<use href="#sym-check" transform="translate(14420 13075) scale(0.85)"/><text x="14870" y="13120" class="tb">현장 확인점</text>
+</g>
+<g id="L-notes">
+<text x="-2700" y="13050" class="note" style="font-size:130px">1. 치수는 분양 평면도 표기값(벽 중심선). 좌측 1800·우측 1500 구간 차이에 따라 I-서재(3900)과 F-침실(4200) 북측 벽선이 다름.</text>
+<text x="-2700" y="13270" class="note" style="font-size:130px">2. 벽은 도면 표현 두께(실제 두께 아님)이며 문 폭은 가정값. 실측 후 L-wall-*·개구부 data-width-mm 갱신.</text>
+<text x="-2700" y="13490" class="note" style="font-size:130px">3. 하위 레이어(L-light·L-iot·L-hvac 등)는 비어 있음 — &lt;use href=&quot;#sym-…&quot; x y&gt; 로 mm 좌표 배치.</text>
+<text x="-2700" y="13710" class="note" style="font-size:130px">4. 철거 표시는 구조도면·관리주체 확인 전 계획. 단열·결로(T)는 E-01에서 관리.</text>
+<text x="-2700" y="13930" class="note" style="font-size:130px">5. 11/11 회신 반영: 욕실A·주방 돌출부 창(W09·W10), D07·TD01 터닝도어, N-01·팬트리 가벽, 욕실A 옆 X(배관).</text>
+<text x="-2700" y="14150" class="note" style="font-size:130px">6. 실사 반영: I-서재 확장(10:15 재변경 — 기존 샷시 자리 가벽 + 큰창 W11, 날개벽 옆 출입문 D11 루버 셔터 접이문, 확장부 창고는 비용 문제로 취소 — 빈 공간), 거실 확장부 서측은 벽으로 막음(TD02 삭제), 팬트리1 취소(서재 원복·현관 신발장), 안방 드레스룸 가벽 철거, H-옷방. X 공간 둘레는 외부 내력벽.</text>
+</g>
+</svg>

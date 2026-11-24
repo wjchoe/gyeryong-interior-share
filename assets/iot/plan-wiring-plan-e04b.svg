@@ -1,0 +1,465 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-2900 -3300 15100 17700" width="1130" height="1324" data-units="mm" data-origin="세대 외곽 좌상단(X1,Y1)" role="img" aria-labelledby="t d">
+<title id="t">계룡삼환 리모델링 기준평면도 v2 (mm 좌표, 레이어 구조)</title>
+<desc id="d">단위 mm, 원점은 X1·Y1 교점. 벽은 중심선 좌표, 표현 두께 외벽 100 · 기존 내벽 80 · 신설 100(실제 두께 아님). 분양 평면도 치수 기준이며 실측으로 갱신. 하위 레이어(L-*)에 전기·IoT·통신·냉난방·설비·가구를 추가해 사용.</desc>
+<defs>
+<pattern id="pat-tile" width="300" height="300" patternUnits="userSpaceOnUse"><path d="M300 0H0V300" fill="none" stroke="#b9b9b9" stroke-width="8"/></pattern>
+<pattern id="pat-tile-s" width="150" height="150" patternUnits="userSpaceOnUse"><path d="M150 0H0V150" fill="none" stroke="#c4c4c4" stroke-width="6"/></pattern>
+<pattern id="pat-wood" width="1200" height="180" patternUnits="userSpaceOnUse"><path d="M0 180H1200 M600 0V180" fill="none" stroke="#efe6d8" stroke-width="6"/></pattern>
+<pattern id="pat-new" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V80" stroke="#3a3a3a" stroke-width="14"/></pattern>
+<pattern id="pat-shaft" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V120" stroke="#9a9a9a" stroke-width="8"/></pattern>
+<style>
+text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-serif;fill:#222}
+.ext{stroke:#111;stroke-width:100;stroke-linecap:square;fill:none}
+.str{stroke:#222;stroke-width:80;stroke-linecap:square;fill:none}
+.new{fill:url(#pat-new);stroke:#222;stroke-width:14}
+.demo{stroke:#c0392b;stroke-width:80;stroke-dasharray:180 120;fill:none;opacity:.85}
+.demo-t{fill:#c0392b;font-size:150px}
+.win-gap{stroke:#fff;stroke-width:120;fill:none}
+.win{stroke:#222;stroke-width:16;fill:none}
+.win-g{stroke:#4a7bb7;stroke-width:22;fill:none}
+.door-leaf{stroke:#111;stroke-width:34;fill:none}
+.door-arc{stroke:#555;stroke-width:12;fill:none;stroke-dasharray:60 40}
+.door-gap{stroke:#fff;stroke-width:130;fill:none}
+.fix{fill:#fff;stroke:#555;stroke-width:16}
+.fix-l{fill:none;stroke:#777;stroke-width:10}
+.grid{stroke:#4a7bb7;stroke-width:9;stroke-dasharray:240 80 40 80;fill:none;opacity:.55}
+.grid-b{fill:#fff;stroke:#4a7bb7;stroke-width:14}
+.grid-t{fill:#2c5d97;font-size:170px;font-weight:700;text-anchor:middle;dominant-baseline:central}
+.dim{stroke:#666;stroke-width:10;fill:none}
+.dim-t{font-size:155px;text-anchor:middle;fill:#444}
+.room{font-size:260px;font-weight:800;text-anchor:middle}
+.room-c{font-size:150px;text-anchor:middle;fill:#666}
+.room-a{font-size:140px;text-anchor:middle;fill:#2c5d97}
+.tag{font-size:135px;font-weight:800;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:40px;fill:#111}
+.note{font-size:140px;fill:#333}
+.h1{font-size:330px;font-weight:800}
+.h2{font-size:190px;font-weight:800}
+.tb{font-size:128px;fill:#333}
+.tbh{font-size:128px;font-weight:800;fill:#111}
+.rule{stroke:#bbb;stroke-width:8}
+.sym{fill:none;stroke:#111;stroke-width:16}
+.chk{fill:#e67e22;font-size:150px;font-weight:800}
+.gs text{fill:#777}.gs .demo,.gs .win-g,.gs .grid,.gs .grid-b{stroke:#aaa}.gs .demo-t,.gs .grid-t,.gs .room-a,.gs .chk{fill:#999}.gs .tag{fill:#555}</style>
+<symbol id="sym-outlet" overflow="visible" data-label="콘센트(2구)"><circle r="110" class="sym" fill="#fff"/><path d="M-110 0H110" class="sym"/></symbol>
+<symbol id="sym-outlet-wp" overflow="visible" data-label="방수 콘센트"><circle r="110" class="sym" fill="#fff"/><path d="M-110 0H110" class="sym"/><text y="60" font-size="110" text-anchor="middle">W</text></symbol>
+<symbol id="sym-outlet-ded" overflow="visible" data-label="전용 회로(인덕션·에어컨 등)"><rect x="-110" y="-110" width="220" height="220" class="sym" fill="#fff"/><path d="M-110 110L110 -110" class="sym"/></symbol>
+<symbol id="sym-switch" overflow="visible" data-label="스위치"><circle r="70" fill="#111"/><path d="M0 0L130 -130" class="sym"/></symbol>
+<symbol id="sym-switch-smart" overflow="visible" data-label="스마트 스위치(중성선)"><circle r="80" fill="#fff" class="sym"/><text y="45" font-size="120" text-anchor="middle" font-weight="800">N</text></symbol>
+<symbol id="sym-downlight" overflow="visible" data-label="다운라이트"><circle r="90" class="sym" fill="#fff"/><circle r="30" fill="#111"/></symbol>
+<symbol id="sym-ceiling-light" overflow="visible" data-label="천장등"><circle r="140" class="sym" fill="#fff"/><path d="M-100 -100L100 100M100 -100L-100 100" class="sym"/></symbol>
+<symbol id="sym-linear" overflow="visible" data-label="라인조명(길이별 늘림)"><rect x="-400" y="-35" width="800" height="70" fill="#111"/></symbol>
+<symbol id="sym-ac-ceiling" overflow="visible" data-label="천장형 에어컨 실내기"><rect x="-420" y="-420" width="840" height="840" class="sym" fill="#fff"/><path d="M-420 -420L420 420M420 -420L-420 420" class="sym" stroke-dasharray="40 30"/><text y="50" font-size="150" text-anchor="middle" font-weight="800">AC</text></symbol>
+<symbol id="sym-ac-out" overflow="visible" data-label="에어컨 실외기"><rect x="-400" y="-200" width="800" height="400" class="sym" fill="#fff"/><circle r="150" class="sym"/></symbol>
+<symbol id="sym-lan" overflow="visible" data-label="LAN 단자"><path d="M-110 90L0 -110L110 90Z" class="sym" fill="#fff"/></symbol>
+<symbol id="sym-ap" overflow="visible" data-label="Wi-Fi AP"><circle r="110" class="sym" fill="#fff"/><path d="M-170 -120A210 210 0 0 1 170 -120" class="sym"/></symbol>
+<symbol id="sym-comm" overflow="visible" data-label="통신단자함"><rect x="-220" y="-140" width="440" height="280" class="sym" fill="#fff"/><text y="45" font-size="120" text-anchor="middle" font-weight="800">TEL</text></symbol>
+<symbol id="sym-panel" overflow="visible" data-label="분전반"><rect x="-220" y="-140" width="440" height="280" fill="#111"/><text y="45" font-size="120" text-anchor="middle" font-weight="800" style="fill:#fff">P</text></symbol>
+<symbol id="sym-tablet" overflow="visible" data-label="벽 태블릿(HA)"><rect x="-260" y="-170" width="520" height="340" rx="40" class="sym" fill="#fff"/><text y="45" font-size="120" text-anchor="middle" font-weight="800">HA</text></symbol>
+<symbol id="sym-doorbell" overflow="visible" data-label="도어벨/카메라"><circle r="120" class="sym" fill="#fff"/><circle r="45" fill="#111"/></symbol>
+<symbol id="sym-sensor" overflow="visible" data-label="센서(재실·문열림·온습도)"><path d="M0 -130L130 0L0 130L-130 0Z" class="sym" fill="#fff"/><text y="45" font-size="110" text-anchor="middle" font-weight="800">S</text></symbol>
+<symbol id="sym-manifold" overflow="visible" data-label="난방 분배기"><rect x="-350" y="-120" width="700" height="240" class="sym" fill="#fff"/><path d="M-250 -120V120M-100 -120V120M50 -120V120M200 -120V120" class="sym"/></symbol>
+<symbol id="sym-water" overflow="visible" data-label="급수·급탕 접속점"><circle r="100" fill="#2e86de"/><circle r="45" fill="#fff"/></symbol>
+<symbol id="sym-drain" overflow="visible" data-label="배수구·배수 접속"><circle r="110" class="sym" fill="#fff"/><path d="M-60 -60L60 60M60 -60L-60 60" class="sym"/></symbol>
+<symbol id="sym-check" overflow="visible" data-label="현장 확인점"><circle r="130" fill="#e67e22"/><text y="50" font-size="150" text-anchor="middle" font-weight="800" style="fill:#fff">?</text></symbol>
+<style>.wl{font-size:115px;font-weight:800;text-anchor:middle;paint-order:stroke;stroke:#fff;stroke-width:22px}
+.wlg{font-size:170px;font-weight:700;fill:#222}
+.wsw{font-size:130px;font-weight:900;text-anchor:middle;fill:#fff}</style></defs>
+<rect x="-3000" y="-3300" width="22600" height="20300" fill="#fff"/>
+<g id="L-title" class="gs">
+<text x="-2700" y="-2750" class="h1">계룡삼환 리모델링 · E-04-2 IoT 조명 배선 평면도 (개념 연결선)</text>
+<text x="-2700" y="-2420" class="note">단위 mm · 원점 X1/Y1 · 벽 중심선 좌표 · 분양 평면도 치수 기준(실측 전) · 1:100 @A3</text>
+</g><g id="W-legend"><text x="-2700" y="-2140" style="font-size:150px;font-weight:800;fill:#555">범례</text><path d="M-2700 -1950h650" stroke="#c0392b" stroke-width="34" stroke-dasharray="120 70"/><text x="-1940" y="-1900" style="font-size:170px;font-weight:700;fill:#222">분전함 → 전등1(16A) 홈런: 거실·복도·주방·현관</text><path d="M-2700 -1670h650" stroke="#2e6db4" stroke-width="34" stroke-dasharray="120 70"/><text x="-1940" y="-1620" style="font-size:170px;font-weight:700;fill:#222">분전함 → 전등2(16A) 홈런: 방·욕실·안방 장 구역·발코니</text><path d="M-2700 -1390h650" stroke="#e67e22" stroke-width="34"/><text x="-1940" y="-1340" style="font-size:170px;font-weight:700;fill:#222">스위치·릴레이 출력 220V → 등기구 (채널별 색)</text><path d="M-2700 -1110h650" stroke="#1e8449" stroke-width="34"/><text x="-1940" y="-1060" style="font-size:170px;font-weight:700;fill:#222">24V DC (SMPS·LED 제어기 → 등기구)</text><rect x="5000" y="-2050" width="190" height="190" rx="30" fill="#555"/><text x="5095" y="-1910" class="wsw">S</text><text x="5290" y="-1900" style="font-size:170px;font-weight:700;fill:#222">벽 스마트 스위치(Aqara H2 · 거실 H1 2구) — 박스에 L·N</text><rect x="5005" y="-1770" width="180" height="190" rx="30" fill="#fff" stroke="#8e44ad" stroke-width="20"/><rect x="5045" y="-1730" width="100" height="80" rx="10" fill="#d7bde2"/><text x="5290" y="-1620" style="font-size:170px;font-weight:700;fill:#8e44ad">S1 Plus 월패드(거실 패널 · 2연 박스)</text><text x="5000" y="-1340" style="font-size:170px;font-weight:700;fill:#222">T2 = Aqara 듀얼 릴레이 · LED = Aqara LED 제어기(24V) · SMPS = 24V 전원</text><text x="5000" y="-1060" style="font-size:170px;font-weight:700;fill:#222">220V 다운라이트 = 컨버터 세트 · 메인등·펜던트 = 컨버터 내장</text><path d="M-2700 -770h500" stroke="#e67e22" stroke-width="26"/><text x="-2120" y="-720" style="font-size:170px;font-weight:700;fill:#222">ch1(1번)</text><path d="M-950 -770h500" stroke="#0097a7" stroke-width="26"/><text x="-370" y="-720" style="font-size:170px;font-weight:700;fill:#222">ch2(2번)</text><path d="M800 -770h500" stroke="#6d4c41" stroke-width="26"/><text x="1380" y="-720" style="font-size:170px;font-weight:700;fill:#222">ch3(3번)</text><path d="M2550 -770h500" stroke="#455a64" stroke-width="26"/><text x="3130" y="-720" style="font-size:170px;font-weight:700;fill:#222">ch4(4번)</text><text x="5000" y="-720" style="font-size:170px;font-weight:700;fill:#222">같은 선에 이어진 등은 모두 병렬 연결(등 단자에서 다음 등으로 넘김)</text><text x="-2700" y="-400" style="font-size:150px;font-weight:800;fill:#555">등기구 기호 (사양·수량은 페이지의 &#x27;조명 기구 종류표&#x27;)</text><use href="#sym-downlight" x="-2550" y="-180" style="color:#111"/><text x="-2290" y="-130" style="font-size:150px;font-weight:700;fill:#222">다운라이트 220V — 컨버터 세트</text><circle cx="1150" cy="-180" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="1150" cy="-180" r="34" fill="#1e8449"/><text x="1410" y="-130" style="font-size:150px;font-weight:700;fill:#222">거실 다운라이트 24V 색온도형 — A1~A4·B1~B4</text><use href="#sym-ceiling-light" x="4850" y="-180"/><text x="5110" y="-130" style="font-size:150px;font-weight:700;fill:#222">메인 천장등 — 컨버터 내장</text><path d="M8550 -340V-250" stroke="#a0522d" stroke-width="14"/><path d="M8400 -100L8480 -250H8620L8700 -100Z" fill="#fff" stroke="#a0522d" stroke-width="20" stroke-linejoin="round"/><circle cx="8550" cy="-75" r="35" fill="#a0522d"/><text x="8810" y="-130" style="font-size:150px;font-weight:700;fill:#222">식탁 펜던트 — 컨버터 내장</text><path d="M-2700 200L-2400 200" stroke="#1e8449" stroke-width="70" stroke-linecap="round"/><text x="-2290" y="250" style="font-size:150px;font-weight:700;fill:#222">라인등 24V — SMPS·LED 제어기 경유</text><g transform="translate(1150 200) scale(.45) translate(-1150 -200)"><ellipse cx="1150" cy="-60" rx="90" ry="230" transform="rotate(0 1150 200)" fill="#fff" stroke="#111" stroke-width="16"/><ellipse cx="1150" cy="-60" rx="90" ry="230" transform="rotate(120 1150 200)" fill="#fff" stroke="#111" stroke-width="16"/><ellipse cx="1150" cy="-60" rx="90" ry="230" transform="rotate(240 1150 200)" fill="#fff" stroke="#111" stroke-width="16"/><circle cx="1150" cy="200" r="90" fill="#111"/></g><text x="1410" y="250" style="font-size:150px;font-weight:700;fill:#222">실링팬</text><rect x="4725" y="75" width="250" height="250" rx="20" fill="#fff" stroke="#111" stroke-width="18"/><circle cx="4850" cy="200" r="80" fill="none" stroke="#111" stroke-width="12"/><path d="M4770 200H4930 M4850 120V280" stroke="#111" stroke-width="10"/><text x="5110" y="250" style="font-size:150px;font-weight:700;fill:#222">욕실 환풍기</text><text x="-2700" y="670" style="font-size:150px;font-weight:600;fill:#555">220V 다운라이트는 컨버터 세트 — 컨버터는 등 바로 옆 천장 속(타공구로 교체), 평면도에는 따로 그리지 않음 · 순서는 스위치 → 컨버터 → 등(E-04)</text><text x="-2700" y="910" style="font-size:150px;font-weight:600;fill:#555">거실 다운라이트 8 = 24V DC 정전압 CCT(컨버터 없음) · A1~A4 / B1~B4 · 메인 방등·펜던트·발코니등은 컨버터 내장</text><text x="-2700" y="1150" style="font-size:150px;font-weight:600;fill:#555">라인등 = SMPS(주방) · LED 제어기(거실·안방 장 구역) · 선은 연결 관계(개념) — 실제 배관·차단기 번호는 전기 업체 설계, 상세는 E-04 계통도</text><text x="-2700" y="1430" style="font-size:150px;font-weight:700;fill:#7d3c98">무선 버튼은 전선이 없어 선을 그리지 않음 — 라벨에 &quot;무선&quot;으로 표시, M3 로컬 자동화로 동작</text><text x="-2700" y="1670" style="font-size:150px;font-weight:700;fill:#7d3c98">무선 버튼: 거실 H2 노브 · 거실 H1 2구 2번(디커플) · 주방 4번(복도) · 안방 4번(복도 COB) · 욕실B 4번(화장대)</text><text x="-2700" y="1910" style="font-size:150px;font-weight:700;fill:#7d3c98">여분 무선: 욕실A 4번 · 발코니 2번 — 나머지는 유선 릴레이 · 현관은 센서등 · I-서재 확장부는 T2 릴레이(스위치 없음) · 결선 방법은 E-04 하단 표</text><path d="M-2700 2170H12000" stroke="#bbb" stroke-width="10"/></g><g id="W-plan" transform="translate(0 2700)">
+
+
+<g id="L-wall-exist" class="gs" data-layer="기존 벽">
+<path class="ext" d="M0 700L4800 700 M4800 700L4800 0 M4800 0L7950 0 M7950 0L7950 350 M7950 350L10450 350 M10450 350L10450 1480 M10450 1480L11400 1480 M11400 1480L11400 4000 M11400 4000L10750 4000 M10750 4000L10750 5500 M10750 5500L11400 5500 M11400 5500L11400 11050 M11400 11050L0 11050 M0 11050L0 5560 M0 4560L0 700 M10450 700L11400 700 M11400 700L11400 1480 M10450 350L10450 700 M11400 4000L11400 5500"/>
+<path class="str" d="M3150 700L3150 4000 M4800 700L4800 4000 M2670 4000L3150 4000 M3800 4000L4150 4000 M4720 4000L4800 4000 M4100 2700L4800 2700 M4100 3150L4800 3150 M4100 2700L4100 4000 M7950 350L7950 740 M7950 1440L7950 4000 M7950 1480L10450 1480 M7950 4000L8300 4000 M9030 4000L11400 4000 M9275 4000L9275 5500 M9960 5500L10750 5500 M7200 5500L7350 5500 M8100 5500L9275 5500 M7200 5500L7200 9700 M7200 9700L11400 9700 M0 5800L1950 5800 M2700 5800L2700 9700 M0 4000L1950 4000"/>
+<rect x="10550" y="800" width="750" height="580" fill="url(#pat-shaft)" stroke="#c7c7c7" stroke-width="10"/>
+<rect x="10850" y="4100" width="450" height="1300" fill="url(#pat-shaft)" stroke="#c7c7c7" stroke-width="10"/>
+<text x="10925" y="1170" class="room-c">X(세대 밖)</text><text x="11075" y="4770" class="room-c" transform="rotate(-90 11075 4770)">X(세대 밖)</text>
+<text x="4450" y="2900" class="room-c">X(배관)</text><text x="4450" y="3060" class="room-c" style="font-size:105px">세대 밖</text>
+</g>
+<g id="L-wall-new" class="gs" data-layer="신설 벽(계획)">
+<rect class="new" x="9950.0" y="6580" width="100" height="3120"/>
+<rect class="new" x="1450.0" y="4000" width="100" height="350"/>
+<rect class="new" x="1450.0" y="5170" width="100" height="630"/>
+<rect class="new" x="460" y="9650.0" width="1080" height="100"/>
+<rect class="new" x="7150.0" y="9700" width="100" height="360"/>
+<rect class="new" x="7150.0" y="10750" width="100" height="300"/>
+<rect class="new" x="10150.0" y="9700" width="100" height="550"/>
+<rect class="new" x="10150.0" y="10830" width="100" height="220"/>
+</g>
+<g id="L-wall-wing" class="gs" data-layer="내력 날개벽">
+<rect x="0" y="9660" width="460" height="80" fill="#7c7c7c"/>
+<rect class="new" x="2240" y="9660" width="420" height="80"/>
+<rect class="new" x="2660" y="9660" width="80" height="1390"/>
+</g>
+
+<text x="2450" y="9560" class="room-c" style="font-size:55px;fill:#555">가벽(날개벽 자리)</text>
+
+<g id="L-openings" class="gs" data-layer="창호·문(번호)">
+<g id="W01" data-type="window" data-width-mm="2130">
+<path class="win-gap" d="M410 700H2540"/>
+<path class="win" d="M410 645H2540 M410 755H2540 M410 645V755 M2540 645V755"/>
+<path class="win-g" d="M410 685H2540 M410 715H2540"/>
+
+</g>
+<g id="W02" data-type="window" data-width-mm="935">
+<path class="win-gap" d="M8890 350H9825"/>
+<path class="win" d="M8890 295H9825 M8890 405H9825 M8890 295V405 M9825 295V405"/>
+<path class="win-g" d="M8890 335H9825 M8890 365H9825"/>
+
+</g>
+<g id="W03" data-type="window" data-width-mm="1470">
+<path class="win-gap" d="M8800 1480H10270"/>
+<path class="win" d="M8800 1425H10270 M8800 1535H10270 M8800 1425V1535 M10270 1425V1535"/>
+<path class="win-g" d="M8800 1465H10270 M8800 1495H10270"/>
+
+</g>
+<g id="W04" data-type="window" data-width-mm="2020">
+<path class="win-gap" d="M7930 9700H9950"/>
+<path class="win" d="M7930 9645H9950 M7930 9755H9950 M7930 9645V9755 M9950 9645V9755"/>
+<path class="win-g" d="M7930 9685H9950 M7930 9715H9950"/>
+
+</g>
+<g id="W05" data-type="window" data-width-mm="2090">
+<path class="win-gap" d="M320 11050H2410"/>
+<path class="win" d="M320 10995H2410 M320 11105H2410 M320 10995V11105 M2410 10995V11105"/>
+<path class="win-g" d="M320 11035H2410 M320 11065H2410"/>
+
+</g>
+<g id="W11" data-type="window" data-width-mm="880">
+<path class="win-gap" d="M560 9700H1440"/>
+<path class="win" d="M560 9645H1440 M560 9755H1440 M560 9645V9755 M1440 9645V9755"/>
+<path class="win-g" d="M560 9685H1440 M560 9715H1440"/>
+
+</g>
+<g id="W06" data-type="window" data-width-mm="3470">
+<path class="win-gap" d="M3290 11050H6760"/>
+<path class="win" d="M3290 10995H6760 M3290 11105H6760 M3290 10995V11105 M6760 10995V11105"/>
+<path class="win-g" d="M3290 11035H6760 M3290 11065H6760"/>
+
+</g>
+<g id="W07" data-type="window" data-width-mm="2140">
+<path class="win-gap" d="M7340 11050H9480"/>
+<path class="win" d="M7340 10995H9480 M7340 11105H9480 M7340 10995V11105 M9480 10995V11105"/>
+<path class="win-g" d="M7340 11035H9480 M7340 11065H9480"/>
+
+</g>
+<g id="W08" data-type="window" data-width-mm="680">
+<path class="win-gap" d="M10470 11050H11150"/>
+<path class="win" d="M10470 10995H11150 M10470 11105H11150 M10470 10995V11105 M11150 10995V11105"/>
+<path class="win-g" d="M10470 11035H11150 M10470 11065H11150"/>
+
+</g>
+<g id="W09" data-type="window" data-width-mm="800">
+<path class="win-gap" d="M3550 700H4350"/>
+<path class="win" d="M3550 645H4350 M3550 755H4350 M3550 645V755 M4350 645V755"/>
+<path class="win-g" d="M3550 685H4350 M3550 715H4350"/>
+
+</g>
+<g id="W10" data-type="window" data-width-mm="800">
+<path class="win-gap" d="M6050 0H6850"/>
+<path class="win" d="M6050 -55H6850 M6050 55H6850 M6050 -55V55 M6850 -55V55"/>
+<path class="win-g" d="M6050 -15H6850 M6050 15H6850"/>
+
+</g>
+<g id="D01" data-type="door" data-width-mm="1000">
+<path class="door-gap" d="M0 4560L0 5560"/>
+<path class="door-leaf" d="M0 4560L-1000 4560"/>
+<path class="door-arc" d="M-1000 4560A1000 1000 0 0 0 0 5560"/>
+
+</g>
+<g id="MD01" data-type="door" data-width-mm="820">
+<path class="door-gap" d="M1500 5170L1500 4350"/>
+<path class="door-leaf" d="M1500 5170L2320 5170"/>
+<path class="door-arc" d="M2320 5170A820 820 0 0 0 1500 4350"/>
+
+</g>
+<g id="D02" data-type="door" data-width-mm="720">
+<path class="door-gap" d="M1950 4000L2670 4000"/>
+<path class="door-leaf" d="M1950 4000L1950 3280"/>
+<path class="door-arc" d="M1950 3280A720 720 0 0 1 2670 4000"/>
+
+</g>
+<g id="D03" data-type="door" data-width-mm="650">
+<path class="door-gap" d="M3150 4000L3800 4000"/>
+<path class="door-leaf" d="M3150 4000L3150 3350"/>
+<path class="door-arc" d="M3150 3350A650 650 0 0 1 3800 4000"/>
+
+</g>
+<g id="D04" data-type="door" data-width-mm="750">
+<path class="door-gap" d="M2700 5800L1950 5800"/>
+<path class="door-leaf" d="M2700 5800L2700 6550"/>
+<path class="door-arc" d="M2700 6550A750 750 0 0 1 1950 5800"/>
+
+</g>
+<g id="D05" data-type="door" data-width-mm="750">
+<path class="door-gap" d="M7350 5500L8100 5500"/>
+<path class="door-leaf" d="M7350 5500L7350 6250"/>
+<path class="door-arc" d="M7350 6250A750 750 0 0 0 8100 5500"/>
+
+</g>
+<g id="D06" data-type="door" data-width-mm="685">
+<path class="door-gap" d="M9275 5500L9960 5500"/>
+<path class="door-leaf" d="M9275 5500L9275 4815"/>
+<path class="door-arc" d="M9275 4815A685 685 0 0 1 9960 5500"/>
+
+</g>
+<g id="D09" data-type="door" data-width-mm="580">
+<path class="door-gap" d="M10200 10250L10200 10830"/>
+<path class="door-leaf" d="M10200 10250L9620 10250"/>
+<path class="door-arc" d="M9620 10250A580 580 0 0 0 10200 10830"/>
+
+</g>
+<g id="D10" data-type="door" data-width-mm="570">
+<path class="door-gap" d="M4720 4000L4150 4000"/>
+<path class="door-leaf" d="M4720 4000L4720 4570"/>
+<path class="door-arc" d="M4720 4570A570 570 0 0 1 4150 4000"/>
+
+</g>
+<g id="D07" data-type="door" data-width-mm="700">
+<path class="door-gap" d="M7950 1440L7950 740"/>
+<path class="door-leaf" d="M7950 1440L8650 1440"/>
+<path class="door-arc" d="M8650 1440A700 700 0 0 0 7950 740"/>
+
+</g>
+<g id="TD01" data-type="door" data-width-mm="690">
+<path class="door-gap" d="M7200 10060L7200 10750"/>
+<path class="door-leaf" d="M7200 10060L7890 10060"/>
+<path class="door-arc" d="M7890 10060A690 690 0 0 1 7200 10750"/>
+
+</g>
+</g>
+<g id="L-fixture-exist" class="gs" data-layer="기존 위생·주방 기구(원도면 배치)">
+<rect class="fix" x="3230" y="790" width="1490" height="440" rx="110"/><rect class="fix-l" x="3300" y="850" width="1350" height="320" rx="100"/><text x="3975" y="1065" class="room-c">욕조</text>
+<rect class="fix" x="4230" y="1330" width="510" height="500" rx="70"/><ellipse class="fix-l" cx="4470" cy="1580" rx="170" ry="190"/><text x="4000" y="1620" class="room-c" style="text-anchor:end">세면</text>
+<rect class="fix" x="4580" y="2030" width="160" height="480" rx="30"/><ellipse class="fix" cx="4340" cy="2270" rx="300" ry="200"/><text x="4000" y="2310" class="room-c" style="text-anchor:end">변기</text>
+<rect x="4615" y="2000" width="120" height="540" fill="none" stroke="#a2a2a2" stroke-width="12" stroke-dasharray="40 25"/><text x="4560" y="1980" class="room-c" style="font-size:60px;text-anchor:end">선반(변기 위)</text>
+<rect x="9330" y="4045" width="580" height="120" fill="none" stroke="#a2a2a2" stroke-width="12" stroke-dasharray="40 25"/><text x="9620" y="3990" class="room-c" style="font-size:60px">선반(변기 위)</text>
+<rect class="fix" x="9380" y="4060" width="480" height="160" rx="30"/><ellipse class="fix" cx="9620" cy="4450" rx="200" ry="290"/>
+<rect class="fix" x="10050" y="4060" width="600" height="460" rx="70"/><ellipse class="fix-l" cx="10350" cy="4310" rx="200" ry="150"/>
+</g>
+<g id="L-kitchen" class="gs" data-layer="주방 계획(1안 ㄷ자, 2026-11-22)">
+<rect x="4850" y="50" width="3060" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<path d="M4850 50 H5750 V650 H5450 V950 H4850 Z" fill="#ffffff" stroke="#a7a7a7" stroke-width="14"/>
+<path d="M5450 650 H5750 M5450 650 V950" stroke="#a7a7a7" stroke-width="30"/>
+
+
+<text x="5150" y="330" class="room-c" style="font-size:72px">하부 코너장</text>
+<text x="5150" y="440" class="room-c" style="font-size:66px">양개형 900</text>
+<rect x="5750" y="50" width="600" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14" style="fill:#f7f7f7"/>
+<text x="6050" y="330" class="room-c" style="font-size:70px">식세기 600</text>
+<rect x="5750" y="650" width="600" height="565" fill="none" stroke="#a1a1a1" stroke-width="10" stroke-dasharray="40 30"/>
+<text x="6050" y="990" class="room-c" style="font-size:52px">문 열림 565</text>
+<text x="6590" y="380" class="room-c" style="font-size:70px">조리대 480</text>
+<rect x="6830" y="90" width="600" height="520" fill="#ffffff" stroke="#7c7c7c" stroke-width="16"/><circle cx="6980" cy="250" r="95" class="fix-l"/><circle cx="7280" cy="250" r="95" class="fix-l"/><circle cx="7130" cy="470" r="110" class="fix-l"/>
+<rect x="6780" y="60" width="700" height="120" fill="none" stroke="#a7a7a7" stroke-width="16" stroke-dasharray="50 30"/>
+<rect x="7430" y="50" width="450" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<text x="7655" y="350" class="room-c" style="font-size:80px" transform="rotate(-90 7655 350)">양념</text>
+<rect x="7880" y="50" width="30" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14" style="fill:#ececec"/>
+<rect x="6380" y="1170" width="1100" height="120" fill="#ffffff"/>
+<rect x="4850" y="950" width="600" height="900" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<rect x="4920" y="970" width="460" height="860" rx="50" class="fix"/><circle cx="5150" cy="1400" r="40" class="fix-l"/>
+<text x="5150" y="1260" class="room-c" style="font-size:62px" transform="rotate(-90 5150 1260)">개수대 860</text>
+<rect x="5260" y="1020" width="150" height="760" fill="none" stroke="#a5a5a5" stroke-width="12" stroke-dasharray="30 18"/>
+<text x="5335" y="1400" class="room-c" style="font-size:52px" transform="rotate(-90 5335 1400)">분배기(하부)</text>
+<rect x="4850" y="1850" width="600" height="100" fill="#ffffff" stroke="#a2a2a2" stroke-width="10" stroke-dasharray="30 20"/>
+<text x="5150" y="1920.0" class="room-c" style="font-size:46px">여유 100</text>
+<path d="M5520 950 V1950 M5480 950 H5560 M5480 1850 H5560 M5480 1950 H5560" stroke="#a2a2a2" stroke-width="10"/>
+
+
+<rect x="4850" y="1950" width="1400" height="600" fill="#f8f8f8" stroke="#a7a7a7" stroke-width="16"/>
+<path d="M5450 1950 V2550" stroke="#a7a7a7" stroke-width="10" stroke-dasharray="40 30"/>
+<text x="5150" y="2240" class="room-c" style="font-size:58px">로봇청소기</text>
+<text x="5150" y="2330" class="room-c" style="font-size:48px">(식탁 쪽 개방)</text>
+<path d="M4900 2550 h500" stroke="#a1a1a1" stroke-width="22"/>
+<text x="5880" y="2280" class="room-c" style="font-size:62px">반도 1,400 × 600</text>
+<path d="M5450 2470 H6250 M5450 2430 V2510 M6250 2430 V2510" stroke="#a2a2a2" stroke-width="8"/>
+<text x="5850" y="2400" class="room-c" style="font-size:44px">앞면 800</text>
+<rect x="7160" y="1990" width="750" height="930" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<rect x="7160" y="2920" width="750" height="720" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<rect x="7160" y="1998" width="698" height="914" fill="#f1f1f1" stroke="#9e9e9e" stroke-width="10"/>
+<text x="7509" y="2455" class="room-c" style="font-size:66px" transform="rotate(-90 7509 2455)">냉장고 914×698</text>
+<rect x="7160" y="2947" width="685" height="666" fill="#f1f1f1" stroke="#9e9e9e" stroke-width="10"/>
+<text x="7502" y="3280" class="room-c" style="font-size:62px" transform="rotate(-90 7502 3280)">김치 666×685</text>
+<text x="7884" y="2455" class="room-c" style="font-size:36px" transform="rotate(-90 7884 2455)">뒤 52</text>
+<text x="7878" y="3280" class="room-c" style="font-size:36px" transform="rotate(-90 7878 3280)">뒤 65</text>
+<rect x="7160" y="1990" width="750" height="1650" fill="none" stroke="#9e9e9e" stroke-width="18"/>
+<path d="M7160 1998 L6703 1998 A457 457 0 0 0 7160 2455 M7160 2912 L6703 2912 A457 457 0 0 1 7160 2455" fill="none" stroke="#a1a1a1" stroke-width="10" stroke-dasharray="40 25"/>
+<text x="6930" y="2220" class="room-c" style="font-size:48px">문 457</text>
+<text x="6930" y="2720" class="room-c" style="font-size:48px">문 457</text>
+<path d="M7160 3620 L6494 3620 A666 666 0 0 1 7160 2954" fill="none" stroke="#a1a1a1" stroke-width="10" stroke-dasharray="40 25"/>
+<text x="6820" y="3540" class="room-c" style="font-size:44px">상칸 문 666(좌/우 확인)</text>
+<rect x="7160" y="1440" width="750" height="550" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<text x="7535" y="1715.0" class="room-c" style="font-size:56px" transform="rotate(-90 7535 1715.0)">키큰장 550</text>
+<path d="M7160 1440 L6610 1440 A550 550 0 0 0 7160 1990" fill="none" stroke="#a1a1a1" stroke-width="10" stroke-dasharray="40 25"/>
+<rect x="7160" y="3640" width="750" height="400" fill="#ffffff" stroke="#a2a2a2" stroke-width="14" style="fill:#f8f8f8"/>
+<text x="7535" y="3840.0" class="room-c" style="font-size:52px" transform="rotate(-90 7535 3840.0)">커피장 400</text>
+<text x="7020" y="3860.0" class="room-c" style="font-size:40px" transform="rotate(-90 7020 3860.0)">하부 수납 · 상판 커피머신</text>
+<path d="M7160 1390 H7910 M7160 1350 V1430 M7910 1350 V1430" stroke="#a2a2a2" stroke-width="10"/>
+
+<path d="M7160 4110 H7910 M7160 4070 V4150 M7910 4070 V4150" stroke="#a2a2a2" stroke-width="10"/>
+
+<path d="M8110 50 V4040 M8330 1440 V4040 M8290 1440 H8370 M8290 4040 H8370 M8070 50 H8150 M8070 650 H8150 M8070 740 H8150 M8070 1440 H8150 M8070 1990 H8150 M8070 3640 H8150 M8070 4040 H8150" stroke="#a2a2a2" stroke-width="10"/>
+
+
+
+<text x="8190" y="1715.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 1715.0)">키큰장 550</text>
+<text x="8190" y="2815.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 2815.0)">냉장고장 1,650 (930 + 720)</text>
+<text x="8190" y="3840.0" class="room-c" style="font-size:46px" transform="rotate(-90 8190 3840.0)">커피장 400</text>
+<text x="8410" y="2740" class="room-c" style="font-size:46px" transform="rotate(-90 8410 2740)">실측 2,600 (발코니 문 쪽 모서리~커피장 끝 = H-옷방 외경)</text>
+<path d="M6500 650 V1950 M6430 650 H6570 M6430 1950 H6570" stroke="#a1a1a1" stroke-width="12"/>
+<path d="M6250 2350 H7160 M6250 2280 V2420 M7160 2280 V2420" stroke="#a1a1a1" stroke-width="12"/>
+<path d="M6850 1100 L7450 1100" stroke="#a7a7a7" stroke-width="10" stroke-dasharray="50 30"/><text x="7500" y="1080" class="room-c" style="font-size:60px;fill:#a7a7a7;text-anchor:start">→ D07</text>
+<path d="M5650 2550 V2650" stroke="#a2a2a2" stroke-width="10"/>
+
+<path d="M4850 600 H7910 M4850 565 V635 M5750 565 V635 M6350 565 V635 M6830 565 V635 M7430 565 V635 M7880 565 V635 M7910 565 V635" stroke="#a2a2a2" stroke-width="8"/>
+
+
+
+
+
+<text x="7895.0" y="585" class="room-c" style="font-size:42px"></text>
+
+<path d="M5520 50 V1950 M5480 50 H5560" stroke="#a2a2a2" stroke-width="10"/>
+
+<path d="M6320 1950 V2550 M6280 1950 H6360 M6280 2550 H6360" stroke="#a2a2a2" stroke-width="10"/>
+
+<path d="M7470 50 V650 M7440 50 H7500 M7440 650 H7500" stroke="#a2a2a2" stroke-width="8"/>
+<circle cx="5650" cy="3250" r="600" fill="#f2f2f2" stroke="#a7a7a7" stroke-width="16"/>
+<text x="5650" y="3260" class="room-c" style="font-size:90px">원형 식탁</text>
+<text x="5650" y="3370" class="room-c" style="font-size:60px">Ø1,200</text>
+<rect x="5987.401153701776" y="3587.401153701776" width="400" height="400" rx="70" fill="#ffffff" stroke="#bebebe" stroke-width="12" transform="rotate(-45 6187.401153701776 3787.401153701776)"/>
+<rect x="5450.0" y="3810.0" width="400" height="400" rx="70" fill="#ffffff" stroke="#bebebe" stroke-width="12" transform="rotate(0 5650.0 4010.0)"/>
+<rect x="4912.598846298224" y="3587.401153701776" width="400" height="400" rx="70" fill="#ffffff" stroke="#bebebe" stroke-width="12" transform="rotate(45 5112.598846298224 3787.401153701776)"/>
+
+</g>
+<g id="L-furniture" class="gs" data-layer="가구·수납(계획)">
+<rect x="80" y="5560" width="1340" height="170" fill="none" stroke="#a2a2a2" stroke-width="10" stroke-dasharray="20 40"/><text x="750" y="5500" class="room-c" style="font-size:72px">노출형 기울임 신발 거치대 170 (가구 없음)</text>
+<rect x="60" y="4040" width="1380" height="400" fill="#ffffff" stroke="#a2a2a2" stroke-width="14" stroke-dasharray="70 40"/><text x="750" y="4290" class="room-c" style="font-size:80px">신발장 (깊이 약 400)</text>
+<g data-furniture="beds"><rect x="7220" y="6940" width="2300" height="1760" rx="40" fill="#f6f6f6" stroke="#a6a6a6" stroke-width="14"/><rect x="7240" y="7010" width="420" height="1620" rx="30" fill="#ffffff" stroke="#a6a6a6" stroke-width="8"/><text x="8450" y="7860" class="room-c" style="font-size:105px;fill:#a6a6a6">침대 1,760×2,300</text></g>
+
+<rect x="10890" y="5580" width="450" height="1000" fill="#ffffff" stroke="#a7a7a7" stroke-width="16"/>
+<path d="M11330 5650V6510" stroke="#b2b2b2" stroke-width="30"/>
+<text x="11115" y="6080" class="room-c" transform="rotate(-90 11115 6080)" style="dominant-baseline:central;fill:#a7a7a7;font-size:60px">화장대 선반 (직접 구매)</text>
+<circle cx="10650" cy="6080" r="160" fill="#ffffff" stroke="#bebebe" stroke-width="12" stroke-dasharray="30 20"/>
+
+
+
+
+<text x="1350" y="10750" class="room-c" style="font-size:60px;fill:#a2a2a2">빈 공간 (창고 없음 · 추후 가구)</text>
+<g id="D11" data-type="folding-door" data-width-mm="700">
+<path d="M2240 9700 L2065 9397 L1890 9700" fill="none" stroke="#7c7c7c" stroke-width="30" stroke-linejoin="round"/>
+<path d="M2240 9700 H1540" stroke="#a2a2a2" stroke-width="10" stroke-dasharray="40 30"/>
+<path d="M1700 9560 H2090" stroke="#a1a1a1" stroke-width="10"/><path d="M2130 9560 L2070 9525 L2070 9595 Z" fill="#a1a1a1"/>
+<rect x="2140" y="9330" width="100" height="370" fill="none" stroke="#a1a1a1" stroke-width="8" stroke-dasharray="25 15"/>
+<text x="2060" y="9250" class="tag">D11</text><text x="1890" y="9150" class="room-c" style="font-size:50px;fill:#a2a2a2">루버 셔터 접이문 350×2</text>
+</g>
+<text x="9750" y="3250" class="room-c" style="font-size:85px;fill:#a7a7a7">시스템장 (기존 집 이전)</text>
+<text x="8665" y="4330" class="room-c" style="font-size:60px;fill:#a2a2a2">개구부 730 (문 없음)</text>
+<rect x="210" y="750" width="2530" height="200" fill="#fafafa" fill-opacity=".45" stroke="#b5b5b5" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="1475.0" y="850.0" class="room-c" style="font-size:75px;fill:#b5b5b5;dominant-baseline:central">커튼박스 W01</text>
+<rect x="8600" y="1530" width="1870" height="200" fill="#fafafa" fill-opacity=".45" stroke="#b5b5b5" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="9535.0" y="1630.0" class="room-c" style="font-size:75px;fill:#b5b5b5;dominant-baseline:central">커튼박스 W03</text>
+<rect x="7730" y="9450" width="2210" height="200" fill="#fafafa" fill-opacity=".45" stroke="#b5b5b5" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="8835.0" y="9550.0" class="room-c" style="font-size:75px;fill:#b5b5b5;dominant-baseline:central">커튼박스 W04</text>
+<rect x="480" y="9450" width="1760" height="200" fill="#fafafa" fill-opacity=".45" stroke="#b5b5b5" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="1360.0" y="9550.0" class="room-c" style="font-size:75px;fill:#b5b5b5;dominant-baseline:central">커튼박스 W11+D11</text>
+<rect x="3190" y="10800" width="3950" height="200" fill="#fafafa" fill-opacity=".45" stroke="#b5b5b5" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="5165.0" y="10900.0" class="room-c" style="font-size:75px;fill:#b5b5b5;dominant-baseline:central">커튼박스 W06</text>
+<g data-furniture="sofa"><rect x="2800" y="6650.0" width="950" height="2200" rx="60" fill="#f6f6f6" stroke="#a6a6a6" stroke-width="16"/><rect x="2800" y="6650.0" width="220" height="2200" rx="40" fill="#ececec" stroke="#a6a6a6" stroke-width="10"/><rect x="2800" y="6650.0" width="950" height="200" rx="40" fill="#ececec" stroke="#a6a6a6" stroke-width="10"/><rect x="2800" y="8650.0" width="950" height="200" rx="40" fill="#ececec" stroke="#a6a6a6" stroke-width="10"/><path d="M3020 7383H3750 M3020 8117H3750" stroke="#a6a6a6" stroke-width="8" stroke-dasharray="30 20"/><text x="3385" y="7750" class="room-c" transform="rotate(-90 3385 7750)" style="dominant-baseline:central;fill:#a6a6a6">소파 약 2,200×950</text></g>
+<g data-furniture="tv"><rect x="6600" y="7200" width="500" height="800" rx="80" fill="#ffffff" stroke="#bebebe" stroke-width="12" stroke-dasharray="40 25"/><path d="M6720 6762.5V8437.5" stroke="#7c7c7c" stroke-width="60" stroke-linecap="butt"/><text x="6980" y="7600" class="room-c" transform="rotate(-90 6980 7600)" style="dominant-baseline:central;font-size:105px">TV 75" · 폭 약 1,675</text></g>
+
+<g data-furniture="tower-ac" transform="rotate(45 3043 10687)"><rect x="2843.0" y="10487.0" width="400" height="400" rx="50" fill="#f8f8f8" stroke="#a1a1a1" stroke-width="16"/><path d="M2903.0 10487.0 H3183.0" stroke="#a1a1a1" stroke-width="40" stroke-linecap="round"/></g>
+<text x="3373" y="10437" class="room-c" style="font-size:80px;fill:#a1a1a1;text-anchor:start">타워 에어컨(45°)</text>
+
+<path d="M3790 7675H6680" stroke="#c7c7c7" stroke-width="10" stroke-dasharray="60 40"/>
+
+</g>
+<g id="L-labels" class="gs" data-layer="실명·면적">
+<g data-room="A-01" data-area-m2="2.70" data-floor="타일 · 북측 신발장">
+<text x="750" y="5000" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">현관</text>
+<text x="750" y="5190" class="room-a">A-01 · ≈2.7㎡</text>
+</g>
+<g data-room="G" data-area-m2="10.39" data-floor="마루 · 팬트리1 취소로 원래 크기 · 서재→침실(2026-11-22)">
+<text x="1950" y="2050" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">G-침실</text>
+<text x="1950" y="2240" class="room-a">G · ≈10.4㎡</text>
+</g>
+<g data-room="PT" data-area-m2="0.59" data-floor="마루 · MX4200 #1">
+<text x="4450" y="3560" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">팬트리</text>
+<text x="4450" y="3750" class="room-a">PT · ≈0.6㎡</text>
+</g>
+<g data-room="A-04" data-area-m2="4.54" data-floor="타일">
+<text x="3560" y="2900" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">욕실A</text>
+<text x="3560" y="3090" class="room-a">A-04 · ≈4.5㎡</text>
+</g>
+<g data-room="A-03" data-area-m2="13.20" data-floor="마루/타일 미정">
+<text x="6000" y="1470" class="room">주방</text>
+<text x="6000" y="1700" class="room-c">A-03</text>
+<text x="6000" y="1890" class="room-a">≈13.2㎡</text>
+</g>
+<g data-room="A-08-1" data-area-m2="2.66" data-floor="타일(비확장) · 외벽 위치 실측 필요">
+<text x="9275" y="1080" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">주방 옆 발코니</text>
+<text x="9275" y="1270" class="room-a">A-08-1 · ≈2.7㎡</text>
+</g>
+<g data-room="H" data-area-m2="8.69" data-floor="마루 · 시스템장(기존 집 이전 설치)">
+<text x="9750" y="2800" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">H-옷방</text>
+<text x="9750" y="2990" class="room-a">H · ≈8.7㎡</text>
+</g>
+<g data-room="A-05" data-area-m2="2.21" data-floor="타일">
+<text x="10300" y="4950" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">욕실B</text>
+<text x="10300" y="5140" class="room-a">A-05 · ≈2.2㎡</text>
+</g>
+<g data-room="HALL" data-area-m2="12.02" data-floor="마루">
+<text x="4950" y="4800" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">복도</text>
+<text x="4950" y="4990" class="room-a">HALL · ≈12.0㎡</text>
+</g>
+<g data-room="I" data-area-m2="10.53" data-floor="마루">
+<text x="1300" y="8400" class="room">I-서재</text>
+<text x="1300" y="8630" class="room-c">I</text>
+<text x="1300" y="8820" class="room-a">≈10.5㎡</text>
+</g>
+<g data-room="A-02" data-area-m2="18.90" data-floor="마루">
+<text x="4950" y="7700" class="room">거실</text>
+<text x="4950" y="7930" class="room-c">A-02</text>
+<text x="4950" y="8120" class="room-a">≈18.9㎡</text>
+</g>
+<g data-room="F" data-area-m2="17.64" data-floor="마루 · 드레스룸 가벽 철거, 장 위치 미정">
+<text x="8500" y="6050" class="room">F-침실</text>
+<text x="8500" y="6280" class="room-c">F</text>
+<text x="8500" y="6470" class="room-a">≈17.6㎡</text>
+</g>
+<g data-room="A-08-2" data-area-m2="3.65" data-floor="확장(단열·난방) · 바닥 미정 · 출입 D11 루버 셔터문(당기는 문) · 창고 없음(빈 공간, 추후 가구)">
+<text x="1350" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">I-서재 확장부</text>
+<text x="1350" y="10570" class="room-a">A-08-2 · ≈3.6㎡</text>
+</g>
+<g data-room="A-08-3" data-area-m2="6.08" data-floor="마루(확장)">
+<text x="4950" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">거실 확장부</text>
+<text x="4950" y="10570" class="room-a">A-08-3 · ≈6.1㎡</text>
+</g>
+<g data-room="A-08-4" data-area-m2="4.05" data-floor="타일(비확장)">
+<text x="8700" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">비확장 발코니</text>
+<text x="8700" y="10570" class="room-a">A-08-4 · ≈4.0㎡</text>
+</g>
+<g data-room="ST2" data-area-m2="1.62" data-floor="타일">
+<text x="10800" y="10380" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">발코니 창고</text>
+<text x="10800" y="10570" class="room-a">ST2 · ≈1.6㎡</text>
+</g>
+</g>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<g id="W-overlay"><path d="M445 4135 L690 4135 L690 4560 L2830 4560 L2830 5930" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L3220 4560 L3220 6335 L3430 6335" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L2830 4560 L2830 6130" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L2830 4560 L2830 6345" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L4900 4560 L4900 3780" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L2800 4760 L2800 3870" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L9200 4760 L9200 3870" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L1780 4760 L1780 5930" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L1350 4760 L1350 10750" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L1350 4760 L1350 10750" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L8250 4760 L8250 5640" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L700 4560 L700 4950" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L7300 4760 L7300 9880" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L8000 4760 L8000 1720" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L8950 4560 L8950 4250" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L3950 4760 L3950 4130" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L10120 4760 L10120 5640" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4135 L690 4135 L690 4560 L8950 4560 L8950 4250" stroke="#c0392b" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M445 4195 L750 4195 L750 4760 L11000 4760 L11000 6835 L10870 6835" stroke="#2e6db4" stroke-width="20" stroke-dasharray="40 30" stroke-linejoin="round" opacity=".6" fill="none"/><path d="M3770 6110 H3900 V9950 M3900 6400 H4100 M3900 7450 H5800 V7650 M3900 8900 H4100 M3900 9950 H5800 V10150" stroke="#1e8449" stroke-width="16" stroke-linejoin="round" fill="none"/><path d="M3660 6060 V5910 H6400 V10350 M6400 6400 H5800 M6400 7850 H4100 V7650 M6400 8900 H5800 M6400 10350 H4100 V10150" stroke="#1e8449" stroke-width="16" stroke-linejoin="round" fill="none"/><path d="M2925 6130 H3300 V6480 H4950 V8275" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M2830 6345" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M4825 3780 L4825 3780 L6700 3780 L6700 3400 L6700 3400 L6700 2400 L6700 2400 L6700 2400 L6700 1250 L6850 1250 L6850 1250 L5950 1250 L5950 1250" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M4875 3780 L4875 3780 L4875 330 L5300 330" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" fill="none"/><path d="M5390 330 L5390 420 L5390 180.0 L5560.0 180.0 M5560.0 180.0 L5470.0 90.0 M5560.0 180.0 L5560.0 180.0 L5560.0 835.0 L4990.0 835.0 M4990.0 835.0 L4900.0 745.0 M4990.0 835.0" stroke="#1e8449" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M5105 3780 L5105 3960 L5830 3960 L5830 3430 M5830 3430 L5650 3250 M5830 3430" stroke="#6d4c41" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M2725 3870 L2725 3870 L2725 2350 L1575 2350" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M2865 3870 L2865 3960 L2865 1240 L2340 1240 M2340 1240 L2250 1150 M2340 1240 L2340 1240 L990 1240 L990 1240 M990 1240 L900 1150 M990 1240" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M9125 3870 L9125 3870 L9125 2800 L9750 2800" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M9265 3870 L9265 3960 L9265 2190 L9090 2190 M9090 2190 L9000 2100 M9090 2190 L9090 2190 L10190 2190 L10190 2190 M10190 2190 L10100 2100 M10190 2190" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M1845 5930 L1845 6020 L1845 7190 L2490 7190 M2490 7190 L2400 7100 M2490 7190 L2490 7190 L2490 8690 L2490 8690 M2490 8690 L2400 8600 M2490 8690" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M1985 5930 L1985 6110 L1985 7930 L1530 7930 M1530 7930 L1350 7750 M1530 7930" stroke="#6d4c41" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M1705 5930 L1705 5930 L1705 6750 L1950 6750 L1950 6750 L750 6750 L750 6750 L750 6750 L750 8750 L750 8750 L750 8750 L1950 8750 L1950 8750" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M1350 10750 L1350 10750 L700 10750 L700 10450 L700 10450 L2000 10450 L2000 10450" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M1440 10750 L1440 10840 L5040 10840 L5040 10540 M5040 10540 L4950 10450 M5040 10540" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M8175 5640 L8175 5640 L8175 7600 L8700 7600" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M8315 5640 L8315 5730 L8315 7440 L9890 7440 M9890 7440 L9800 7350 M9890 7440 L9890 7440 L9890 8390 L9890 8390 M9890 8390 L9800 8300 M9890 8390" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M625 4950 L625 4950 L700 4950 L700 4950" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M7225 9880 L7225 9880 L8700 9880 L8700 10300 L8700 10300 L10800 10300 L10800 10600" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M7925 1720 L7925 1720 L9275 1720 L9275 1150" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M9040 4250 L9040 4340 L6390 4340 L6390 4840 M6390 4840 L6300 4750 M6390 4840 L6390 4840 L3390 4840 L3390 4840 M3390 4840 L3300 4750 M3390 4840" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M3875 4130 L3875 4130 L3875 1750 L3700 1750" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M4015 4130 L4015 4220 L4015 1670 L4840 1670 M4840 1670 L4750 1580 M4840 1670" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M4155 4130 L4155 4310 L4155 1230 L4080 1230 M4080 1230 L3900 1050 M4080 1230" stroke="#6d4c41" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M10045 5640 L10045 5640 L10045 5150 L9900 5150" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M10185 5640 L10185 5730 L10185 4130 L9710 4130 M9710 4130 L9620 4040 M9710 4130" stroke="#0097a7" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M10325 5640 L10325 5820 L10325 4530 L9780 4530 M9780 4530 L9600 4350 M9780 4530" stroke="#6d4c41" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M8455 5640 L8455 5820 L10730 5820 L10730 6030 M10730 6030 L10550 5850 M10730 6030" stroke="#6d4c41" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M8950 4250 L8950 4250 L8950 4650 L8950 4650" stroke="#e67e22" stroke-width="14" stroke-linejoin="round" opacity=".9" fill="none"/><path d="M10530 6610 H9970.0 V7900.0 H10090.0" stroke="#1e8449" stroke-width="14" fill="none"/><rect x="3430" y="6060" width="340" height="180" rx="30" fill="#fff" stroke="#c0392b" stroke-width="20"/><text x="3600" y="6180" class="wl" style="font-size:80px;fill:#c0392b">LED</text><rect x="3430" y="6260" width="340" height="150" rx="26" fill="#fff" stroke="#1e8449" stroke-width="16"/><text x="3600" y="6365" class="wl" style="font-size:70px;fill:#1e8449;stroke-width:0">SMPS</text><path d="M3790 6335 H3830 V6190 H3790" stroke="#1e8449" stroke-width="14" fill="none"/><g><circle cx="4100" cy="6400" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="4100" cy="6400" r="34" fill="#1e8449"/><circle cx="5800" cy="7650" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="5800" cy="7650" r="34" fill="#1e8449"/><circle cx="4100" cy="8900" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="4100" cy="8900" r="34" fill="#1e8449"/><circle cx="5800" cy="10150" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="5800" cy="10150" r="34" fill="#1e8449"/></g><g><circle cx="5800" cy="6400" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="5800" cy="6400" r="34" fill="#1e8449"/><circle cx="4100" cy="7650" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="4100" cy="7650" r="34" fill="#1e8449"/><circle cx="5800" cy="8900" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="5800" cy="8900" r="34" fill="#1e8449"/><circle cx="4100" cy="10150" r="95" fill="#fff" stroke="#1e8449" stroke-width="24"/><circle cx="4100" cy="10150" r="34" fill="#1e8449"/></g><g><ellipse cx="4950" cy="8015" rx="90" ry="230" transform="rotate(0 4950 8275)" fill="#fff" stroke="#111" stroke-width="16"/><ellipse cx="4950" cy="8015" rx="90" ry="230" transform="rotate(120 4950 8275)" fill="#fff" stroke="#111" stroke-width="16"/><ellipse cx="4950" cy="8015" rx="90" ry="230" transform="rotate(240 4950 8275)" fill="#fff" stroke="#111" stroke-width="16"/><circle cx="4950" cy="8275" r="90" fill="#111"/></g><g></g><g><use href="#sym-downlight" x="5950" y="1250" style="color:#111"/><use href="#sym-downlight" x="6850" y="1250" style="color:#111"/><use href="#sym-downlight" x="6700" y="2400" style="color:#111"/><use href="#sym-downlight" x="6700" y="3400" style="color:#111"/></g><rect x="5130" y="240" width="340" height="180" rx="30" fill="#fff" stroke="#1e8449" stroke-width="20"/><text x="5300" y="360" class="wl" style="font-size:72px;fill:#1e8449">SMPS</text><g><path d="M6040 90L4900 90" stroke="#1e8449" stroke-width="70" stroke-linecap="round"/><path d="M4900 90L4900 1400" stroke="#1e8449" stroke-width="70" stroke-linecap="round"/></g><use href="#sym-sensor" x="6300" y="1300"/><g><path d="M5650 3090V3180" stroke="#a0522d" stroke-width="14"/><path d="M5500 3330L5580 3180H5720L5800 3330Z" fill="#fff" stroke="#a0522d" stroke-width="20" stroke-linejoin="round"/><circle cx="5650" cy="3355" r="35" fill="#a0522d"/></g><g><use href="#sym-ceiling-light" x="1575" y="2350"/><use href="#sym-downlight" x="900" y="1150" style="color:#111"/><use href="#sym-downlight" x="2250" y="1150" style="color:#111"/></g><g><use href="#sym-ceiling-light" x="9750" y="2800"/><use href="#sym-downlight" x="9000" y="2100" style="color:#111"/><use href="#sym-downlight" x="10100" y="2100" style="color:#111"/></g><g><ellipse cx="1350" cy="7490" rx="90" ry="230" transform="rotate(0 1350 7750)" fill="#fff" stroke="#111" stroke-width="16"/><ellipse cx="1350" cy="7490" rx="90" ry="230" transform="rotate(120 1350 7750)" fill="#fff" stroke="#111" stroke-width="16"/><ellipse cx="1350" cy="7490" rx="90" ry="230" transform="rotate(240 1350 7750)" fill="#fff" stroke="#111" stroke-width="16"/><circle cx="1350" cy="7750" r="90" fill="#111"/><use href="#sym-downlight" x="2400" y="7100" style="color:#111"/><use href="#sym-downlight" x="2400" y="8600" style="color:#111"/></g><g><use href="#sym-downlight" x="750" y="6750" style="color:#111"/><use href="#sym-downlight" x="1950" y="6750" style="color:#111"/><use href="#sym-downlight" x="750" y="8750" style="color:#111"/><use href="#sym-downlight" x="1950" y="8750" style="color:#111"/></g><rect x="1180" y="10660" width="340" height="180" rx="30" fill="#fff" stroke="#2e6db4" stroke-width="20"/><text x="1350" y="10780" class="wl" style="font-size:80px;fill:#2e6db4">T2</text><g><use href="#sym-downlight" x="700" y="10450" style="color:#111"/><use href="#sym-downlight" x="2000" y="10450" style="color:#111"/></g><use href="#sym-sensor" x="1350" y="10150"/><rect x="1180" y="10660" width="340" height="180" rx="30" fill="#fff" stroke="#2e6db4" stroke-width="20"/><text x="1350" y="10780" class="wl" style="font-size:80px;fill:#2e6db4">T2</text><g><path d="M4950 10290V10380" stroke="#a0522d" stroke-width="14"/><path d="M4800 10530L4880 10380H5020L5100 10530Z" fill="#fff" stroke="#a0522d" stroke-width="20" stroke-linejoin="round"/><circle cx="4950" cy="10555" r="35" fill="#a0522d"/></g><g><use href="#sym-ceiling-light" x="8700" y="7600"/><use href="#sym-downlight" x="9800" y="7350" style="color:#111"/><use href="#sym-downlight" x="9800" y="8300" style="color:#111"/></g><g><use href="#sym-ceiling-light" x="700" y="4950"/></g><g><use href="#sym-ceiling-light" x="8700" y="10300"/><use href="#sym-downlight" x="10800" y="10600" style="color:#111"/></g><use href="#sym-sensor" x="7700" y="10500"/><g><use href="#sym-ceiling-light" x="9275" y="1150"/></g><use href="#sym-sensor" x="8600" y="850"/><rect x="8780" y="4160" width="340" height="180" rx="30" fill="#fff" stroke="#c0392b" stroke-width="20"/><text x="8950" y="4280" class="wl" style="font-size:80px;fill:#c0392b">T2</text><g><use href="#sym-downlight" x="3300" y="4750" style="color:#111"/><use href="#sym-downlight" x="6300" y="4750" style="color:#111"/></g><g><use href="#sym-ceiling-light" x="3700" y="1750"/><g transform="rotate(90 4750 1580)"><path d="M4600 1580A150 150 0 0 0 4900 1580Z" fill="#fff" stroke="#111" stroke-width="20"/><path d="M4560 1580H4940" stroke="#111" stroke-width="30"/><circle cx="4750" cy="1640" r="30" fill="#111"/></g><rect x="3775" y="925" width="250" height="250" rx="20" fill="#fff" stroke="#111" stroke-width="18"/><circle cx="3900" cy="1050" r="80" fill="none" stroke="#111" stroke-width="12"/><path d="M3820 1050H3980 M3900 970V1130" stroke="#111" stroke-width="10"/></g><use href="#sym-sensor" x="3400" y="2650"/><g><use href="#sym-ceiling-light" x="9900" y="5150"/><g transform="rotate(0 9620 4040)"><path d="M9470 4040A150 150 0 0 0 9770 4040Z" fill="#fff" stroke="#111" stroke-width="20"/><path d="M9430 4040H9810" stroke="#111" stroke-width="30"/><circle cx="9620" cy="4100" r="30" fill="#111"/></g><rect x="9475" y="4225" width="250" height="250" rx="20" fill="#fff" stroke="#111" stroke-width="18"/><circle cx="9600" cy="4350" r="80" fill="none" stroke="#111" stroke-width="12"/><path d="M9520 4350H9680 M9600 4270V4430" stroke="#111" stroke-width="10"/></g><use href="#sym-sensor" x="9450" y="5300"/><g><use href="#sym-downlight" x="10550" y="5850" style="color:#111"/></g><rect x="8780" y="4160" width="340" height="180" rx="30" fill="#fff" stroke="#c0392b" stroke-width="20"/><text x="8950" y="4280" class="wl" style="font-size:80px;fill:#c0392b">T2</text><g><use href="#sym-downlight" x="8950" y="4650" style="color:#111"/></g><rect x="10530" y="6560" width="340" height="180" rx="30" fill="#fff" stroke="#2e6db4" stroke-width="20"/><text x="10700" y="6680" class="wl" style="font-size:80px;fill:#2e6db4">LED</text><rect x="10530" y="6760" width="340" height="150" rx="26" fill="#fff" stroke="#1e8449" stroke-width="16"/><text x="10700" y="6865" class="wl" style="font-size:70px;fill:#1e8449;stroke-width:0">SMPS</text><path d="M10510 6835 H10470 V6650 H10510" stroke="#1e8449" stroke-width="14" fill="none"/><g><path d="M10090 6800L10090 9000" stroke="#1e8449" stroke-width="70" stroke-linecap="round"/></g><use href="#sym-sensor" x="10380" y="6450"/><rect x="2735" y="5835" width="190" height="190" rx="30" fill="#c0392b"/><text x="2830" y="5975" class="wsw">S</text><rect x="2735" y="6035" width="190" height="190" rx="30" fill="#c0392b"/><text x="2830" y="6175" class="wsw">S</text><rect x="2720" y="6230" width="220" height="230" rx="30" fill="#fff" stroke="#8e44ad" stroke-width="22"/><rect x="2770" y="6280" width="120" height="100" rx="10" fill="#d7bde2"/><text x="2830" y="6440" class="wsw" style="font-size:60px;fill:#8e44ad">S1+</text><rect x="4805" y="3685" width="190" height="190" rx="30" fill="#c0392b"/><text x="4900" y="3825" class="wsw">S</text><rect x="2705" y="3775" width="190" height="190" rx="30" fill="#2e6db4"/><text x="2800" y="3915" class="wsw">S</text><rect x="9105" y="3775" width="190" height="190" rx="30" fill="#2e6db4"/><text x="9200" y="3915" class="wsw">S</text><rect x="1685" y="5835" width="190" height="190" rx="30" fill="#2e6db4"/><text x="1780" y="5975" class="wsw">S</text><rect x="8155" y="5545" width="190" height="190" rx="30" fill="#2e6db4"/><text x="8250" y="5685" class="wsw">S</text><rect x="7205" y="9785" width="190" height="190" rx="30" fill="#2e6db4"/><text x="7300" y="9925" class="wsw">S</text><rect x="7905" y="1625" width="190" height="190" rx="30" fill="#2e6db4"/><text x="8000" y="1765" class="wsw">S</text><rect x="3855" y="4035" width="190" height="190" rx="30" fill="#2e6db4"/><text x="3950" y="4175" class="wsw">S</text><rect x="10025" y="5545" width="190" height="190" rx="30" fill="#2e6db4"/><text x="10120" y="5685" class="wsw">S</text><rect x="150" y="4050" width="420" height="170" fill="#111"/><text x="360" y="4175" class="wsw">P</text><rect x="3925" y="6093" width="1764" height="101" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3925" y="6205" width="1972" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4355" y="6354" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="6055" y="7604" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4355" y="8854" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="6055" y="10104" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4245" y="5977" width="1794" height="95" rx="18" fill="#fff" fill-opacity=".88"/><rect x="6055" y="6354" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4355" y="7604" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="6055" y="8854" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4355" y="10104" width="150" height="112" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4903" y="5777" width="1794" height="95" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4714" y="8406" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="5714" y="1381" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4592" y="461" width="1417" height="129" rx="18" fill="#fff" fill-opacity=".88"/><rect x="5259" y="221" width="422" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="5414" y="3381" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1339" y="2481" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="664" y="1281" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9514" y="2931" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8764" y="2231" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2164" y="7231" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1114" y="7881" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="514" y="6881" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="389" y="9818" width="1923" height="118" rx="18" fill="#fff" fill-opacity=".88"/><rect x="31" y="9931" width="2638" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="464" y="10581" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4714" y="10581" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8464" y="7731" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9564" y="7481" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="975" y="5203" width="2373" height="101" rx="18" fill="#fff" fill-opacity=".88"/><rect x="464" y="5081" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8464" y="10431" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9039" y="1281" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3064" y="4881" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3464" y="1881" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4514" y="1711" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3664" y="1181" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9664" y="5281" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9384" y="4171" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9364" y="4481" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="10314" y="5981" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7538" y="3898" width="1825" height="118" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7033" y="4011" width="2834" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8714" y="4781" width="172" height="90" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9499" y="6130" width="2403" height="118" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="5510" width="546" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="5621" width="824" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="5713" width="673" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="5805" width="731" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2017" y="6286" width="508" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1813" y="6397" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1389" y="6489" width="1136" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="6531" width="960" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="6642" width="1641" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="6734" width="689" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2985" y="6826" width="715" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4872" y="3188" width="815" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4461" y="3299" width="1638" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4699" y="3391" width="1162" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4924" y="3483" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="4670" y="3575" width="1220" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2419" y="3462" width="761" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2444" y="3573" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="2282" y="3665" width="1036" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8819" y="3462" width="761" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8844" y="3573" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="8682" y="3665" width="1036" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1399" y="5338" width="761" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1262" y="5449" width="1036" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1262" y="5541" width="1036" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="1424" y="5633" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="953" y="5725" width="1653" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7869" y="5048" width="761" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7894" y="5159" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7732" y="5251" width="1036" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7696" y="5343" width="1107" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7754" y="5435" width="992" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="6892" y="9472" width="815" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="6817" y="9583" width="966" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7034" y="9675" width="532" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7592" y="1312" width="815" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7609" y="1423" width="783" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="7734" y="1515" width="532" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3392" y="3538" width="815" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3444" y="3649" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3184" y="3741" width="1232" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3444" y="3833" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="3534" y="3925" width="532" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9792" y="5048" width="815" height="110" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9844" y="5159" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9619" y="5251" width="1162" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9844" y="5343" width="712" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="9555" y="5435" width="1290" height="85" rx="18" fill="#fff" fill-opacity=".88"/><rect x="-2178" y="4042" width="2053" height="95" rx="18" fill="#fff" fill-opacity=".88"/><text x="3900" y="6170" class="wl" style="fill:#1e8449;text-anchor:start;font-size:90px">거실 SMPS 24V 150W(상시) + LED 제어기</text><text x="3900" y="6270" class="wl" style="fill:#1e8449;text-anchor:start;font-size:76px">ch1 = A · ch2 = B ← L1 노브·L2 2번 무선(선 없음)</text><text x="4330" y="6440" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">A1</text><text x="6030" y="7690" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">A2</text><text x="4330" y="8940" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">A3</text><text x="6030" y="10190" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">A4</text><text x="4220" y="6050" class="wl" style="font-size:85px;fill:#1e8449;text-anchor:start">A 채널(ch1) · 공통+·WW·CW 3심 · 4등 병렬</text><text x="6030" y="6440" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">B1</text><text x="4330" y="7690" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">B2</text><text x="6030" y="8940" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">B3</text><text x="4330" y="10190" class="wl" style="font-size:100px;fill:#1e8449;text-anchor:start">B4</text><text x="5800" y="5850" class="wl" style="font-size:85px;fill:#1e8449;text-anchor:middle">B 채널(ch2) · 공통+·WW·CW 3심 · 4등 병렬</text><text x="4800" y="8475" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="5800" y="1450" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="5300" y="560" class="wl" style="fill:#1e8449">K2 SMPS 24V · 상부장 위</text><text x="5470.0" y="290.0" class="wl" style="font-size:80px;fill:#0097a7">ch2→SMPS</text><text x="5500" y="3450" class="wl" style="font-size:80px;fill:#6d4c41">ch3</text><text x="1425" y="2550" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="750" y="1350" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="9600" y="3000" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="8850" y="2300" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="2250" y="7300" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="1200" y="7950" class="wl" style="font-size:80px;fill:#6d4c41">ch3</text><text x="600" y="6950" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="1350" y="9908" class="wl" style="fill:#2e6db4;font-size:105px">IX·LP T2 릴레이 · 확장부 천장 점검구</text><text x="1350" y="10000" class="wl" style="fill:#2e6db4;font-size:80px">(ch1 확장부 ← 센서·I-서재 4번 · ch2 거실 펜던트 ← S1 Plus 1번)</text><text x="550" y="10650" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="4800" y="10650" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="8550" y="7800" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="9650" y="7550" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="950" y="5280" class="wl" style="fill:#c0392b;text-anchor:start;font-size:90px">현관 센서등 · 센서 내장 · 벽 스위치 없음 (전등1 상시)</text><text x="550" y="5150" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="8550" y="10500" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="9125" y="1350" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="3150" y="4950" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="3550" y="1950" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="4600" y="1780" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="3750" y="1250" class="wl" style="font-size:80px;fill:#6d4c41">ch3</text><text x="9750" y="5350" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="9470" y="4240" class="wl" style="font-size:80px;fill:#0097a7">ch2</text><text x="9450" y="4550" class="wl" style="font-size:80px;fill:#6d4c41">ch3</text><text x="10400" y="6050" class="wl" style="font-size:80px;fill:#6d4c41">ch3</text><text x="8450" y="3988" class="wl" style="fill:#c0392b;font-size:105px">AL·HL T2 릴레이 · 복도 천장 점검구</text><text x="8450" y="4080" class="wl" style="fill:#c0392b;font-size:80px">(ch1 복도 COB ← 안방 4번 무선 · ch2 복도 다운라이트 ← 주방 4번 무선)</text><text x="8800" y="4850" class="wl" style="font-size:80px;fill:#e67e22">ch1</text><text x="10700" y="6220" class="wl" style="fill:#2e6db4;font-size:105px">D1 SMPS 24V + LED 제어기 · 안방 장 구역 상부</text><text x="2960" y="5594" class="wl" style="fill:#c0392b;font-size:98px;text-anchor:start">L1 H2 디머</text><text x="2960" y="5686" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:start">누름 A/B 채널 on/off</text><text x="2960" y="5778" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:start">두 번 A 단독 장면</text><text x="2960" y="5870" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:start">돌림 켜진 채널 디밍</text><text x="2550" y="6370" class="wl" style="fill:#c0392b;font-size:98px;text-anchor:end">L2 H1 2구</text><text x="2550" y="6462" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:end">ch1 실링팬 on/off</text><text x="2550" y="6554" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:end">ch2 A 단독 장면 (무선·디커플)</text><text x="2960" y="6615" class="wl" style="fill:#8e44ad;font-size:98px;text-anchor:start">S1 Plus · 2연 박스</text><text x="2960" y="6707" class="wl" style="fill:#8e44ad;font-size:76px;text-anchor:start">1번 거실 확장부 펜던트 (무선 → IX T2 ch2)</text><text x="2960" y="6799" class="wl" style="fill:#8e44ad;font-size:76px;text-anchor:start">릴레이 출력 미결선</text><text x="2960" y="6891" class="wl" style="fill:#8e44ad;font-size:76px;text-anchor:start">화면 A/B·장면·현관</text><text x="5280" y="3272" class="wl" style="fill:#c0392b;font-size:98px;text-anchor:middle">K1 H2 4버튼·3ch</text><text x="5280" y="3364" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:middle">ch1 주방 다운라이트 on/off (M3: ch2 연동)</text><text x="5280" y="3456" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:middle">ch2 주방 라인등 on/off (단독)</text><text x="5280" y="3548" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:middle">ch3 식탁등 on/off</text><text x="5280" y="3640" class="wl" style="fill:#c0392b;font-size:76px;text-anchor:middle">4 복도 다운라이트 on/off (무선)</text><text x="2800" y="3546" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">G H2 2버튼·2ch</text><text x="2800" y="3638" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 메인등 on/off</text><text x="2800" y="3730" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch2 간접 다운라이트 on/off</text><text x="9200" y="3546" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">H H2 2버튼·2ch</text><text x="9200" y="3638" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 메인등 on/off</text><text x="9200" y="3730" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch2 간접 다운라이트 on/off</text><text x="1780" y="5422" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">I H2 4버튼·3ch</text><text x="1780" y="5514" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 메인 다운라이트 on/off</text><text x="1780" y="5606" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch2 간접 다운라이트 on/off</text><text x="1780" y="5698" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch3 실링팬 on/off</text><text x="1780" y="5790" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">4 확장부 다운라이트 on/off (무선 → IX T2)</text><text x="8250" y="5132" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">F H2 4버튼·3ch</text><text x="8250" y="5224" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 메인등 on/off</text><text x="8250" y="5316" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch2 간접 다운라이트 on/off</text><text x="8250" y="5408" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch3 화장대 다운라이트 on/off</text><text x="8250" y="5500" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">4 복도 COB on/off (무선)</text><text x="7300" y="9556" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">B1 H2 2버튼·1ch</text><text x="7300" y="9648" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 발코니·창고등 on/off</text><text x="7300" y="9740" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">2 여분 (무선)</text><text x="8000" y="1396" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">B2 H2 2버튼·1ch</text><text x="8000" y="1488" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 발코니등 on/off</text><text x="8000" y="1580" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">2 여분 (무선)</text><text x="3800" y="3622" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">BA H2 4버튼·3ch</text><text x="3800" y="3714" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 메인등 on/off</text><text x="3800" y="3806" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch2 보조 벽등(세면대 위) on/off</text><text x="3800" y="3898" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch3 환풍기 on/off</text><text x="3800" y="3990" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">4 여분 (무선)</text><text x="10200" y="5132" class="wl" style="fill:#2e6db4;font-size:98px;text-anchor:middle">BB H2 4버튼·3ch</text><text x="10200" y="5224" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch1 메인등 on/off</text><text x="10200" y="5316" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch2 보조 벽등(변기 위) on/off</text><text x="10200" y="5408" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">ch3 환풍기 on/off</text><text x="10200" y="5500" class="wl" style="fill:#2e6db4;font-size:76px;text-anchor:middle">4 화장대 다운라이트 on/off (무선)</text><text x="-100" y="4115" class="wl" style="fill:#111;text-anchor:end">분전함 (신발장 안 · 12시 벽)</text><text x="-100" y="4225" class="wl" style="fill:#111;text-anchor:end;font-size:85px">(전등1·전등2 차단기)</text></g></g></svg>

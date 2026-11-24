@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>계룡삼환 리모델링 · 업체 공유</title>
+<style>
+:root{--ink:#1c1f24;--mut:#666c75;--line:#dcdfe4;--bg:#f5f6f8;--acc:#2457c5}
+*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;color:var(--ink);background:var(--bg)}
+header{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
+.bar{max-width:1400px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.brand{font-weight:700;font-size:17px}.brand small{display:block;font-weight:400;color:var(--mut);font-size:12px}
+nav{display:flex;gap:6px;margin-left:auto}nav a{padding:8px 16px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:600}
+nav a.on{background:var(--ink);color:#fff}nav a:not(.on):hover{background:#eef0f3}
+main{max-width:1400px;margin:0 auto;padding:24px 20px 60px}h1{font-size:22px;margin:0 0 4px}.mut{color:var(--mut);font-size:13px}
+.plan{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:16px;overflow:auto}
+.plan .wrap{position:relative;width:100%}.plan.zoom .wrap{width:2600px}.plan img{display:block;width:100%;height:auto;cursor:zoom-in}.plan.zoom img{cursor:zoom-out}
+.pin{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:4px;padding:3px 9px 3px 5px;border-radius:999px;border:2px solid #fff;background:var(--acc);color:#fff;font-size:12px;font-weight:600;line-height:1.2;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.3);white-space:nowrap;text-decoration:none}
+.pin:hover{background:#163c8f}.pin svg{width:16px;height:16px}.pin small{opacity:.85;font-weight:400}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.tools button,.tools a{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:13px;color:var(--ink);text-decoration:none;cursor:pointer}
+.tools button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+figure{margin:0;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+figure button{display:block;width:100%;padding:0;border:0;background:#eee;cursor:zoom-in}figure img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+figcaption{padding:8px 10px 10px;font-size:13px}figcaption b{display:block;font-size:14px;margin-bottom:3px}figcaption span{display:block;color:var(--mut);font-size:12.5px;line-height:1.5}#lb p{max-width:900px;text-align:center;font-size:14px;line-height:1.5}
+h2.grp{font-size:16px;margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:20;padding:20px}
+#lb.on{display:flex}#lb img{max-width:100%;max-height:78vh}#lb p{color:#fff;margin:10px 0 0}
+#lb .x{position:absolute;top:14px;right:18px;color:#fff;font-size:28px;background:none;border:0;cursor:pointer}
+#lb .nv{position:absolute;top:50%;color:#fff;font-size:40px;background:none;border:0;cursor:pointer;padding:10px}#lb .pv{left:8px}#lb .nx{right:8px}
+@media (max-width:700px){.bar{padding:8px 10px;gap:6px}nav{margin-left:0;width:100%}nav a{flex:1;text-align:center;padding:7px 4px;font-size:13px}main{padding:16px 10px 40px}.pin{font-size:10px;padding:2px 6px 2px 3px}.pin svg{width:12px;height:12px}}#pv{position:fixed;inset:0;background:#f5f6f8;z-index:30;display:none;touch-action:none;overflow:hidden}#pv.on{display:block}
+#pv .stage{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}#pv .stage img{display:block;width:100%;height:auto;pointer-events:none;-webkit-user-drag:none;user-select:none;-webkit-user-select:none}#pv{cursor:grab;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}#pv .pin{pointer-events:auto}
+#pv .ctl{position:absolute;right:12px;top:12px;display:flex;gap:6px;z-index:2}#pv .ctl button{width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:20px;font-weight:700;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+#pv .hint{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:5px 9px;border-radius:6px;z-index:2}
+table{width:100%;border-collapse:collapse;background:#fff;font-size:13px;margin:10px 0}th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}th{background:#eef0f3}.tblw{overflow-x:auto}details summary{font-size:15px}
+.plan.sheet{margin-top:10px}.plan .zimg{cursor:zoom-in}
+@media (max-width:700px){table{font-size:12px;min-width:760px}th,td{padding:5px 6px}nav{flex-wrap:wrap}nav a{white-space:nowrap;font-size:12px;padding:7px 2px;flex:1 1 45%}}
+footer{max-width:1400px;margin:0 auto;padding:0 20px 30px;color:var(--mut);font-size:12px}
+</style></head><body>
+<header><div class="bar"><div class="brand">계룡삼환 리모델링<small>인테리어 업체 공유용</small></div>
+<nav><a href="#plan">기준평면도</a><a href="#iot">IoT 구성 및 조명·배선</a><a href="#power">전원·콘센트</a><a href="#refs">레퍼런스 사진</a></nav></div></header>
+<main id="main"></main>
+<div id="pv"><div class="ctl"><button data-z="in" aria-label="확대">+</button><button data-z="out" aria-label="축소">−</button><button data-z="fit" aria-label="맞춤" style="font-size:13px">맞춤</button><button data-z="x" aria-label="닫기">×</button></div><div class="stage"></div><div class="hint">두 손가락으로 확대·축소, 끌어서 이동 · 두 번 탭하면 확대</div></div>
+<div id="lb"><button class="x" aria-label="닫기">×</button><button class="nv pv" aria-label="이전">‹</button><img alt=""><p></p><button class="nv nx" aria-label="다음">›</button></div>
+<footer>현장 실측과 협의 후 확정하는 초안입니다. 레퍼런스 사진은 '볼 점'에 적은 부분만 참고하며 현장 사진이 아닙니다.</footer>
+<script src="refs-data.js"></script>
+<script src="iot.js?v=20261124a"></script>
+<script src="power.js?v=20261124a"></script>
+<script>
+'use strict';
+const V='20261124a';const $=s=>document.querySelector(s);
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let filter='전체',shown=[],cur=0;
+const VB=[-3000,-3300,22600,17600];
+const PINS=[['entry',750,4350],['bath-a',3560,2300],['pantry',4450,3330],['kitchen',6650,3000],['utility',8650,780],['room-i',1300,7700],['extension-i',800,10650],['balcony',4950,10000],['bath-b',10300,4420],['room-f',9900,6550],['common',3500,5100],['misc',6450,5100]];
+const CAM='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h3l2-2h6l2 2h3v12H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+function plan(){return `<h1>기준평면도 (A-00)</h1><p class="mut">단위 mm · 벽 중심선 기준 · 실측 반영본. 도면을 누르면 전체 화면으로 열려 손가락으로 확대·축소·이동할 수 있고, 파란 사진 아이콘을 누르면 그 공간의 레퍼런스 사진으로 이동합니다.</p>
+<div class="tools"><a href="assets/plan-v2.svg?v=${V}" target="_blank" rel="noopener">새 창에서 원본 열기</a></div>
+<div class="plan" id="planbox"><div class="wrap"><img src="assets/plan-v2.svg?v=${V}" alt="계룡삼환 리모델링 A-00 기준평면도">${PINS.map(([z,x,y])=>`<a class="pin" href="#refs-${z}" style="left:${((x-VB[0])/VB[2]*100).toFixed(2)}%;top:${((y-VB[1])/VB[3]*100).toFixed(2)}%" title="${esc(ZONES[z])} 레퍼런스 사진 보기">${CAM}${esc(ZONES[z])} <small>${REFS.filter(r=>r.z===z).length}</small></a>`).join('')}</div></div>`;}
+function refs(){const zs=Object.keys(ZONES).filter(z=>REFS.some(r=>r.z===z));shown=REFS.filter(r=>filter==='전체'||r.z===filter);
+const by={};shown.forEach(r=>(by[r.z]=by[r.z]||[]).push(r));
+return `<h1>레퍼런스 사진</h1><p class="mut">공간별 참고 사진 ${REFS.length}장 · 사진마다 '볼 점'을 적었습니다. 사진 속 다른 요소까지 적용한다는 뜻은 아닙니다.</p>
+<div class="tools"><button data-z="전체" class="${filter==='전체'?'on':''}">전체</button>${zs.map(z=>`<button data-z="${z}" class="${z===filter?'on':''}">${esc(ZONES[z])} ${REFS.filter(r=>r.z===z).length}</button>`).join('')}</div>
+${Object.entries(by).map(([z,rs])=>`<h2 class="grp">${esc(ZONES[z])}</h2><div class="grid">${rs.map(r=>`<figure><button data-i="${shown.indexOf(r)}"><img src="assets/${r.f}" loading="lazy" alt="${esc(r.c)}"></button><figcaption><b>${esc(r.c)}</b><span>${esc(r.p)}</span></figcaption></figure>`).join('')}</div>`).join('')}`;}
+function open(i){cur=(i+shown.length)%shown.length;const r=shown[cur];$('#lb img').src='assets/'+r.f;$('#lb p').textContent=ZONES[r.z]+' · '+r.c+' — '+r.p;$('#lb').classList.add('on');}
+function render(){const h=location.hash.slice(1);const r=h.startsWith('refs')?'refs':h==='iot'?'iot':h==='power'?'power':'plan';
+if(h.startsWith('refs-')){const z=h.slice(5);if(ZONES[z])filter=z;}else if(h==='refs')filter='전체';$('#main').innerHTML=r==='refs'?refs():r==='iot'?iot():r==='power'?power():plan();window.scrollTo(0,0);
+document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.hash==='#'+r));
+if(r==='iot'||r==='power'){document.querySelectorAll('img.zimg').forEach(i=>i.onclick=()=>openImg(i));}
+else if(r==='plan'){$("#planbox img").onclick=openPV;document.querySelectorAll('#planbox .pin').forEach(p=>p.onclick=e=>{e.preventDefault();location.hash=p.getAttribute('href');});}
+else{document.querySelectorAll('.tools button').forEach(b=>b.onclick=()=>{const t=b.dataset.z==='전체'?'#refs':'#refs-'+b.dataset.z;filter=b.dataset.z;if(location.hash!==t)location.hash=t;else render();});document.querySelectorAll('figure button').forEach(b=>b.onclick=()=>open(+b.dataset.i));}}
+$('#lb .x').onclick=()=>$('#lb').classList.remove('on');$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').classList.remove('on')};
+$('#lb .pv').onclick=e=>{e.stopPropagation();open(cur-1)};$('#lb .nx').onclick=e=>{e.stopPropagation();open(cur+1)};
+addEventListener('keydown',e=>{if(!$('#lb').classList.contains('on'))return;if(e.key==='Escape')$('#lb').classList.remove('on');if(e.key==='ArrowLeft')open(cur-1);if(e.key==='ArrowRight')open(cur+1);});
+// ---- 평면도 전체 화면 뷰어: 핀치 줌·드래그·휠·더블탭
+const PV={s:1,x:0,y:0,w:1600,pts:new Map(),last:null,tap:0};
+function pvApply(){const st=$('#pv .stage');st.style.transform=`translate(${PV.x}px,${PV.y}px) scale(${PV.s})`;st.querySelectorAll('.pin').forEach(p=>p.style.transform=`translate(-50%,-50%) scale(${Math.max(1/PV.s,0.35)})`);}
+function pvFit(){const W=innerWidth,H=innerHeight,h=PV.w*(PV.ar||VB[3]/VB[2]);PV.s=PV.fit=Math.min(W/PV.w,H/h);PV.x=(W-PV.w*PV.s)/2;PV.y=(H-h*PV.s)/2;pvApply();}
+function pvZoom(f,cx,cy){const ns=Math.min(Math.max(PV.s*f,PV.fit||0.1),(PV.fit||0.25)*12);if(ns<=(PV.fit||0)+1e-6&&f<1){pvFit();return;}cx??=innerWidth/2;cy??=innerHeight/2;PV.x=cx-(cx-PV.x)*ns/PV.s;PV.y=cy-(cy-PV.y)*ns/PV.s;PV.s=ns;pvApply();}
+function openImg(img){PV.ar=img.naturalHeight/img.naturalWidth||0.75;const st=$('#pv .stage');st.style.width=PV.w+'px';st.innerHTML=`<img src="${img.getAttribute('src')}" alt="">`;st.querySelector('img').draggable=false;$('#pv').classList.add('on');pvFit();}
+function openPV(){PV.ar=0;const st=$('#pv .stage');st.style.width=PV.w+'px';st.innerHTML=$('#planbox .wrap').innerHTML;st.querySelectorAll('img').forEach(i=>i.draggable=false);st.querySelectorAll('.pin').forEach(p=>{p.addEventListener('pointerdown',e=>e.stopPropagation());p.addEventListener('click',e=>{e.preventDefault();$('#pv').classList.remove('on');location.hash=p.getAttribute('href');});});$('#pv').classList.add('on');pvFit();}
+(function(){const pv=$('#pv');
+pv.querySelector('.ctl').onclick=e=>{const z=e.target.dataset.z;if(z==='in')pvZoom(1.5);if(z==='out')pvZoom(1/1.5);if(z==='fit')pvFit();if(z==='x')pv.classList.remove('on');};
+pv.addEventListener('wheel',e=>{e.preventDefault();pvZoom(e.deltaY<0?1.15:1/1.15,e.clientX,e.clientY);},{passive:false});
+// 마우스: 포인터 이벤트 / 터치: 터치 이벤트(아이폰·앱 안 화면에서도 끌기·핀치가 끊기지 않게)
+pv.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse'||e.target.closest('.ctl,.pin'))return;e.preventDefault();PV.drag={x:e.clientX,y:e.clientY};
+ const now=Date.now();if(now-PV.tap<300){pvZoom(2,e.clientX,e.clientY);PV.tap=0;}else PV.tap=now;});
+addEventListener('pointermove',e=>{if(e.pointerType!=='mouse'||!PV.drag)return;PV.x+=e.clientX-PV.drag.x;PV.y+=e.clientY-PV.drag.y;PV.drag={x:e.clientX,y:e.clientY};pvApply();});
+addEventListener('pointerup',e=>{if(e.pointerType==='mouse')PV.drag=null;});
+const T=t=>[...t].map(p=>({x:p.clientX,y:p.clientY}));
+pv.addEventListener('touchstart',e=>{if(e.target.closest('.ctl,.pin'))return;e.preventDefault();const t=T(e.touches);PV.last=null;PV.one=t.length===1?t[0]:null;
+ if(t.length===1){const now=Date.now();if(now-PV.tap<300){pvZoom(2,t[0].x,t[0].y);PV.tap=0;}else PV.tap=now;}},{passive:false});
+pv.addEventListener('touchmove',e=>{if(e.target.closest('.ctl,.pin'))return;e.preventDefault();const t=T(e.touches);
+ if(t.length===1&&PV.one){PV.x+=t[0].x-PV.one.x;PV.y+=t[0].y-PV.one.y;PV.one=t[0];pvApply();}
+ else if(t.length>=2){const [a,b]=t;const d=Math.hypot(a.x-b.x,a.y-b.y),cx=(a.x+b.x)/2,cy=(a.y+b.y)/2;PV.one=null;
+  if(PV.last){pvZoom(d/PV.last.d,cx,cy);PV.x+=cx-PV.last.cx;PV.y+=cy-PV.last.cy;pvApply();}PV.last={d,cx,cy};}},{passive:false});
+pv.addEventListener('touchend',e=>{const t=T(e.touches);PV.last=null;PV.one=t.length===1?t[0]:null;});
+pv.addEventListener('touchcancel',()=>{PV.last=null;PV.one=null;});
+addEventListener('keydown',e=>{if(pv.classList.contains('on')&&e.key==='Escape')pv.classList.remove('on');});
+addEventListener('resize',()=>{if(pv.classList.contains('on'))pvFit();});})();
+addEventListener('hashchange',()=>{$('#pv').classList.remove('on');render();});if(!location.hash)history.replaceState(null,'','#plan');render();
+</script></body></html>
