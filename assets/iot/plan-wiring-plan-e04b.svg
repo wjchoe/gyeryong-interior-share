@@ -246,20 +246,20 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 
 <text x="5150" y="330" class="room-c" style="font-size:72px">하부 코너장</text>
 <text x="5150" y="440" class="room-c" style="font-size:66px">양개형 900</text>
-<rect x="5750" y="50" width="250" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
-<text x="5875" y="350" class="room-c" style="font-size:52px" transform="rotate(-90 5875 350)">수납 250</text>
-<rect x="6000" y="50" width="900" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14" style="fill:#f9f9f9"/>
-<rect x="6070" y="110" width="760" height="440" rx="50" class="fix"/><circle cx="6450" cy="150" r="40" class="fix-l"/>
-<text x="6450" y="380" class="room-c" style="font-size:64px">개수대 900장</text>
-<rect x="6100" y="470" width="700" height="150" fill="none" stroke="#a5a5a5" stroke-width="12" stroke-dasharray="30 18"/>
-<text x="6450" y="720" class="room-c" style="font-size:50px">분배기(하부, 원위치)</text>
-<text x="7090" y="380" class="room-c" style="font-size:58px">조리대 380</text>
-<rect x="7280" y="90" width="600" height="520" fill="#ffffff" stroke="#7c7c7c" stroke-width="16"/><circle cx="7430" cy="250" r="95" class="fix-l"/><circle cx="7730" cy="250" r="95" class="fix-l"/><circle cx="7580" cy="470" r="110" class="fix-l"/>
-<rect x="7230" y="60" width="650" height="120" fill="none" stroke="#a7a7a7" stroke-width="16" stroke-dasharray="50 30"/>
+<rect x="5750" y="50" width="600" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<text x="6050" y="300" class="room-c" style="font-size:66px">하부장 600</text>
+<rect x="6050" y="470" width="760" height="150" fill="none" stroke="#a5a5a5" stroke-width="12" stroke-dasharray="30 18"/>
+<text x="6430" y="720" class="room-c" style="font-size:48px">분배기(하부, 원위치 · 이동 불가)</text>
+<text x="6590" y="380" class="room-c" style="font-size:70px">조리대 480</text>
+<rect x="6830" y="90" width="600" height="520" fill="#ffffff" stroke="#7c7c7c" stroke-width="16"/><circle cx="6980" cy="250" r="95" class="fix-l"/><circle cx="7280" cy="250" r="95" class="fix-l"/><circle cx="7130" cy="470" r="110" class="fix-l"/>
+<rect x="6780" y="60" width="700" height="120" fill="none" stroke="#a7a7a7" stroke-width="16" stroke-dasharray="50 30"/>
+<rect x="7430" y="50" width="450" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
+<text x="7655" y="350" class="room-c" style="font-size:80px" transform="rotate(-90 7655 350)">양념</text>
 <rect x="7880" y="50" width="30" height="600" fill="#ffffff" stroke="#a2a2a2" stroke-width="14" style="fill:#ececec"/>
 <rect x="6380" y="1170" width="1100" height="120" fill="#ffffff"/>
 <rect x="4850" y="950" width="600" height="900" fill="#ffffff" stroke="#a2a2a2" stroke-width="14"/>
-<text x="5150" y="1400" class="room-c" style="font-size:62px" transform="rotate(-90 5150 1400)">하부장 900 (서랍)</text>
+<rect x="4920" y="970" width="460" height="860" rx="50" class="fix"/><circle cx="5150" cy="1400" r="40" class="fix-l"/>
+<text x="5150" y="1260" class="room-c" style="font-size:62px" transform="rotate(-90 5150 1260)">개수대 860</text>
 <rect x="4850" y="1850" width="600" height="100" fill="#ffffff" stroke="#a2a2a2" stroke-width="10" stroke-dasharray="30 20"/>
 <text x="5150" y="1920.0" class="room-c" style="font-size:46px">여유 100</text>
 <path d="M5520 950 V1950 M5480 950 H5560 M5480 1850 H5560 M5480 1950 H5560" stroke="#a2a2a2" stroke-width="10"/>
@@ -315,7 +315,7 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <path d="M6850 1100 L7450 1100" stroke="#a7a7a7" stroke-width="10" stroke-dasharray="50 30"/><text x="7500" y="1080" class="room-c" style="font-size:60px;fill:#a7a7a7;text-anchor:start">→ D07</text>
 <path d="M5650 2550 V2650" stroke="#a2a2a2" stroke-width="10"/>
 
-<path d="M4850 600 H7910 M4850 565 V635 M5750 565 V635 M6000 565 V635 M6900 565 V635 M7280 565 V635 M7880 565 V635 M7910 565 V635" stroke="#a2a2a2" stroke-width="8"/>
+<path d="M4850 600 H7910 M4850 565 V635 M5750 565 V635 M6350 565 V635 M6830 565 V635 M7430 565 V635 M7880 565 V635 M7910 565 V635" stroke="#a2a2a2" stroke-width="8"/>
 
 
 
