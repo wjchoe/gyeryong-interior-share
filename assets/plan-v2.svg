@@ -282,11 +282,16 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <path class="door-arc" d="M9620 10250A580 580 0 0 0 10200 10830"/>
 <text class="tag" x="9939.0" y="10585.0">D09</text>
 </g>
-<g id="D10" data-type="door" data-width-mm="570">
-<path class="door-gap" d="M4720 4000L4150 4000"/>
-<path class="door-leaf" d="M4720 4000L4720 4570"/>
-<path class="door-arc" d="M4720 4570A570 570 0 0 1 4150 4000"/>
-<text class="tag" x="4435.0" y="4301.5">D10</text>
+<g id="D10" data-type="door" data-width-mm="285">
+<path class="door-gap" d="M4150 4000L4435 4000"/>
+<path class="door-leaf" d="M4150 4000L4150 4285"/>
+<path class="door-arc" d="M4150 4285A285 285 0 0 0 4435 4000"/>
+<text class="tag" x="4292.5" y="4173.25">D10</text>
+</g>
+<g id="D10b" data-type="door" data-width-mm="285">
+<path class="door-gap" d="M4720 4000L4435 4000"/>
+<path class="door-leaf" d="M4720 4000L4720 4285"/>
+<path class="door-arc" d="M4720 4285A285 285 0 0 1 4435 4000"/>
 </g>
 <g id="D07" data-type="door" data-width-mm="700">
 <path class="door-gap" d="M7950 1440L7950 740"/>
@@ -623,55 +628,56 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <text x="14200" y="2285" class="tb" font-weight="800">D05</text><text x="15000" y="2285" class="tb">750</text><text x="15700" y="2285" class="tb">F-침실</text>
 <text x="14200" y="2490" class="tb" font-weight="800">D06</text><text x="15000" y="2490" class="tb">685</text><text x="15700" y="2490" class="tb">욕실B</text>
 <text x="14200" y="2695" class="tb" font-weight="800">D09</text><text x="15000" y="2695" class="tb">580</text><text x="15700" y="2695" class="tb">A-08-4 창고(발코니 쪽 개폐)</text>
-<text x="14200" y="2900" class="tb" font-weight="800">D10</text><text x="15000" y="2900" class="tb">570</text><text x="15700" y="2900" class="tb">팬트리 여닫이 — 구 SD01 2짝문 변경</text>
-<text x="14200" y="3105" class="tb" font-weight="800">D07</text><text x="15000" y="3105" class="tb">700</text><text x="15700" y="3105" class="tb">주방 → A-08-1 발코니 터닝도어(여닫이, 발코니 쪽 개폐 · 문짝이 옷방 쪽(남측)으로 열림,)</text>
-<text x="14200" y="3310" class="tb" font-weight="800">TD01</text><text x="15000" y="3310" class="tb">690</text><text x="15700" y="3310" class="tb">거실 확장부 ↔ A-08-4 터닝도어(여닫이, 거실에서 밀어서 발코니 쪽으로 열림 —)</text>
-<path class="rule" d="M14200 3510H19500"/>
-<text x="14200" y="3840" class="h2">실 면적 (벽 중심선 개략)</text>
-<text x="14200" y="4100" class="tb" font-weight="800">A-01</text><text x="15200" y="4100" class="tb">현관</text><text x="17200" y="4100" class="tb">2.7㎡</text><text x="18000" y="4100" class="tb">타일 · 북측 신발장</text>
-<text x="14200" y="4290" class="tb" font-weight="800">G</text><text x="15200" y="4290" class="tb">G-침실</text><text x="17200" y="4290" class="tb">10.4㎡</text><text x="18000" y="4290" class="tb">마루 · 팬트리1 취소로 원래 크기 · 서재→침실</text>
-<text x="14200" y="4480" class="tb" font-weight="800">PT</text><text x="15200" y="4480" class="tb">팬트리</text><text x="17200" y="4480" class="tb">0.6㎡</text><text x="18000" y="4480" class="tb">마루 · MX4200 #1</text>
-<text x="14200" y="4670" class="tb" font-weight="800">A-04</text><text x="15200" y="4670" class="tb">욕실A</text><text x="17200" y="4670" class="tb">4.5㎡</text><text x="18000" y="4670" class="tb">타일</text>
-<text x="14200" y="4860" class="tb" font-weight="800">A-03</text><text x="15200" y="4860" class="tb">주방</text><text x="17200" y="4860" class="tb">13.2㎡</text><text x="18000" y="4860" class="tb">마루/타일 미정</text>
-<text x="14200" y="5050" class="tb" font-weight="800">A-08-1</text><text x="15200" y="5050" class="tb">주방 옆 발코니</text><text x="17200" y="5050" class="tb">2.7㎡</text><text x="18000" y="5050" class="tb">타일(비확장) · 외벽 위치 실측 필요</text>
-<text x="14200" y="5240" class="tb" font-weight="800">H</text><text x="15200" y="5240" class="tb">H-옷방</text><text x="17200" y="5240" class="tb">8.7㎡</text><text x="18000" y="5240" class="tb">마루 · 시스템장(기존 집 이전 설치)</text>
-<text x="14200" y="5430" class="tb" font-weight="800">A-05</text><text x="15200" y="5430" class="tb">욕실B</text><text x="17200" y="5430" class="tb">2.2㎡</text><text x="18000" y="5430" class="tb">타일</text>
-<text x="14200" y="5620" class="tb" font-weight="800">HALL</text><text x="15200" y="5620" class="tb">복도</text><text x="17200" y="5620" class="tb">12.0㎡</text><text x="18000" y="5620" class="tb">마루</text>
-<text x="14200" y="5810" class="tb" font-weight="800">I</text><text x="15200" y="5810" class="tb">I-서재</text><text x="17200" y="5810" class="tb">10.5㎡</text><text x="18000" y="5810" class="tb">마루</text>
-<text x="14200" y="6000" class="tb" font-weight="800">A-02</text><text x="15200" y="6000" class="tb">거실</text><text x="17200" y="6000" class="tb">18.9㎡</text><text x="18000" y="6000" class="tb">마루</text>
-<text x="14200" y="6190" class="tb" font-weight="800">F</text><text x="15200" y="6190" class="tb">F-침실</text><text x="17200" y="6190" class="tb">17.6㎡</text><text x="18000" y="6190" class="tb">마루 · 드레스룸 가벽 철거, 장 위치 미정</text>
-<text x="14200" y="6380" class="tb" font-weight="800">A-08-2</text><text x="15200" y="6380" class="tb">I-서재 확장부</text><text x="17200" y="6380" class="tb">3.6㎡</text><text x="18000" y="6380" class="tb">확장(단열·난방) · 강마루 · 출입 개구부 700(문 없음) · 창고 없음(빈 공간, 추후 가구)</text>
-<text x="14200" y="6570" class="tb" font-weight="800">A-08-3</text><text x="15200" y="6570" class="tb">거실 확장부</text><text x="17200" y="6570" class="tb">6.1㎡</text><text x="18000" y="6570" class="tb">마루(확장)</text>
-<text x="14200" y="6760" class="tb" font-weight="800">A-08-4</text><text x="15200" y="6760" class="tb">비확장 발코니</text><text x="17200" y="6760" class="tb">4.0㎡</text><text x="18000" y="6760" class="tb">타일(비확장)</text>
-<text x="14200" y="6950" class="tb" font-weight="800">ST2</text><text x="15200" y="6950" class="tb">발코니 창고</text><text x="17200" y="6950" class="tb">1.6㎡</text><text x="18000" y="6950" class="tb">타일</text>
-<path class="rule" d="M14200 7260H19500"/>
-<text x="14200" y="7590" class="h2">범례 · 기호 라이브러리</text>
-<path class="ext" d="M14200 7880H14620" style="stroke-width:100"/><text x="14800" y="7920" class="tb">기존 벽(도면 표현 두께 외벽 100·내벽 80)</text>
-<rect class="new" x="14200" y="8110" width="420" height="100"/><text x="14800" y="8200" class="tb">신설 벽(경량 100)</text>
-<path class="demo" d="M14200 8440H14620" style="stroke-width:80"/><text x="14800" y="8480" class="tb">철거 계획(구조 확인 전)</text>
-<rect x="14200" y="8610" width="420" height="220" fill="url(#pat-tile)" stroke="#999" stroke-width="8"/><text x="14800" y="8760" class="tb">타일 바닥</text>
-<rect x="14200" y="8890" width="420" height="220" fill="url(#pat-wood)" stroke="#999" stroke-width="8"/><text x="14800" y="9040" class="tb">마루 바닥</text>
-<use href="#sym-outlet" transform="translate(14420 9275) scale(0.85)"/><text x="14870" y="9320" class="tb">콘센트(2구)</text>
-<use href="#sym-outlet-wp" transform="translate(17120 9275) scale(0.85)"/><text x="17570" y="9320" class="tb">방수 콘센트</text>
-<use href="#sym-outlet-ded" transform="translate(14420 9655) scale(0.85)"/><text x="14870" y="9700" class="tb">전용 회로(인덕션·에어컨 등)</text>
-<use href="#sym-switch" transform="translate(17120 9655) scale(0.85)"/><text x="17570" y="9700" class="tb">스위치</text>
-<use href="#sym-switch-smart" transform="translate(14420 10035) scale(0.85)"/><text x="14870" y="10080" class="tb">스마트 스위치(중성선)</text>
-<use href="#sym-downlight" transform="translate(17120 10035) scale(0.85)"/><text x="17570" y="10080" class="tb">다운라이트</text>
-<use href="#sym-ceiling-light" transform="translate(14420 10415) scale(0.85)"/><text x="14870" y="10460" class="tb">천장등</text>
-<use href="#sym-linear" transform="translate(17120 10415) scale(0.85)"/><text x="17570" y="10460" class="tb">라인조명(길이별 늘림)</text>
-<use href="#sym-ac-ceiling" transform="translate(14420 10795) scale(0.4)"/><text x="14870" y="10840" class="tb">천장형 에어컨 실내기</text>
-<use href="#sym-ac-out" transform="translate(17120 10795) scale(0.4)"/><text x="17570" y="10840" class="tb">에어컨 실외기</text>
-<use href="#sym-lan" transform="translate(14420 11175) scale(0.85)"/><text x="14870" y="11220" class="tb">LAN 단자</text>
-<use href="#sym-ap" transform="translate(17120 11175) scale(0.85)"/><text x="17570" y="11220" class="tb">Wi-Fi AP</text>
-<use href="#sym-comm" transform="translate(14420 11555) scale(0.4)"/><text x="14870" y="11600" class="tb">통신단자함</text>
-<use href="#sym-panel" transform="translate(17120 11555) scale(0.4)"/><text x="17570" y="11600" class="tb">분전반</text>
-<use href="#sym-tablet" transform="translate(14420 11935) scale(0.4)"/><text x="14870" y="11980" class="tb">벽 태블릿(HA)</text>
-<use href="#sym-doorbell" transform="translate(17120 11935) scale(0.85)"/><text x="17570" y="11980" class="tb">도어벨/카메라</text>
-<use href="#sym-sensor" transform="translate(14420 12315) scale(0.85)"/><text x="14870" y="12360" class="tb">센서(재실·문열림·온습도)</text>
-<use href="#sym-manifold" transform="translate(17120 12315) scale(0.4)"/><text x="17570" y="12360" class="tb">난방 분배기</text>
-<use href="#sym-water" transform="translate(14420 12695) scale(0.85)"/><text x="14870" y="12740" class="tb">급수·급탕 접속점</text>
-<use href="#sym-drain" transform="translate(17120 12695) scale(0.85)"/><text x="17570" y="12740" class="tb">배수구·배수 접속</text>
-<use href="#sym-check" transform="translate(14420 13075) scale(0.85)"/><text x="14870" y="13120" class="tb">현장 확인점</text>
+<text x="14200" y="2900" class="tb" font-weight="800">D10</text><text x="15000" y="2900" class="tb">285</text><text x="15700" y="2900" class="tb">팬트리 양문형(2짝, 복도 쪽 개폐) — 여닫이 → 양문형</text>
+<text x="14200" y="3105" class="tb" font-weight="800">D10b</text><text x="15000" y="3105" class="tb">285</text><text x="15700" y="3105" class="tb">팬트리 양문형 오른쪽 짝</text>
+<text x="14200" y="3310" class="tb" font-weight="800">D07</text><text x="15000" y="3310" class="tb">700</text><text x="15700" y="3310" class="tb">주방 → A-08-1 발코니 터닝도어(여닫이, 발코니 쪽 개폐 · 문짝이 옷방 쪽(남측)으로 열림,)</text>
+<text x="14200" y="3515" class="tb" font-weight="800">TD01</text><text x="15000" y="3515" class="tb">690</text><text x="15700" y="3515" class="tb">거실 확장부 ↔ A-08-4 터닝도어(여닫이, 거실에서 밀어서 발코니 쪽으로 열림 —)</text>
+<path class="rule" d="M14200 3715H19500"/>
+<text x="14200" y="4045" class="h2">실 면적 (벽 중심선 개략)</text>
+<text x="14200" y="4305" class="tb" font-weight="800">A-01</text><text x="15200" y="4305" class="tb">현관</text><text x="17200" y="4305" class="tb">2.7㎡</text><text x="18000" y="4305" class="tb">타일 · 북측 신발장</text>
+<text x="14200" y="4495" class="tb" font-weight="800">G</text><text x="15200" y="4495" class="tb">G-침실</text><text x="17200" y="4495" class="tb">10.4㎡</text><text x="18000" y="4495" class="tb">마루 · 팬트리1 취소로 원래 크기 · 서재→침실</text>
+<text x="14200" y="4685" class="tb" font-weight="800">PT</text><text x="15200" y="4685" class="tb">팬트리</text><text x="17200" y="4685" class="tb">0.6㎡</text><text x="18000" y="4685" class="tb">마루 · MX4200 #1</text>
+<text x="14200" y="4875" class="tb" font-weight="800">A-04</text><text x="15200" y="4875" class="tb">욕실A</text><text x="17200" y="4875" class="tb">4.5㎡</text><text x="18000" y="4875" class="tb">타일</text>
+<text x="14200" y="5065" class="tb" font-weight="800">A-03</text><text x="15200" y="5065" class="tb">주방</text><text x="17200" y="5065" class="tb">13.2㎡</text><text x="18000" y="5065" class="tb">마루/타일 미정</text>
+<text x="14200" y="5255" class="tb" font-weight="800">A-08-1</text><text x="15200" y="5255" class="tb">주방 옆 발코니</text><text x="17200" y="5255" class="tb">2.7㎡</text><text x="18000" y="5255" class="tb">타일(비확장) · 외벽 위치 실측 필요</text>
+<text x="14200" y="5445" class="tb" font-weight="800">H</text><text x="15200" y="5445" class="tb">H-옷방</text><text x="17200" y="5445" class="tb">8.7㎡</text><text x="18000" y="5445" class="tb">마루 · 시스템장(기존 집 이전 설치)</text>
+<text x="14200" y="5635" class="tb" font-weight="800">A-05</text><text x="15200" y="5635" class="tb">욕실B</text><text x="17200" y="5635" class="tb">2.2㎡</text><text x="18000" y="5635" class="tb">타일</text>
+<text x="14200" y="5825" class="tb" font-weight="800">HALL</text><text x="15200" y="5825" class="tb">복도</text><text x="17200" y="5825" class="tb">12.0㎡</text><text x="18000" y="5825" class="tb">마루</text>
+<text x="14200" y="6015" class="tb" font-weight="800">I</text><text x="15200" y="6015" class="tb">I-서재</text><text x="17200" y="6015" class="tb">10.5㎡</text><text x="18000" y="6015" class="tb">마루</text>
+<text x="14200" y="6205" class="tb" font-weight="800">A-02</text><text x="15200" y="6205" class="tb">거실</text><text x="17200" y="6205" class="tb">18.9㎡</text><text x="18000" y="6205" class="tb">마루</text>
+<text x="14200" y="6395" class="tb" font-weight="800">F</text><text x="15200" y="6395" class="tb">F-침실</text><text x="17200" y="6395" class="tb">17.6㎡</text><text x="18000" y="6395" class="tb">마루 · 드레스룸 가벽 철거, 장 위치 미정</text>
+<text x="14200" y="6585" class="tb" font-weight="800">A-08-2</text><text x="15200" y="6585" class="tb">I-서재 확장부</text><text x="17200" y="6585" class="tb">3.6㎡</text><text x="18000" y="6585" class="tb">확장(단열·난방) · 강마루 · 출입 개구부 700(문 없음) · 창고 없음(빈 공간, 추후 가구)</text>
+<text x="14200" y="6775" class="tb" font-weight="800">A-08-3</text><text x="15200" y="6775" class="tb">거실 확장부</text><text x="17200" y="6775" class="tb">6.1㎡</text><text x="18000" y="6775" class="tb">마루(확장)</text>
+<text x="14200" y="6965" class="tb" font-weight="800">A-08-4</text><text x="15200" y="6965" class="tb">비확장 발코니</text><text x="17200" y="6965" class="tb">4.0㎡</text><text x="18000" y="6965" class="tb">타일(비확장)</text>
+<text x="14200" y="7155" class="tb" font-weight="800">ST2</text><text x="15200" y="7155" class="tb">발코니 창고</text><text x="17200" y="7155" class="tb">1.6㎡</text><text x="18000" y="7155" class="tb">타일</text>
+<path class="rule" d="M14200 7465H19500"/>
+<text x="14200" y="7795" class="h2">범례 · 기호 라이브러리</text>
+<path class="ext" d="M14200 8085H14620" style="stroke-width:100"/><text x="14800" y="8125" class="tb">기존 벽(도면 표현 두께 외벽 100·내벽 80)</text>
+<rect class="new" x="14200" y="8315" width="420" height="100"/><text x="14800" y="8405" class="tb">신설 벽(경량 100)</text>
+<path class="demo" d="M14200 8645H14620" style="stroke-width:80"/><text x="14800" y="8685" class="tb">철거 계획(구조 확인 전)</text>
+<rect x="14200" y="8815" width="420" height="220" fill="url(#pat-tile)" stroke="#999" stroke-width="8"/><text x="14800" y="8965" class="tb">타일 바닥</text>
+<rect x="14200" y="9095" width="420" height="220" fill="url(#pat-wood)" stroke="#999" stroke-width="8"/><text x="14800" y="9245" class="tb">마루 바닥</text>
+<use href="#sym-outlet" transform="translate(14420 9480) scale(0.85)"/><text x="14870" y="9525" class="tb">콘센트(2구)</text>
+<use href="#sym-outlet-wp" transform="translate(17120 9480) scale(0.85)"/><text x="17570" y="9525" class="tb">방수 콘센트</text>
+<use href="#sym-outlet-ded" transform="translate(14420 9860) scale(0.85)"/><text x="14870" y="9905" class="tb">전용 회로(인덕션·에어컨 등)</text>
+<use href="#sym-switch" transform="translate(17120 9860) scale(0.85)"/><text x="17570" y="9905" class="tb">스위치</text>
+<use href="#sym-switch-smart" transform="translate(14420 10240) scale(0.85)"/><text x="14870" y="10285" class="tb">스마트 스위치(중성선)</text>
+<use href="#sym-downlight" transform="translate(17120 10240) scale(0.85)"/><text x="17570" y="10285" class="tb">다운라이트</text>
+<use href="#sym-ceiling-light" transform="translate(14420 10620) scale(0.85)"/><text x="14870" y="10665" class="tb">천장등</text>
+<use href="#sym-linear" transform="translate(17120 10620) scale(0.85)"/><text x="17570" y="10665" class="tb">라인조명(길이별 늘림)</text>
+<use href="#sym-ac-ceiling" transform="translate(14420 11000) scale(0.4)"/><text x="14870" y="11045" class="tb">천장형 에어컨 실내기</text>
+<use href="#sym-ac-out" transform="translate(17120 11000) scale(0.4)"/><text x="17570" y="11045" class="tb">에어컨 실외기</text>
+<use href="#sym-lan" transform="translate(14420 11380) scale(0.85)"/><text x="14870" y="11425" class="tb">LAN 단자</text>
+<use href="#sym-ap" transform="translate(17120 11380) scale(0.85)"/><text x="17570" y="11425" class="tb">Wi-Fi AP</text>
+<use href="#sym-comm" transform="translate(14420 11760) scale(0.4)"/><text x="14870" y="11805" class="tb">통신단자함</text>
+<use href="#sym-panel" transform="translate(17120 11760) scale(0.4)"/><text x="17570" y="11805" class="tb">분전반</text>
+<use href="#sym-tablet" transform="translate(14420 12140) scale(0.4)"/><text x="14870" y="12185" class="tb">벽 태블릿(HA)</text>
+<use href="#sym-doorbell" transform="translate(17120 12140) scale(0.85)"/><text x="17570" y="12185" class="tb">도어벨/카메라</text>
+<use href="#sym-sensor" transform="translate(14420 12520) scale(0.85)"/><text x="14870" y="12565" class="tb">센서(재실·문열림·온습도)</text>
+<use href="#sym-manifold" transform="translate(17120 12520) scale(0.4)"/><text x="17570" y="12565" class="tb">난방 분배기</text>
+<use href="#sym-water" transform="translate(14420 12900) scale(0.85)"/><text x="14870" y="12945" class="tb">급수·급탕 접속점</text>
+<use href="#sym-drain" transform="translate(17120 12900) scale(0.85)"/><text x="17570" y="12945" class="tb">배수구·배수 접속</text>
+<use href="#sym-check" transform="translate(14420 13280) scale(0.85)"/><text x="14870" y="13325" class="tb">현장 확인점</text>
 </g>
 <g id="L-notes">
 <text x="-2700" y="13050" class="note" style="font-size:130px">1. 치수는 분양 평면도 표기값(벽 중심선). 좌측 1800·우측 1500 구간 차이에 따라 I-서재(3900)과 F-침실(4200) 북측 벽선이 다름.</text>
