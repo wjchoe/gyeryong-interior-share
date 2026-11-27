@@ -303,7 +303,7 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <path class="door-gap" d="M7200 10060L7200 10750"/>
 <path class="door-leaf" d="M7200 10060L7890 10060"/>
 <path class="door-arc" d="M7890 10060A690 690 0 0 1 7200 10750"/>
-<text class="tag" x="7510.5" y="10450.0">TD01</text>
+<text class="tag" x="6900" y="10450">TD01</text>
 </g>
 </g>
 <g id="L-fixture-exist" data-layer="기존 위생·주방 기구(원도면 배치)">

@@ -35,17 +35,17 @@ table{width:100%;border-collapse:collapse;background:#fff;font-size:13px;margin:
 footer{max-width:1400px;margin:0 auto;padding:0 20px 30px;color:var(--mut);font-size:12px}
 </style></head><body>
 <header><div class="bar"><div class="brand">계룡삼환 리모델링<small>인테리어 업체 공유용</small></div>
-<nav><a href="#plan">기준평면도</a><a href="#iot">IoT 구성 및 조명·배선</a><a href="#power">전원·콘센트</a><a href="#refs">레퍼런스 사진</a></nav></div></header>
+<nav><a href="#plan">기준평면도</a><a href="#iot">IoT 구성 및 조명·배선</a><a href="#power">전원·콘센트·통신</a><a href="#refs">레퍼런스 사진</a></nav></div></header>
 <main id="main"></main>
 <div id="pv"><div class="ctl"><button data-z="in" aria-label="확대">+</button><button data-z="out" aria-label="축소">−</button><button data-z="fit" aria-label="맞춤" style="font-size:13px">맞춤</button><button data-z="x" aria-label="닫기">×</button></div><div class="stage"></div><div class="hint">두 손가락으로 확대·축소, 끌어서 이동 · 두 번 탭하면 확대</div></div>
 <div id="lb"><button class="x" aria-label="닫기">×</button><button class="nv pv" aria-label="이전">‹</button><img alt=""><p></p><button class="nv nx" aria-label="다음">›</button></div>
 <footer>현장 실측과 협의 후 확정하는 초안입니다. 레퍼런스 사진은 '볼 점'에 적은 부분만 참고하며 현장 사진이 아닙니다.</footer>
 <script src="refs-data.js"></script>
-<script src="iot.js?v=20261124a"></script>
-<script src="power.js?v=20261124a"></script>
+<script src="iot.js?v=20261127e"></script>
+<script src="power.js?v=20261127e"></script>
 <script>
 'use strict';
-const V='20261127d';const $=s=>document.querySelector(s);
+const V='20261127e';const $=s=>document.querySelector(s);
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let filter='전체',shown=[],cur=0;
 const VB=[-3000,-3300,22600,17600];
