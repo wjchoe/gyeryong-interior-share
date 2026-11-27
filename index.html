@@ -35,17 +35,18 @@ table{width:100%;border-collapse:collapse;background:#fff;font-size:13px;margin:
 footer{max-width:1400px;margin:0 auto;padding:0 20px 30px;color:var(--mut);font-size:12px}
 </style></head><body>
 <header><div class="bar"><div class="brand">계룡삼환 리모델링<small>인테리어 업체 공유용</small></div>
-<nav><a href="#plan">기준평면도</a><a href="#iot">IoT 구성 및 조명·배선</a><a href="#power">전원·콘센트·통신</a><a href="#refs">레퍼런스 사진</a></nav></div></header>
+<nav><a href="#plan">기준평면도</a><a href="#iot">IoT 구성 및 조명·배선</a><a href="#power">전원·콘센트</a><a href="#net">네트워크</a><a href="#refs">레퍼런스 사진</a></nav></div></header>
 <main id="main"></main>
 <div id="pv"><div class="ctl"><button data-z="in" aria-label="확대">+</button><button data-z="out" aria-label="축소">−</button><button data-z="fit" aria-label="맞춤" style="font-size:13px">맞춤</button><button data-z="x" aria-label="닫기">×</button></div><div class="stage"></div><div class="hint">두 손가락으로 확대·축소, 끌어서 이동 · 두 번 탭하면 확대</div></div>
 <div id="lb"><button class="x" aria-label="닫기">×</button><button class="nv pv" aria-label="이전">‹</button><img alt=""><p></p><button class="nv nx" aria-label="다음">›</button></div>
 <footer>현장 실측과 협의 후 확정하는 초안입니다. 레퍼런스 사진은 '볼 점'에 적은 부분만 참고하며 현장 사진이 아닙니다.</footer>
 <script src="refs-data.js"></script>
 <script src="iot.js?v=20261127e"></script>
-<script src="power.js?v=20261127f"></script>
+<script src="power.js?v=20261127g"></script>
+<script src="net.js?v=20261127g"></script>
 <script>
 'use strict';
-const V='20261127f';const $=s=>document.querySelector(s);
+const V='20261127g';const $=s=>document.querySelector(s);
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let filter='전체',shown=[],cur=0;
 const VB=[-3000,-3300,22600,17600];
@@ -60,10 +61,10 @@ return `<h1>레퍼런스 사진</h1><p class="mut">공간별 참고 사진 ${REF
 <div class="tools"><button data-z="전체" class="${filter==='전체'?'on':''}">전체</button>${zs.map(z=>`<button data-z="${z}" class="${z===filter?'on':''}">${esc(ZONES[z])} ${REFS.filter(r=>r.z===z).length}</button>`).join('')}</div>
 ${Object.entries(by).map(([z,rs])=>`<h2 class="grp">${esc(ZONES[z])}</h2><div class="grid">${rs.map(r=>`<figure><button data-i="${shown.indexOf(r)}"><img src="assets/${r.f}" loading="lazy" alt="${esc(r.c)}"></button><figcaption><b>${esc(r.c)}</b><span>${esc(r.p)}</span></figcaption></figure>`).join('')}</div>`).join('')}`;}
 function open(i){cur=(i+shown.length)%shown.length;const r=shown[cur];$('#lb img').src='assets/'+r.f;$('#lb p').textContent=ZONES[r.z]+' · '+r.c+' — '+r.p;$('#lb').classList.add('on');}
-function render(){const h=location.hash.slice(1);const r=h.startsWith('refs')?'refs':h==='iot'?'iot':h==='power'?'power':'plan';
-if(h.startsWith('refs-')){const z=h.slice(5);if(ZONES[z])filter=z;}else if(h==='refs')filter='전체';$('#main').innerHTML=r==='refs'?refs():r==='iot'?iot():r==='power'?power():plan();window.scrollTo(0,0);
+function render(){const h=location.hash.slice(1);const r=h.startsWith('refs')?'refs':h==='iot'?'iot':h==='power'?'power':h==='net'?'net':'plan';
+if(h.startsWith('refs-')){const z=h.slice(5);if(ZONES[z])filter=z;}else if(h==='refs')filter='전체';$('#main').innerHTML=r==='refs'?refs():r==='iot'?iot():r==='power'?power():r==='net'?net():plan();window.scrollTo(0,0);
 document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.hash==='#'+r));
-if(r==='iot'||r==='power'){document.querySelectorAll('img.zimg').forEach(i=>i.onclick=()=>openImg(i));}
+if(r==='iot'||r==='power'||r==='net'){document.querySelectorAll('img.zimg').forEach(i=>i.onclick=()=>openImg(i));}
 else if(r==='plan'){$("#planbox img").onclick=openPV;document.querySelectorAll('#planbox .pin').forEach(p=>p.onclick=e=>{e.preventDefault();location.hash=p.getAttribute('href');});}
 else{document.querySelectorAll('.tools button').forEach(b=>b.onclick=()=>{const t=b.dataset.z==='전체'?'#refs':'#refs-'+b.dataset.z;filter=b.dataset.z;if(location.hash!==t)location.hash=t;else render();});document.querySelectorAll('figure button').forEach(b=>b.onclick=()=>open(+b.dataset.i));}}
 $('#lb .x').onclick=()=>$('#lb').classList.remove('on');$('#lb').onclick=e=>{if(e.target.id==='lb')$('#lb').classList.remove('on')};
