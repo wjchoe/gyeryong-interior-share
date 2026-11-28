@@ -388,7 +388,7 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <text x="1950" y="2050" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">G-침실</text>
 <text x="1950" y="2240" class="room-a">G · ≈10.4㎡</text>
 </g>
-<g data-room="PT" data-area-m2="0.59" data-floor="마루 · MX4200 #1">
+<g data-room="PT" data-area-m2="0.59" data-floor="마루 · MX4200 #2(노드)">
 <text x="4450" y="3560" class="room-c" style="font-weight:800;font-size:165px;fill:#858585">팬트리</text>
 <text x="4450" y="3750" class="room-a">PT · ≈0.6㎡</text>
 </g>

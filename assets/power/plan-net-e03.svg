@@ -468,7 +468,7 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <text x="1950" y="2050" class="room-c" style="font-weight:800;font-size:165px;fill:#646464">G-침실</text>
 <text x="1950" y="2240" class="room-a">G · ≈10.4㎡</text>
 </g>
-<g data-room="PT" data-area-m2="0.59" data-floor="마루 · MX4200 #1">
+<g data-room="PT" data-area-m2="0.59" data-floor="마루 · MX4200 #2(노드)">
 <text x="4450" y="3560" class="room-c" style="font-weight:800;font-size:165px;fill:#646464">팬트리</text>
 <text x="4450" y="3750" class="room-a">PT · ≈0.6㎡</text>
 </g>
@@ -604,7 +604,7 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <g id="L-switch" class="gs" data-layer="스위치(스마트 포함)" data-status="empty"></g>
 <g id="L-outlet" data-layer="콘센트·전용회로"></g>
 <g id="L-iot" class="gs" data-layer="IoT(태블릿·도어벨·센서·허브)" data-status="empty"></g>
-<g id="L-network" data-layer="통신(단자함·LAN·AP)"><path d="M130 10200 V7820" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M210 10250 H330 V9850 H7040 V8470 H7030" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M210 10370 H440 V9960 H6930 V8300 H7030" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M7120 8060 V4090 H4740 V3910" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M210 10310 H385 V9905 H2800 V6300 H2810" fill="none" stroke="#2c5d97" stroke-width="40" stroke-linejoin="round"/><path d="M210 10310 H385 V9905 H2800 V6300 H2810" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/><g data-lan="월패드 LAN"><rect x="2810" y="6060" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M2855 6115h90 M2855 6155h90" stroke="#2c5d97" stroke-width="14"/></g><g data-lan="월패드 LAN"><rect x="2810" y="6230" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M2855 6285h90 M2855 6325h90" stroke="#2c5d97" stroke-width="14"/></g><path d="M2800 6300 V6130 H2810" fill="none" stroke="#2c5d97" stroke-width="14"/><text x="3070" y="6155" class="lt" style="text-anchor:start">⑤ 월패드 LAN 2구(220V 박스와 분리) ← 네트워크함 UTP 2가닥</text><path d="M2900 6060 V5800 H-90" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><g data-device="도어벨"><rect x="-250" y="5720" width="160" height="160" rx="30" fill="#2c5d97"/><text x="-170" y="5835" class="pt">D</text></g><text x="-310" y="5830" class="lt" style="text-anchor:end">도어벨 G410(세대 밖, 현관문 아래쪽)</text><text x="-310" y="5950" class="lt" style="text-anchor:end;font-size:66px">12V — PoE → 12V 변환기는 LAN 박스 안</text><text x="3070" y="6265" class="lt" style="text-anchor:start;font-size:66px">위(2번) → 키스톤 커플러 → 도어벨 1가닥</text><text x="3070" y="6365" class="lt" style="text-anchor:start;font-size:66px">아래(1번) → 월패드 PoE 스플리터 자리(나중 태블릿)</text><g data-device="네트워크함"><rect x="30" y="10200" width="180" height="350" fill="#2c5d97"/><text x="120.0" y="10410.0" class="pt">N</text></g><text x="520" y="10140" class="dvl" style="fill:#2c5d97;text-anchor:start;font-size:90px">① 네트워크함(확장부 왼쪽벽) · 모뎀</text><g data-lan="② 서재 LAN(왼쪽벽 중앙)"><rect x="30" y="7680" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M75 7735h90 M75 7775h90" stroke="#2c5d97" stroke-width="14"/></g><text x="600" y="7940" class="lt">② 서재 LAN(왼쪽벽 중앙)</text><g data-lan=""><rect x="7030" y="8060" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M7075 8115h90 M7075 8155h90" stroke="#2c5d97" stroke-width="14"/></g><g data-lan=""><rect x="7030" y="8230" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M7075 8285h90 M7075 8325h90" stroke="#2c5d97" stroke-width="14"/></g><g data-lan=""><rect x="7030" y="8400" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M7075 8455h90 M7075 8495h90" stroke="#2c5d97" stroke-width="14"/></g><text x="6870" y="8240" class="lt" style="text-anchor:end">③ TV LAN 3구(TV벽 1/3)</text><text x="6870" y="8360" class="lt" style="text-anchor:end;font-size:66px">위: → 팬트리 · 가운데: → 네트워크함 복귀 · 아래: 모뎀 →</text><text x="6870" y="8470" class="lt" style="text-anchor:end;font-size:66px">TV: 스위치 허브 → TV · MX4200 #1</text><g data-lan="팬트리 LAN"><rect x="4590" y="3780" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M4635 3835h90 M4635 3875h90" stroke="#2c5d97" stroke-width="14"/></g><text x="4900" y="3875" class="lt" style="text-anchor:start">← ④ 팬트리 LAN 포트 · MX4200 #2</text><text x="5900" y="4280" class="lt">③에서 새 선 → TV벽 타고 위로 → 천장 → 팬트리</text><text x="4950" y="10130" class="lt" style="font-size:90px">① ⇄ ③ 2가닥: 선 A 모뎀 → TV 스위치 허브 / 선 B MX4200 #1 LAN → 네트워크함 복귀</text><g data-device="분전함"><rect x="150" y="4050" width="420" height="170" fill="#111"/><text x="360" y="4170" class="dvt" style="font-size:105px">P</text></g><text x="620" y="4185" class="dvl" style="fill:#111;text-anchor:start;font-size:80px">분전함</text></g>
+<g id="L-network" data-layer="통신(단자함·LAN·AP)"><path d="M130 10200 V7820" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M210 10250 H330 V9850 H6930 V8300 H7030" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M210 10370 H440 V9960 H7040 V8470 H7030" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M7080 8230 V4090 H4740 V3910" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><path d="M210 10310 H385 V9905 H2800 V6300 H2810" fill="none" stroke="#2c5d97" stroke-width="40" stroke-linejoin="round"/><path d="M210 10310 H385 V9905 H2800 V6300 H2810" fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"/><g data-lan="월패드 LAN"><rect x="2810" y="6060" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M2855 6115h90 M2855 6155h90" stroke="#2c5d97" stroke-width="14"/></g><g data-lan="월패드 LAN"><rect x="2810" y="6230" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M2855 6285h90 M2855 6325h90" stroke="#2c5d97" stroke-width="14"/></g><path d="M2800 6300 V6130 H2810" fill="none" stroke="#2c5d97" stroke-width="14"/><text x="3070" y="6155" class="lt" style="text-anchor:start">⑤ 월패드 LAN 2구(220V 박스와 분리) ← 네트워크함 UTP 2가닥</text><path d="M2900 6060 V5800 H-90" fill="none" stroke="#2c5d97" stroke-width="14" stroke-linejoin="round"/><g data-device="도어벨"><rect x="-250" y="5720" width="160" height="160" rx="30" fill="#2c5d97"/><text x="-170" y="5835" class="pt">D</text></g><text x="-310" y="5830" class="lt" style="text-anchor:end">도어벨 G410(세대 밖, 현관문 아래쪽)</text><text x="-310" y="5950" class="lt" style="text-anchor:end;font-size:66px">12V — PoE → 12V 변환기는 LAN 박스 안</text><text x="3070" y="6265" class="lt" style="text-anchor:start;font-size:66px">위(2번) → 키스톤 커플러 → 도어벨 1가닥</text><text x="3070" y="6365" class="lt" style="text-anchor:start;font-size:66px">아래(1번) → 월패드 PoE 스플리터 자리(나중 태블릿)</text><g data-device="네트워크함"><rect x="30" y="10200" width="180" height="350" fill="#2c5d97"/><text x="120.0" y="10410.0" class="pt">N</text></g><text x="520" y="10140" class="dvl" style="fill:#2c5d97;text-anchor:start;font-size:90px">① 네트워크함(확장부 왼쪽벽) · 모뎀 · MX5300(메인) · PoE 스위치</text><g data-lan="② 서재 LAN(왼쪽벽 중앙)"><rect x="30" y="7680" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M75 7735h90 M75 7775h90" stroke="#2c5d97" stroke-width="14"/></g><text x="600" y="7940" class="lt">② 서재 LAN(왼쪽벽 중앙)</text><g data-lan=""><rect x="7030" y="8230" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M7075 8285h90 M7075 8325h90" stroke="#2c5d97" stroke-width="14"/></g><g data-lan=""><rect x="7030" y="8400" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M7075 8455h90 M7075 8495h90" stroke="#2c5d97" stroke-width="14"/></g><text x="6870" y="8240" class="lt" style="text-anchor:end">③ TV LAN 2구(TV벽 1/3)</text><text x="6870" y="8360" class="lt" style="text-anchor:end;font-size:66px">위: 선 A MX5300 → MX4200 #1 (팬트리행도 이 자리에서 인출) · 아래: 선 B 모뎀 → TV</text><text x="6870" y="8470" class="lt" style="text-anchor:end;font-size:66px">TV 쪽 스위치 허브 없음 — TV는 모뎀 직결, MX4200 #1은 MX5300</text><g data-lan="팬트리 LAN"><rect x="4590" y="3780" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><path d="M4635 3835h90 M4635 3875h90" stroke="#2c5d97" stroke-width="14"/></g><text x="4900" y="3875" class="lt" style="text-anchor:start">← ④ 팬트리 LAN 포트 · MX4200 #2(노드)</text><text x="5900" y="4280" class="lt">③에서 새 선 → TV벽 타고 위로 → 천장 → 팬트리</text><text x="4950" y="10130" class="lt" style="font-size:90px">① ⇄ ③ 2가닥: 선 A MX5300 LAN → MX4200 #1(노드) / 선 B 모뎀 LAN → TV</text><g data-device="분전함"><rect x="150" y="4050" width="420" height="170" fill="#111"/><text x="360" y="4170" class="dvt" style="font-size:105px">P</text></g><text x="620" y="4185" class="dvl" style="fill:#111;text-anchor:start;font-size:80px">분전함</text></g>
 <g id="L-hvac" class="gs" data-layer="시스템에어컨(실내기·배관·드레인)" data-status="empty"></g>
 <g id="L-heating" class="gs" data-layer="난방(분배기·회로 구역)" data-status="empty"></g>
 <g id="L-water" class="gs" data-layer="급수·급탕 접속점" data-status="empty"></g>
@@ -615,49 +615,54 @@ text{font-family:"Apple SD Gothic Neo","Noto Sans CJK KR","Noto Sans KR",sans-se
 <g id="L-sheet" data-layer="콘센트표·범례">
 <text x="14200" y="-1500" class="h2">통신 구성 </text>
 <text x="14200" y="-1150" class="tb" font-weight="800">■ 통신</text>
-<text x="14350" y="-975" class="tb">① 네트워크함: I-서재 확장부 왼쪽벽 · 모뎀</text>
-<text x="14350" y="-810" class="tb">② 서재 LAN: 서재 왼쪽벽 중앙 ← 네트워크함(벽 따라 위로)</text>
-<text x="14350" y="-645" class="tb">③ TV LAN 3구: 네트워크함 → 서재 확장부 → 거실 확장부 → 거실</text>
-<text x="14350" y="-480" class="tb">TV벽 1/3 지점(확장부 쪽). 선 A 모뎀 → TV 스위치 허브 → TV</text>
-<text x="14350" y="-315" class="tb">· MX4200 #1 WAN · 선 B MX4200 #1 LAN → 네트워크함</text>
-<text x="14350" y="-150" class="tb">복귀 → ② 서재 · 1구는 팬트리행</text>
-<text x="14350" y="15" class="tb">④ 팬트리 LAN: MX4200 #1 LAN → TV벽 타고 위로 → 천장 →</text>
-<text x="14350" y="180" class="tb">팬트리 LAN 포트 → MX4200 #2</text>
-<text x="14350" y="345" class="tb">⑤ 월패드 LAN 박스: 네트워크함 → 서재 확장부 → 서재·거실 사이 벽</text>
-<text x="14350" y="510" class="tb">타고 위로 → 월패널 옆 LAN 박스, UTP 2가닥(이중선). 1번 =</text>
-<text x="14350" y="675" class="tb">월패드 PoE 스플리터 자리(나중 태블릿) · 2번 = 키스톤 커플러 →</text>
-<text x="14350" y="840" class="tb">UTP 1가닥 → 현관문 밖 도어벨. 지금 G410은 PoE → 12V</text>
-<text x="14350" y="1005" class="tb">변환기를 박스 안에, PoE 도어벨로 바꾸면 변환기만 제거. 카메라 대비 빈</text>
-<text x="14350" y="1170" class="tb">CD관 1. 네트워크함 PoE 스위치에서 ②·⑤ 분기</text>
-<text x="14350" y="1335" class="tb">기존 신발장·팬트리 W1·방 LAN 8·PoE 배선 계획은 삭제</text>
-<path class="rule" d="M14200 1620H19500"/>
-<text x="14200" y="1950" class="h2">범례</text>
-<rect x="14330" y="2155" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="14800" y="2270" class="tb">LAN 포트</text>
-<rect x="14330" y="2470" width="180" height="150" fill="#2c5d97"/><text x="14420" y="2580" class="pt">N</text><text x="14800" y="2590" class="tb">네트워크함</text>
-<path d="M14220 2865H14620" stroke="#2c5d97" stroke-width="30"/><text x="14800" y="2910" class="tb">이더넷 선(개략 경로) — ① ⇄ ③ 2가닥, ③ → 팬트리 1가닥</text>
-<path class="rule" d="M14200 3430H19500"/>
-<text x="14200" y="3760" class="h2">구성도(개략, 축척 없음)</text>
-<rect x="14200" y="4010" width="5300" height="760" rx="50" fill="#f4f8fc" stroke="#2c5d97" stroke-width="12" stroke-dasharray="50 30"/>
-<text x="14260" y="4120" class="tb" style="font-size:90px;fill:#2c5d97">네트워크함</text>
-<rect x="14200" y="5110" width="5300" height="1300" rx="50" fill="#f4f8fc" stroke="#2c5d97" stroke-width="12" stroke-dasharray="50 30"/>
-<text x="14260" y="5220" class="tb" style="font-size:90px;fill:#2c5d97">TV</text>
-<rect x="14200" y="6750" width="5300" height="760" rx="50" fill="#f4f8fc" stroke="#2c5d97" stroke-width="12" stroke-dasharray="50 30"/>
-<text x="14260" y="6860" class="tb" style="font-size:90px;fill:#2c5d97">팬트리</text>
-<rect x="14450" y="4210" width="1700" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="15300.0" y="4448.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">모뎀</text>
-<rect x="17500" y="4210" width="1750" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="18375.0" y="4448.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">PoE 스위치</text>
-<text x="17500" y="4710" class="tb" style="font-size:80px;fill:#2c5d97">→ ② 서재 LAN · ⑤ 월패드 2가닥(PoE)</text>
-<rect x="14450" y="5310" width="1700" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="15300.0" y="5548.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">스위치 허브</text>
-<rect x="17500" y="5310" width="1750" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="18375.0" y="5548.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">MX4200 #1</text>
-<rect x="14450" y="6010" width="1700" height="300" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="15300.0" y="6198.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">TV</text>
-<rect x="17500" y="6950" width="1750" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="18375.0" y="7188.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">MX4200 #2</text>
-<path d="M15300 4610V5310 M16150 5510H17500 M18375 5310V4610 M15300 5710V6010 M18375 5710V6950" fill="none" stroke="#2c5d97" stroke-width="22"/>
-<text x="15370" y="4990" class="tb" style="font-size:90px;fill:#2c5d97">선 A</text>
-<text x="16200" y="5460" class="tb" style="font-size:90px;fill:#2c5d97">WAN</text>
-<text x="18445" y="4990" class="tb" style="font-size:90px;fill:#2c5d97">선 B · LAN 복귀</text>
-<text x="18445" y="6610" class="tb" style="font-size:90px;fill:#2c5d97">LAN → 팬트리</text>
+<text x="14350" y="-975" class="tb">① 네트워크함: I-서재 확장부 왼쪽벽 · 모뎀 → MX5300(메인 공유기,</text>
+<text x="14350" y="-810" class="tb">WAN). MX5300 LAN = 선 A · ② 서재 · PoE 스위치(→ ⑤</text>
+<text x="14350" y="-645" class="tb">월패드) · 여유 1. 선 B는 모뎀 LAN 포트에서 TV로.</text>
+<text x="14350" y="-480" class="tb">통풍(타공·루버), 문은 목재·플라스틱(금속 X)</text>
+<text x="14350" y="-315" class="tb">② 서재 LAN: 서재 왼쪽벽 중앙 ← 네트워크함(벽 따라 위로)</text>
+<text x="14350" y="-150" class="tb">③ TV LAN 2구: 네트워크함 → 서재 확장부 → 거실 확장부 → 거실</text>
+<text x="14350" y="15" class="tb">TV벽 1/3 지점(확장부 쪽). 선 A MX5300 LAN → MX4200</text>
+<text x="14350" y="180" class="tb">#1(노드, 인터넷 포트) / 선 B 모뎀 LAN → TV(모뎀 대역) ·</text>
+<text x="14350" y="345" class="tb">팬트리행 선은 선 A 포트 자리에서 함께 인출해 MX4200 #1 LAN에</text>
+<text x="14350" y="510" class="tb">연결(별도 포트 없음)</text>
+<text x="14350" y="675" class="tb">④ 팬트리 LAN: MX4200 #1 LAN → TV벽 타고 위로 → 천장 →</text>
+<text x="14350" y="840" class="tb">팬트리 LAN 포트 → MX4200 #2(노드, 유선 백홀)</text>
+<text x="14350" y="1005" class="tb">⑤ 월패드 LAN 박스: 네트워크함 → 서재 확장부 → 서재·거실 사이 벽</text>
+<text x="14350" y="1170" class="tb">타고 위로 → 월패널 옆 LAN 박스, UTP 2가닥(이중선). 1번 =</text>
+<text x="14350" y="1335" class="tb">월패드 PoE 스플리터 자리(나중 태블릿) · 2번 = 키스톤 커플러 →</text>
+<text x="14350" y="1500" class="tb">UTP 1가닥 → 현관문 밖 도어벨. 지금 G410은 PoE → 12V</text>
+<text x="14350" y="1665" class="tb">변환기를 박스 안에, PoE 도어벨로 바꾸면 변환기만 제거. 카메라 대비 빈</text>
+<text x="14350" y="1830" class="tb">CD관 1. ⑤만 네트워크함 PoE 스위치에서(② 서재는 MX5300 직결)</text>
+<text x="14350" y="1995" class="tb">기존 신발장·팬트리 W1·방 LAN 8·PoE 배선 계획은 삭제</text>
+<path class="rule" d="M14200 2280H19500"/>
+<text x="14200" y="2610" class="h2">범례</text>
+<rect x="14330" y="2815" width="180" height="140" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="14800" y="2930" class="tb">LAN 포트</text>
+<rect x="14330" y="3130" width="180" height="150" fill="#2c5d97"/><text x="14420" y="3240" class="pt">N</text><text x="14800" y="3250" class="tb">네트워크함</text>
+<path d="M14220 3525H14620" stroke="#2c5d97" stroke-width="30"/><text x="14800" y="3570" class="tb">이더넷 선(개략 경로) — ① ⇄ ③ 2가닥, ③ → 팬트리 1가닥</text>
+<path class="rule" d="M14200 4090H19500"/>
+<text x="14200" y="4420" class="h2">구성도(개략, 축척 없음)</text>
+<rect x="14200" y="4670" width="5300" height="760" rx="50" fill="#f4f8fc" stroke="#2c5d97" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="14260" y="4780" class="tb" style="font-size:90px;fill:#2c5d97">네트워크함</text>
+<rect x="14200" y="5770" width="5300" height="1300" rx="50" fill="#f4f8fc" stroke="#2c5d97" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="14260" y="5880" class="tb" style="font-size:90px;fill:#2c5d97">TV</text>
+<rect x="14200" y="7410" width="5300" height="760" rx="50" fill="#f4f8fc" stroke="#2c5d97" stroke-width="12" stroke-dasharray="50 30"/>
+<text x="14260" y="7520" class="tb" style="font-size:90px;fill:#2c5d97">팬트리</text>
+<rect x="14350" y="4870" width="1500" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="15100.0" y="5108.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">모뎀</text>
+<rect x="16100" y="4870" width="1500" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="16850.0" y="5108.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">MX5300</text>
+<rect x="17850" y="4870" width="1500" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="18600.0" y="5108.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">PoE 스위치</text>
+<text x="17180" y="5390" class="tb" style="font-size:72px;fill:#2c5d97">PoE → ⑤ 월패드 2가닥 · ② 서재는 MX5300 직결</text>
+<rect x="14450" y="5970" width="1500" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="15200.0" y="6208.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">TV</text>
+<rect x="17500" y="5970" width="1750" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="18375.0" y="6208.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">MX4200 #1</text>
+<rect x="17500" y="7610" width="1750" height="400" rx="40" fill="#fff" stroke="#2c5d97" stroke-width="18"/><text x="18375.0" y="7848.0" class="tb" style="text-anchor:middle;font-weight:800;fill:#2c5d97">MX4200 #2</text>
+<path d="M15850 5070H16100 M17600 5070H17850 M17100 5270V5670H18375V5970 M15100 5270V5970 M18375 6370V7610" fill="none" stroke="#2c5d97" stroke-width="22"/>
+<text x="17170" y="5630" class="tb" style="font-size:80px;fill:#2c5d97">선 A</text>
+<text x="15170" y="5630" class="tb" style="font-size:80px;fill:#2c5d97">선 B</text>
+<text x="18445" y="7270" class="tb" style="font-size:80px;fill:#2c5d97">LAN → 팬트리</text>
+<text x="17500" y="6490" class="tb" style="font-size:72px;fill:#2c5d97">노드(유선 백홀, 인터넷 포트)</text>
+<text x="16150" y="4850" class="tb" style="font-size:72px;fill:#2c5d97">메인 공유기</text>
 </g>
 <g id="L-notes">
-<text x="-2700" y="13050" class="note" style="font-size:130px">1. 통신: 네트워크함 = I-서재 확장부 왼쪽벽. LAN 포트 = 서재 왼쪽벽 중앙 · 거실 TV벽 1/3 지점, TV 포트에서 새 선으로 팬트리 LAN 포트. TV벽 포트 3구: 네트워크함 ⇄ TV 2가닥(선 A 모뎀 → TV 스위치 허브 → TV · MX4200 #1 WAN / 선 B MX4200 #1 LAN → 네트워크함 복귀 → 소형 PoE 스위치 → 서재 · 도어벨) + 팬트리행 1구(MX4200 #1 LAN → 팬트리 MX4200 #2). 기존 신발장·팬트리·방 LAN 계획 삭제. 월패널 옆 LAN 박스까지 UTP 2가닥(1 = 월패드 PoE 스플리터 자리, 2 = 키스톤 커플러 → 도어벨 1가닥) + 카메라 대비 빈 CD관. 커플러는 CAT6 8핀 전부 연결·PoE 지원 키스톤 2개 펀칭(Y자 분배기 금지). S1 Plus는 Wi-Fi 전용(LAN 단자 없음) — 220V(전등1 L·N)와 LAN 박스 분리.</text>
+<text x="-2700" y="13050" class="note" style="font-size:130px">1. 통신: 네트워크함 = I-서재 확장부 왼쪽벽. LAN 포트 = 서재 왼쪽벽 중앙 · 거실 TV벽 1/3 지점, TV 포트에서 새 선으로 팬트리 LAN 포트. 공유기MX5300 추가): 메인 = 네트워크함 MX5300(모뎀 WAN) → ② 서재 직결 · PoE 스위치 → ⑤ 월패드, MX4200 2대 = 노드(TV · 팬트리, 유선 백홀). TV벽 포트 2구: 선 A MX5300 LAN → MX4200 #1 / 선 B 모뎀 LAN → TV(TV 쪽 스위치 허브 없음, TV는 모뎀 대역). 팬트리행 선은 선 A 포트 자리에서 함께 인출 → MX4200 #1 LAN → 팬트리 MX4200 #2. 기존 신발장·팬트리·방 LAN 계획 삭제. 월패널 옆 LAN 박스까지 UTP 2가닥(1 = 월패드 PoE 스플리터 자리, 2 = 키스톤 커플러 → 도어벨 1가닥) + 카메라 대비 빈 CD관. 커플러는 CAT6 8핀 전부 연결·PoE 지원 키스톤 2개 펀칭(Y자 분배기 금지). S1 Plus는 Wi-Fi 전용(LAN 단자 없음) — 220V(전등1 L·N)와 LAN 박스 분리.</text>
 <text x="-2700" y="13270" class="note" style="font-size:130px">2. 선 경로는 개략(벽·천장) — 배관·타공 전 현장 확인. 인터넷 인입 경로·공유기 위치는 추후. 콘센트는 E-02, 조명·제어는 E-01.</text>
 </g>
 </svg>
